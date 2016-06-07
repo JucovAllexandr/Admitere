@@ -25,7 +25,9 @@
 <p>Locul nasterii: </p>
 <p>Adresa: r.{{$e->raion}}.,</p>
 <p>Codul personal: {{$e->cod_personal}}</p>
-<p>Seria </p>
+<p>Seria: </p>
+<p>Seria: </p>
+<p>Seria: </p>
 @endforeach
 </body>
 </html>

@@ -25,7 +25,7 @@
 <p>Locul nasterii: </p>
 <p>Adresa: r.{{$e->raion}}.,</p>
 <p>Codul personal: {{$e->cod_personal}}</p>
-<p>Seria: </p>
+<p>Seria: {{$e->seria_buletin}}</p>
 <p>Nr: </p>
 <p>Eliberat de oficiu: </p>
 <p>Data: </p>

@@ -112,4 +112,5 @@ INSERT INTO `nationalities` (`id`, `nationality`) VALUES
 (111, 'namibian'),
 (112, 'sud African'),
 (113, 'zambian'),
-(114, 'zimbabuean');
+(114, 'zimbabuean'),
+(115,'moldovan');

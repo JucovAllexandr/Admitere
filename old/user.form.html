@@ -1,0 +1,842 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="css/boostrap.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+         <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+	$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+       </script>
+
+    </head>
+    <body>
+    
+     <nav class="navbar navbar-inverse navbar-fixed-top " >
+         <div class="container">
+         <div class="navbar-header">
+             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+             <a href="#" class="navbar-brend col-xs-offset-3 center-block"><img  src="img/logotip.png" width="90px" heigth="60px" alt="Admitere_logo"></a>
+         </div>
+   
+        <div id="navbarCollapse" class="collapse navbar-collapse ">
+            <ul class="nav navbar-nav navbar-right">
+               <li class=""><a href="#">Admitere</a></li> 
+                <li class="active"><a href="#">Datele mele</a></li>       
+               <li class=""><a href="#">Suport</a></li>
+               <li class=""><a href="#">Iesire</a></li>
+            </ul>  
+        </div>
+         
+    </nav>
+        <div class="container"style="margin-top:55px;">
+         
+  <div class="row">
+   <div class="col-sm-12 col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="top">Datele mele</h3>
+        </div>
+        <div class="panel-body">
+            <form class='form-horizontal'>
+                <fieldset>
+                  <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                    <p class="alert alert-warning"><span class="glyphicon glyphicon-alert"></span>Datele introduse NU pot fi modificata.Completati cu atentie datele!</p>
+                              <div class="form-group ">
+    <label class="col-md-2 control-label ">Selectati Optiunea 1</label>
+  <div class="col-md-2 ">
+    <select id="opt1" name="specialitate" class="form-control">
+        <option  id="o1-null">Null</option>
+        <option value="1" id="o1-as_l">AS:lucrător social</option>
+        <option value="2" id="o1-as_p">AS:pedagog social</option>
+        <option value="3"id="o1-web">Administrarea aplicațiilor WEB</option>
+        <option value="4"id="o1-prog">Programarea și analiza produselor de program</option>
+        <option value="5"id="o1-retea">Rețele de calculatoare</option>
+        <option value="6"id="o1-cor">Coregrafie</option>
+        <option value="7" id="o1-eco">Ecologie și protecția mediului</option>
+        <option value="8" id="o1-con">Contabilitate</option>
+        <option value="9" id="o1-ii">Interpretare instrumentala</option>
+        <option value="0" id="o1-pic">Pictura</option>
+    </select>
+  </div>
+   <!--select-->
+   <div class="col-md-1">
+  <div class="checkbox">
+    <label >
+      <input type="checkbox" name="grup" 
+             value="">
+    Buget
+    </label>
+	</div>
+  </div>
+      <div  class="col-md-1 checkbox" >
+    <label >
+      <input type="checkbox" name="grup"  value="">
+      Contract
+    </label>
+
+  </div ><label class="col-md-3 control-label ">Limba de instruire Optiunea 1</label>
+  <div class="col-md-2 ">
+    <select  name="li" class="form-control">
+      <option value="1">Română</option>
+      <option value="2">Rusă</option>
+     
+    </select>
+  </div>
+            </div>
+    <div class="form-group ">
+    <label class="col-md-2 control-label ">Selectati Optiunea 2</label>
+  <div class="col-md-2 ">
+    <select id="specialitate" name="specialitate" class="form-control">
+        <option  id="o1-null">Null</option>
+        <option value="1" id="o2-as_l">AS:lucrător social</option>
+        <option value="2" id="o2-as_p">AS:pedagog social</option>
+        <option value="3"id="o2-web">Administrarea aplicațiilor WEB</option>
+        <option value="4"id="o2-prog">Programarea și analiza produselor de program</option>
+        <option value="5"id="o2-retea">Rețele de calculatoare</option>
+        <option value="6"id="o2-cor">Coregrafie</option>
+        <option value="7" id="o2-eco">Ecologie și protecția mediului</option>
+        <option value="8" id="o2-con">Contabilitate</option>
+        <option value="9" id="o2-ii">Interpretare instrumentala</option>
+        <option value="0" id="o2-pic">Pictura</option>
+    </select>
+  </div>
+   <!--select-->
+   <div class="col-md-1">
+  <div class="checkbox">
+    <label >
+      <input type="checkbox" name="grup" 
+             value="">
+    Buget
+    </label>
+	</div>
+  </div>
+      <div  class="col-md-1 checkbox" >
+    <label >
+      <input type="checkbox" name="grup"  value="">
+      Contract
+    </label>
+
+  </div >
+  <label class="col-md-3 control-label ">Limba de instruire Optiunea 2</label>
+  <div class="col-md-2 ">
+    <select  name="li" class="form-control">
+      <option value="1">Română</option>
+      <option value="2">Rusă</option>
+     
+    </select>
+  </div>
+            </div>
+        <div class="form-group ">
+    <label class="col-md-2 control-label ">Selectati Optiunea 3</label>
+  <div class="col-md-2 ">
+    <select id="specialitate" name="specialitate" class="form-control">
+      <option  id="o1-null">Null</option>
+        <option value="1" id="o3-as_l">AS:lucrător social</option>
+        <option value="2" id="o31-as_p">AS:pedagog social</option>
+        <option value="3"id="o3-web">Administrarea aplicațiilor WEB</option>
+        <option value="4"id="o3-prog">Programarea și analiza produselor de program</option>
+        <option value="5"id="o3-retea">Rețele de calculatoare</option>
+        <option value="6"id="o3-cor">Coregrafie</option>
+        <option value="7" id="o3-eco">Ecologie și protecția mediului</option>
+        <option value="8" id="o3-con">Contabilitate</option>
+        <option value="9" id="o3-ii">Interpretare instrumentala</option>
+        <option value="0" id="o3-pic">Pictura</option>
+    </select>
+  </div>
+    
+                                   
+   <!--select-->
+   <div class="col-md-1">
+  <div class="checkbox">
+    <label >
+      <input type="checkbox" name="grup" 
+             value="">
+    Buget
+    </label>
+	</div>
+  </div>
+      <div  class="col-md-1 checkbox" >
+    <label >
+      <input type="checkbox" name="grup"  value="">
+      Contract
+    </label>
+
+  </div >
+  <label class="col-md-3 control-label ">Limba de instruire Optiunea 3</label>
+  <div class="col-md-2 ">
+    <select  name="li" class="form-control">
+      <option value="1">Română</option>
+      <option value="2">Rusă</option>
+     
+    </select>
+  </div>
+            </div>
+            <div class="form-group">
+     <label class="col-md-1 control-label" >Data depuniri</label>
+  <div class="col-md-3">
+    <div class="input-group">
+      <input id="data_depun" name="data_depun" class="form-control" type="text" placeholder="data depuneri">
+	        <span class="input-group-addon">     
+          <input type="checkbox">     
+      </span>
+    </div>
+    <p class="help-block">Bifeaza pentru data de azi</p>
+  </div>
+                    </div>
+        <!--input_data-->
+        <div class="form-group">
+            <label class="col-md-1 control-label">Nume</label>
+            <div class="col-md-2">
+                <input class="form-control"type="text"placeholder="nume">
+            </div>
+             <label class="col-md-1 control-label">Prenume</label>
+            <div class="col-md-3">
+                <input class="form-control"type="text"placeholder="prenume">
+                
+            </div>
+                <label class="col-md-2 control-label">Patronim</label>
+            <div class="col-md-3">
+                <input class="form-control"type="text"placeholder="patromim">
+        </div>
+        </div>
+      
+        <div class="form-group">
+            <label class="col-md-1 control-label" for="sex">Sexul</label>
+  <div class="col-md-2">
+    <select id="sex" name="sex" class="form-control">
+      <option value="1">masculin</option>
+      <option value="2">femenin</option>
+    </select>
+  </div>  <!--sexul-->
+   <label class="col-md-1 control-label" for="natia">Etnia</label>
+  <div class="col-md-3">
+    <select id="natia" name="natia" class="form-control">
+      <option value="">român</option>
+      <option value="">româncă</option>
+      <option value="">moldovan</option>
+      <option value="">moldoveancă</option>
+      <option value="">rus</option>
+      <option value="">rusoaică</option>
+      <option value="">bulgar</option>
+      <option value="">bulgarcă</option>
+      <option value="">găgăuz</option>
+      <option value="">găgăuzcă</option>
+      <option value="">alte naționalităti</option>
+    </select>
+  </div>
+      
+           <!--natie--> 
+          
+    <label class="col-md-2 control-label" for="data_nasteri">Data nașterii:</label>  
+  <div class="col-md-3">
+  <input id="data_nasteri" name="data_nasteri" type="text" placeholder="data nașteri" class="form-control input-md">
+    
+  </div> 
+           </div>
+        
+
+     
+        
+       
+       
+       
+   
+           <div class="form-group">
+      <label class="col-md-1 control-label" for="raion">Raion:</label>  
+  <div class="col-md-2">
+  <input id="raion" name="raion" type="text" placeholder="raion" class="form-control input-md">
+   </div>
+          
+           <div class="form-group">
+             <label class="col-md-1 control-label" for="adresa">Adresa:</label>  
+  <div class="col-md-4">
+  <input id="adresa" name="adresa" type="text" placeholder="adresa" class="form-control input-md  ">
+   </div>
+
+ 
+  <label class="col-md-1 control-label" for="sat_oras">Sat/Oraș</label>
+  <div class="col-md-2">
+    <select id="sat_oras" name="sat_oras" class="form-control">
+      <option value="1">Sat</option>
+      <option value="2">Oraș</option>
+    </select>
+  </div>
+                    </div>
+         
+</div>
+        <div class="form-group">
+                <label class="col-md-1 control-label" for="telefon">Telefon:</label>  
+  <div class="col-md-2">
+  <input id="telefon" name="telefon" type="text" placeholder="telefon" class="form-control input-md">
+    
+  </div>
+                <label class="col-md-1 control-label" for="mob">Mobil:</label>  
+  <div class="col-md-3">
+  <input id="mob" name="mobi" type="text" placeholder="mobil" class="form-control input-md">
+    
+  </div>  
+                    <label class="col-md-2 control-label" for="email">E-mail:</label>  
+  <div class="col-md-3">
+  <input id="email" name="email" type="text" placeholder="e-mail" class="form-control input-md">
+    
+  </div> 
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label" >Certificat de naștere</label>
+        </div>
+          <div class="form-group">
+            <label class="col-md-1 control-label" >Seria Nr.</label>
+            <div class="col-md-2">
+                <input type="text"class="form-control input-md" placeholder="seria">
+            </div>
+            
+                <label class="col-md-1 control-label" >Eliberat</label>
+            <div class="col-md-2">
+                <input type="text"class="form-control input-md" placeholder="Eliberat">
+            </div>
+          
+        </div>
+        <div class="form-group">
+              <label class="col-md-4 control-label" >Buletin de identitate al candidatului</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-1 control-label" >Seria </label>
+            <div class="col-md-1">
+                <input type="text"class="form-control input-md" placeholder="seria">
+            </div>
+            
+                <label class="col-md-1 control-label" >Nr.</label>
+            <div class="col-md-2">
+                <input type="text"class="form-control input-md" placeholder="Eliberat">
+            </div>
+              <label class="col-md-2 control-label" >Eliberat de oficiul</label>
+            <div class="col-md-2">
+                <input type="text"class="form-control input-md" placeholder="Oficiu ">
+            </div>
+               <label class="col-md-1 control-label" >Data</label>
+            <div class="col-md-2">
+                <input type="text"class="form-control input-md" placeholder="data ">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Codul personal</label>
+            <div class="col-md-3">
+                <input type="text"class="form-control input-md" placeholder="Codul personal ">
+            </div>
+            <label class="col-md-2 control-label">Cetatenie</label>
+            <div class="col-md-2">
+    <select id="tara" name="tara" class="form-control">
+      <option value="1">MD</option>
+      <option value="2">RO</option>
+      <option value="3">RU</option>
+      <option value="4">UA</option>
+    </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3  control-label"> Numele și prenumele părinților</label>
+        </div>
+         <div class="form-group">
+               <label class="col-md-1 control-label"> Tatăl</label>
+          <label class="col-md-1 control-label"> Nume</label>
+            <div class="col-md-2">
+                <input class="form-control"type="text"placeholder="nume">
+            </div>
+             <label class="col-md-1 control-label">Prenume</label>
+            <div class="col-md-3">
+                <input class="form-control"type="text"placeholder="prenume">
+                
+            </div>
+            
+        </div>
+                <div class="form-group">
+               <label class="col-md-1 control-label"> Mama</label>
+          <label class="col-md-1 control-label"> Nume</label>
+            <div class="col-md-2">
+                <input class="form-control"type="text"placeholder="nume">
+            </div>
+             <label class="col-md-1 control-label">Prenume</label>
+            <div class="col-md-3">
+                <input class="form-control"type="text"placeholder="prenume">
+                
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Instituția de învatămant absolvită</label>
+            <div class="col-md-6">
+  <input id="instit_abs" name="instit_abs" type="text" placeholder="instituția absolvită" class="form-control input-md">
+  </div>
+        </div>
+         <div class="form-group">
+            <label class="col-md-3 control-label">Anul absolvirii</label>
+            <div class="col-md-1">
+  <input id="anab" name="anab" type="text" placeholder="anul" class="form-control input-md">
+  </div>
+             <label class="col-md-3 control-label">Actul în baza cărui a fost admis</label>
+            <div class="col-md-3">
+  <input name="act" type="text" placeholder="numar" class="form-control input-md">
+  </div>
+        </div>
+        <div class="form-group">
+             <label class="col-md-3 control-label ">Limba de instruire </label>
+  <div class="col-md-2 ">
+    <select  name="li" class="form-control">
+      <option value="1">Română</option>
+      <option value="2">Rusă</option>
+     
+    </select>
+  </div>
+         <label class="col-md-3 control-label ">Limba străină studiată </label>
+  <div class="col-md-2 ">
+    <select  name="li" class="form-control">
+      <option value="1">Franceză</option>
+      <option value="2">Engleză</option>
+     <option value="3">Germană</option>
+    </select>
+  </div>     
+      
+        <div class="form-group">
+             <label class="col-md-3 control-label" >Necesitatea cazări în camin</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" >
+      <input type="radio" name="radios"  value="1" checked="checked">
+      Da
+    </label> 
+    <label class="radio-inline" >
+      <input type="radio" name="radios"  value="2">
+      Nu
+    </label>
+  </div>
+             
+         </div>
+         <div class="form-group">
+             <label class="col-md-1 control-label"></label>
+               <div class="col-md-2">
+  <div class="col md-2 checkbox">
+    <label >
+      <input type="checkbox" name="grup" 
+             value="">
+      Gimnaziu
+    </label>
+	</div>
+  </div>
+      <div  class="col-md-2 checkbox" >
+    <label >
+      <input type="checkbox" name="grup"  value="">
+      Livret militar
+    </label>
+
+  </div >
+         </div>
+         
+             
+             <div class="form-group checkbox">
+               <label class="col-md-2 control-label " for="grup"></label>
+          
+       <div class=" col-md-2 checkbox">
+    <label >
+      <input type="checkbox" name="grup"  value="">
+      Alolingv
+    </label>
+</div> 
+               <div class=" col-md-2 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+      Copil Orfan
+    </label>  
+                   </div>
+                  <div class=" col-md-5 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+     Copil din familie cu 4 şi mai mulţi copii
+    </label>  
+                      
+                   </div>
+                <label class="col-md-2 control-label " for="grup"></label>
+                <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+     A îndeplinit serviciul militar
+    </label>  
+                      
+      
+                   </div>
+           
+             </div>
+         <div class="form-group"> 
+                 <label class="col-md-2 control-label " for="grup"></label>
+                <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+        Copil cu deficienţe fizice şi senzoriale
+    </label>  
+                   </div>
+         
+      
+                 
+                 <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+   Copil cu ambii părinţi invalizi
+    </label>  
+                   </div>
+         </div>
+         <div class="form-group">
+             <label class="col-md-2 control-label " for="grup"></label>
+                <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+   Parinţii participanti la act milit şi Cernobîl
+    </label>  
+                   </div>
+             
+               <div class=" col-md-3 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+    Copil din familie cu 4 şi mai mulţi copii
+    </label>  
+                   </div>
+                      </div>
+           <div class="form-group">
+           <label class="col-md-2 control-label " for="grup"></label>
+                 <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+     Copil din r-le de Est, Bender
+    </label>  
+                   </div>
+            <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+   Cetateni ai ucrainei de natione romani (moldoveni)
+    </label>  
+                   </div>
+           </div>
+           <div class="form-group">
+           <label class="col-md-2 control-label " for="grup"></label>
+                 <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+     Copil din familie unul din părinți Invalid de gradul I sau II
+    </label>  
+                   </div>
+            <div class=" col-md-4 checkbox">
+             <label >
+      <input type="checkbox" name="grup"  value="">
+    Copil de etnie romă
+    </label>  
+                   </div>
+           </div>
+      
+        
+           <div class="form-group">
+                  <label  class="col-md-2 control-label  " for="dist">În baza documentelor:</label>  
+  <div class="col-md-6">
+      <textarea placeholder="Distinctiile acordate dupa absolvire"rows="3" cols="30" name="dist"  class="form-control input-md" ></textarea>
+</div>
+           </div>
+          
+           <div class="form-group">
+                  <label  class="col-md-2 control-label  " for="dist">Distinctii acordate la absolvire:</label>  
+  <div class="col-md-6">
+      <textarea placeholder="Distinctiile acordate dupa absolvire"rows="3" cols="30" name="dist"  class="form-control input-md" ></textarea>
+</div>
+           </div>
+         <div id="optiune1" class="form-group">
+             
+         </div>
+    <div class="form-group">
+  <label class="col-md-3 control-label" for="nmact">Media examen de absolvire</label>  
+  <div class="col-md-2">
+  <input  name="nmact" type="text" placeholder="media" class="form-control input-md">
+  </div>  
+  <label class="col-md-3 control-label" for="nmact">Media notelor de absolvire</label>  
+  <div class="col-md-2">
+  <input  name="nmact" type="text" placeholder="media" class="form-control input-md">
+    
+  </div>
+         </div>
+        <hr>
+        <div class="col-md-offset-1" >
+        <div class="form-group col-md-4 " style=" width:350px;">
+        <label class="col-md-7 control-label">Optiunea I</label>
+        <div class="form-group" >
+             
+            <label class="col-md-6 control-label">Limba de instruire</label>
+            <div class="col-md-4">
+  <input  id="opt1li" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+              <label class="col-md-6 control-label">
+                   <select  name="opt1set1" class="form-control" style="margin-top:-7px;">
+    <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opt1set1" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+             <label class="col-md-6 control-label">
+                   <select  name="opt1sel3" class="form-control" style="margin-top:-7px;">
+    <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opt1set2" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+               <label class="col-md-6 control-label">
+                   <select  name="set" class="form-control" style="margin-top:-7px;">
+      <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opt1set3" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+                 <label class="col-md-6 control-label">Media Optiunea I</label>
+            <div class="col-md-4 ">
+                <input  id="media1" type="number"  placeholder="media" class="form-control input-md " disabled>
+           
+            </div>
+  </div>  
+        </div>  
+        <div class="form-group col-md-4"  >
+        <label class="col-md-7 control-label">Optiunea II</label>
+        <div class="form-group" >
+             
+            <label class="col-md-6 control-label">Limba de instruire</label>
+           <div class="col-md-4">
+  <input  id="opt2li" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+              <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+     <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opt2set1" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+             <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+     <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+           <div class="col-md-4">
+  <input  id="opt2set2" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+               <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+     <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opr2set3" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+                 <label class="col-md-6 control-label">Media Optiunea II</label>
+            <div class="col-md-4 ">
+                <input  id="media2" type="text"  placeholder="media" class="form-control input-md " disabled>
+           
+            </div>
+               
+        </div>
+        </div> 
+            <div class="form-group col-md-4"  >
+        <label class="col-md-7 control-label">Optiunea III</label>
+        <div class="form-group" >
+             
+            <label class="col-md-6 control-label">Limba de instruire</label>
+           <div class="col-md-4">
+  <input  id="opt3li" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+       <div class="form-group" >
+              <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+  <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+           <div class="col-md-4">
+  <input  id="opt3set1" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+             <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+     <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+           <div class="col-md-4">
+  <input  id="opt3set2" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+               <label class="col-md-6 control-label">
+                   <select  name="li" class="form-control" style="margin-top:-7px;">
+      <option value="1">Null</option>
+      <option value="2">Limba straina</option>
+     <option value="3">Matematica</option>
+      <option value="4">Informatica</option>
+     <option value="5">Istoria</option>
+     <option value="6">Biologia</option>
+      <option value="7">Chimia</option>
+     <option value="8">Proba aptitudini</option>
+    </select>
+   </label>
+          <div class="col-md-4">
+  <input  id="opt3set3" type="number" placeholder="nota" class="form-control input-md">
+            </div>
+        </div>
+        <div class="form-group" >
+                 <label class="col-md-6 control-label">Media Optiunea III</label>
+            <div class="col-md-4 ">
+                <input  id="media3" type="text"  placeholder="media" class="form-control input-md " disabled>
+           
+            </div>
+  </div>  
+        </div>   
+        </div>
+        <hr>
+     
+        <div class="form-group" style="margin-left:100px;">
+            <INPUT class="btn btn-primary btn-lg" type="button"  onclick="calc()"value="Calculeaza" >
+       
+  </div>  
+        </div>
+        <p><a href="#" class="simple-back-to-top btn-lg"  ><span class="glyphicon glyphicon-circle-arrow-up btn-lg " style="font-size: 33px;"></span></a></p>
+        <div  align="right" style="margin-right:40px;margin-bottom:20px;" >
+                    <input Class="btn btn-md btn-info"type="button" style="margin-bottom: 10px" value="Anuleaza">
+                    <input Class="btn btn-info" type="button" style="margin-bottom: 10px" value="Genereaza PDF">
+                      <input Class="btn btn-info" type="button" style="margin-bottom: 10px" value="Editare">
+             <input Class="btn btn-info" type="button" style="margin-bottom: 10px" value="Adauga">
+        
+                </div> 
+             
+                </fieldset>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+               <footer class="container panel">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="#">Admitere</a> |  <a href="#">Datele mele</a>|<a href="#">Suport</a> |<a href="#">Iesire</a>  
+      </div>
+      <div class="col-md-4">
+        <p class="">© 2016 </p>
+      </div>
+    </div>
+  </div>
+</footer>
+        
+        
+      
+      
+       
+                 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

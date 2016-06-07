@@ -52,7 +52,7 @@
                                 </div>
                                 <label class="col-md-3 control-label
                                         ">Limba de instruire </label>
-                                <div class="col-md-2 ">
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->languages1()->get() as $den)
                                             {{$den->language}}
@@ -62,8 +62,7 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-                                <label class="col-md-2 control-label
-                                 ">    @foreach($elev as $e)
+                                <label class="col-md-2 control-label  ">    @foreach($elev as $e)
                                         @foreach($e->specialitates2()->get() as $den)
                                             {{$den->denumire}}
                                         @endforeach
@@ -95,10 +94,8 @@
                                     </label>
 
                                 </div>
-                                <label class="col-md-3 control-label
-
-                                        ">Limba de instruire </label>
-                                <div class="col-md-2 ">
+                                <label class="col-md-3 control-label">Limba de instruire </label>
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->languages2()->get() as $den)
                                             {{$den->language}}
@@ -141,7 +138,7 @@
                                 </div>
                                 <label class="col-md-3 control-label
                                         ">Limba de instruire </label>
-                                <div class="col-md-2 ">
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->languages3()->get() as $den)
                                             {{$den->language}}
@@ -153,18 +150,18 @@
                             <!--input_data-->
                             <div class="form-group">
                                 <label class="col-md-1 control-label">Nume</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->nume }}
                                     @endforeach
 
                                 </div>
-                                <label class="col-md-1 control-label
+                                <label class="col-md-2 control-label
                                  @if($errors->first('prenum'))
                                         alert alert-danger
                                         @endif
                                         ">Prenume</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->prenume }}
                                     @endforeach
@@ -175,7 +172,7 @@
                                         alert alert-danger
                                         @endif
                                         ">Patronim</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->patronimic }}
                                     @endforeach
@@ -188,7 +185,7 @@
                                         alert alert-danger
                                         @endif
                                         " for="sex">Sexul</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                        @if($e->sex==1 )
                                             masculin
@@ -197,9 +194,9 @@
                                         @endif
                                     @endforeach
                                 </div>  <!--sexul-->
-                                <label class="col-md-1 control-label
+                                <label class="col-md-2 control-label
                                      ">Etnia</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         @foreach($e->Nationalitys()->get() as $den)
                                             {{$den->nationality}}
@@ -211,7 +208,7 @@
                                 <!--natie-->
 
                                 <label class="col-md-2 control-label">Data nașterii:</label>
-                                <div class="col-md-3">
+                                <div class="col-md-2 control-label" style="margin-left: -40px;">
                                     @foreach($elev as $e)
                                         {{$e->datanasterii}}
                                     @endforeach
@@ -222,15 +219,15 @@
 
                             <div class="form-group">
                                 <label class="col-md-1 control-label ">Raion:</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->raion}}
                                     @endforeach
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-md-1 control-label" for="adresa">Adresa:</label>
-                                    <div class="col-md-4">
+                                    <label class="col-md-2 control-label" for="adresa">Adresa:</label>
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             {{$e->adresa}}
                                         @endforeach
@@ -238,8 +235,8 @@
                                     </div>
 
 
-                                    <label class="col-md-1 control-label" for="sat_oras">Sat/Oraș</label>
-                                    <div class="col-md-2">
+                                    <label class="col-md-2 control-label" for="sat_oras">Sat/Oraș</label>
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             @if($e->sat_oras ==1)
                                                 Sat
@@ -253,21 +250,21 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-1 control-label" for="telefon">Telefon:</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->telefon}}
                                     @endforeach
 
                                 </div>
                                 <label class="col-md-1 control-label " for="mob">Mobil:</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->telefon_mobil}}
                                     @endforeach
 
                                 </div>
                                 <label class="col-md-2 control-label" for="email">E-mail:</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->email}}
                                     @endforeach
@@ -283,14 +280,14 @@
                                         alert alert-danger
                                          @endif
                                         ">Seria Nr.</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->seria_certificat}}
                                     @endforeach
                                 </div>
 
                                 <label class="col-md-1 control-label">Eliberat</label>
-                                <div class="col-md-2">
+                                <div class="col-md-2 control-label" style="margin-left: -40px;">
 
                                     @foreach($elev as $e)
                                         {{$e->certificat_data_eliberarii}}
@@ -303,26 +300,26 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-1 control-label">Seria </label>
-                                <div class="col-md-1">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->seria_buletin}}
                                     @endforeach
                                 </div>
 
                                 <label class="col-md-1 control-label">Nr.</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->numar_buletin}}
                                     @endforeach
                                 </div>
                                 <label class="col-md-2 control-label">Eliberat de oficiul</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->oficiu}}
                                     @endforeach
                                 </div>
-                                <label class="col-md-1 control-label">Data eliberari</label>
-                                <div class="col-md-2">
+                                <label class="col-md-2 control-label">Data eliberari</label>
+                                <div class="col-md-2 control-label" style="margin-left: -40px;">
                                     @foreach($elev as $e)
                                         {{$e->buletin_data_eliberarii}}
                                     @endforeach
@@ -330,13 +327,13 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Codul personal</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->cod_personal}}
                                     @endforeach
                                 </div>
                                 <label class="col-md-2 control-label">Cetatenie</label>
-                                <div class="col-md-2">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         @if($e->cetatanie==1)
                                             MD
@@ -356,15 +353,15 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-1 control-label"> Tatăl</label>
-                                <label class="col-md-1 control-label"> Nume</label>
-                                <div class="col-md-2">
+                                <label class="col-md-2 control-label"> Nume</label>
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->tat_nume}}
                                     @endforeach
 
                                 </div>
-                                <label class="col-md-1 control-label">Prenume</label>
-                                <div class="col-md-3">
+                                <label class="col-md-2 control-label">Prenume</label>
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->tat_prenume}}
                                     @endforeach
@@ -374,14 +371,14 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-1 control-label"> Mama</label>
-                                <label class="col-md-1 control-label"> Nume</label>
-                                <div class="col-md-2">
+                                <label class="col-md-2 control-label"> Nume</label>
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         {{$e->mam_nume}}
                                     @endforeach
                                 </div>
-                                <label class="col-md-1 control-label">Prenume</label>
-                                <div class="col-md-3">
+                                <label class="col-md-2 control-label">Prenume</label>
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->mam_prenume}}
                                     @endforeach
@@ -391,7 +388,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Instituția de învatămant absolvită</label>
-                                <div class="col-md-6">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->inst_abs}}
                                     @endforeach
@@ -399,13 +396,13 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Anul absolvirii</label>
-                                <div class="col-md-1">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->an_abs}}
                                     @endforeach
                                 </div>
                                 <label class="col-md-3 control-label">Actul în baza cărui a fost admis</label>
-                                <div class="col-md-3">
+                                <div class="col-md-1 control-label">
                                     @foreach($elev as $e)
                                         {{$e->acte}}
                                     @endforeach
@@ -413,7 +410,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Limba de instruire </label>
-                                <div class="col-md-2 ">
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->languages3()->get() as $den)
                                             {{$den->language}}
@@ -421,7 +418,7 @@
                                     @endforeach
                                 </div>
                                 <label class="col-md-3 control-label">Limba străină studiată </label>
-                                <div class="col-md-2 ">
+                                <div class="col-md-1 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->limb_studiata()->get() as $den)
                                             {{$den->language}}
@@ -429,21 +426,21 @@
                                     @endforeach
                                 </div>
 
-                                <div class="form-group">
 
-                                    <div class="col-md-5">
-                                        Necesitatea cazări în camin:
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="col-md-3 control-label">Necesitatea cazări în camin:</label>
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             @if($e->camin == 1)
                                                 Da
-                                                @else
+                                            @else
                                                 Nu
-                                                @endif
+                                            @endif
                                         @endforeach
 
-                                    </div>
-
-                                </div>
+                                    </div></div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label"></label>
                                     <div class="col-md-2">
@@ -607,7 +604,7 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label " for="dist">În baza documentelor:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             {{$e->doc_seria}}
                                         @endforeach
@@ -618,7 +615,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label" for="dist">Distinctii acordate la
                                         absolvire:</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             {{$e->distinc_abs}}
                                         @endforeach
@@ -630,13 +627,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">Media examen de absolvire</label>
-                                    <div class="col-md-2">
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             {{$e->media_exam}}
                                         @endforeach
                                     </div>
                                     <label class="col-md-3 control-label">Media notelor de absolvire</label>
-                                    <div class="col-md-2">
+                                    <div class="col-md-1 control-label">
                                         @foreach($elev as $e)
                                             {{$e->media_discipline}}
                                         @endforeach
@@ -649,7 +646,7 @@
                                     <div class="form-group col-md-4 " style=" width:350px;">
                                         <div class="form-group">
                                             <label class="col-md-6 control-label">Media Optiunea I</label>
-                                            <div class="col-md-4 ">
+                                            <div class="col-md-1 control-label ">
                                                 @foreach($elev as $e)
                                                     {{$e->media1}}
                                                 @endforeach
@@ -661,7 +658,7 @@
 
                                         <div class="form-group">
                                             <label class="col-md-6 control-label">Media Optiunea II</label>
-                                            <div class="col-md-4 ">
+                                            <div class="col-md-1 control-label">
                                                 @foreach($elev as $e)
                                                     {{$e->media2}}
                                                 @endforeach
@@ -673,7 +670,7 @@
                                     <div class="form-group col-md-4" style="width: 350px">
 
                                             <label class="col-md-6 control-label">Media Optiunea III</label>
-                                            <div class="col-md-4 ">
+                                            <div class="col-md-1 control-label">
                                                 @foreach($elev as $e)
                                                     {{$e->media3}}
                                                 @endforeach

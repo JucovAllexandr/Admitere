@@ -49,8 +49,8 @@
       <file leaf-file-name="admiterea.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="39" column="31" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="201">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -59,7 +59,7 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3834">
+            <state relative-caret-position="395">
               <caret line="333" column="25" selection-start-line="333" selection-start-column="13" selection-end-line="333" selection-end-column="25" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
@@ -91,8 +91,8 @@
       <file leaf-file-name="Elev.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Elev.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="125">
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -534,7 +534,7 @@
       <workItem from="1465286267107" duration="35000" />
       <workItem from="1465286424481" duration="922000" />
       <workItem from="1465287367025" duration="16000" />
-      <workItem from="1465289279946" duration="3470000" />
+      <workItem from="1465289279946" duration="3966000" />
     </task>
     <task id="LOCAL-00001" summary="Firs commit">
       <created>1465286961018</created>
@@ -547,7 +547,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133750000" />
+    <option name="totallyTimeSpent" value="134246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1366" y="24" width="1366" height="744" extended-state="6" />
@@ -877,39 +877,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Elev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/data.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17424">
           <caret line="968" column="32" selection-start-line="968" selection-start-column="32" selection-end-line="968" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3834">
-          <caret line="333" column="25" selection-start-line="333" selection-start-column="13" selection-end-line="333" selection-end-column="25" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-            <element signature="e#4799#5344#0#PHP" expanded="false" />
-            <element signature="e#5353#5856#0#PHP" expanded="false" />
-            <element signature="e#5866#6435#0#PHP" expanded="false" />
-            <element signature="e#6444#6911#0#PHP" expanded="false" />
-            <element signature="e#6920#7465#0#PHP" expanded="false" />
-            <element signature="e#7474#7977#0#PHP" expanded="false" />
-            <element signature="e#7987#8556#0#PHP" expanded="false" />
-            <element signature="e#8565#9032#0#PHP" expanded="false" />
-            <element signature="e#9041#9586#0#PHP" expanded="false" />
-            <element signature="e#9595#10098#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,10 +938,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Elev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="333" column="25" selection-start-line="333" selection-start-column="13" selection-end-line="333" selection-end-column="25" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#4799#5344#0#PHP" expanded="false" />
+            <element signature="e#5353#5856#0#PHP" expanded="false" />
+            <element signature="e#5866#6435#0#PHP" expanded="false" />
+            <element signature="e#6444#6911#0#PHP" expanded="false" />
+            <element signature="e#6920#7465#0#PHP" expanded="false" />
+            <element signature="e#7474#7977#0#PHP" expanded="false" />
+            <element signature="e#7987#8556#0#PHP" expanded="false" />
+            <element signature="e#8565#9032#0#PHP" expanded="false" />
+            <element signature="e#9041#9586#0#PHP" expanded="false" />
+            <element signature="e#9595#10098#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="201">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
         </state>
       </provider>

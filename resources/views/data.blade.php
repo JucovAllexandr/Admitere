@@ -586,50 +586,13 @@
                                     </div>
 
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 control-label"></label>
-                                    <div class="col-md-2">
-                                        <div class="col md-2 checkbox">
-                                            <label>
-                                                @if($errors->first('gimnaz'))
-                                                    class=" alert alert-danger"
-                                                @endif
-                                                <input type="checkbox" name="gimnaz" value="1"
-                                                       @if(old('gimnaz')) checked @endif
-                                                >
-                                                Gimnaziu
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 checkbox">
-                                        <label>
-                                            @if($errors->first('liv_mil'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="liv_mil" value="1"
-                                                   @if(old('liv_mil')) checked @endif
-                                            >
-                                            Livret militar
-                                        </label>
 
-                                    </div>
-                                </div>
 
+<hr>                              <div class="form-group"> <label class="col-md-3 control-label " for="grup">Cota de 15%</label></div>
 
                                 <div class="form-group checkbox">
                                     <label class="col-md-2 control-label " for="grup"></label>
 
-                                    <div class=" col-md-2 checkbox">
-                                        <label>
-                                            @if($errors->first('aloling'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="aloling" value="1"
-                                                   @if(old('aloling')) checked @endif
-                                            >
-                                            Alolingv
-                                        </label>
-                                    </div>
                                     <div class=" col-md-2 checkbox">
                                         <label>
                                             @if($errors->first('cop_orf'))
@@ -640,8 +603,8 @@
                                             >
                                             Copil Orfan
                                         </label>
-                                    </div>
-                                    <div class=" col-md-5 checkbox">
+                                    </div><label class="col-md-2 control-label " for="grup"></label>
+                                    <div class=" col-md-4 checkbox">
                                         <label>
                                             @if($errors->first('patru_cop'))
                                                 class=" alert alert-danger"
@@ -653,20 +616,7 @@
                                         </label>
 
                                     </div>
-                                    <label class="col-md-2 control-label " for="grup"></label>
-                                    <div class=" col-md-4 checkbox">
-                                        <label>
-                                            @if($errors->first('indep_serv_mil'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="indep_serv_mil" value="1"
-                                                   @if(old('indep_serv_mil')) checked @endif
-                                            >
-                                            A îndeplinit serviciul militar
-                                        </label>
 
-
-                                    </div>
 
                                 </div>
                                 <div class="form-group">
@@ -724,6 +674,33 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label " for="grup"></label>
+                                    <div class=" col-md-3 checkbox">
+                                        <label>
+                                            @if($errors->first('cetatean_ucr'))
+                                                class=" alert alert-danger"
+                                            @endif
+                                            <input type="checkbox" name="cetatean_ucr" value="1"
+
+                                                   @if(old('cetatean_ucr')) checked @endif>
+                                            Cetateni ai ucrainei de natione romani (moldoveni)
+                                        </label>
+                                    </div>
+                                    <label class="col-md-1 control-label " for="grup"></label>
+                                    <div class=" col-md-4 checkbox">
+                                        <label>
+                                            @if($errors->first('parint_invalid'))
+                                                class=" alert alert-danger"
+                                            @endif
+                                            <input type="checkbox" name="parint_invalid" value="1"
+                                                   @if(old('parint_invalid')) checked @endif>
+                                            Copil din familie unul din părinți Invalid de gradul I sau II
+                                        </label>
+                                    </div>
+                                </div>
+
+<hr>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
                                             @if($errors->first('copil_est'))
@@ -735,34 +712,22 @@
                                             Copil din r-le de Est, Bender
                                         </label>
                                     </div>
-                                    <div class=" col-md-4 checkbox">
-                                        <label>
-                                            @if($errors->first('cetatean_ucr'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="cetatean_ucr" value="1"
 
-                                                   @if(old('cetatean_ucr')) checked @endif>
-                                            Cetateni ai ucrainei de natione romani (moldoveni)
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 control-label " for="grup"></label>
-                                    <div class=" col-md-4 checkbox">
+                                    <div class="col-md-2 checkbox">
                                         <label>
-                                            @if($errors->first('parint_invalid'))
+                                            @if($errors->first('liv_mil'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="parint_invalid" value="1"
-                                                   @if(old('parint_invalid')) checked @endif>
-                                            Copil din familie unul din părinți Invalid de gradul I sau II
+                                            <input type="checkbox" name="liv_mil" value="1"
+                                                   @if(old('liv_mil')) checked @endif
+                                            >
+                                            Livret militar
                                         </label>
+
                                     </div>
 
                                 </div>
-
-
+                                <hr>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label
                                     @if($errors->first('baza_doc'))

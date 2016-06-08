@@ -19,7 +19,7 @@
                             @endforeach
 
                             <div class="form-group ">
-                                <label class="col-md-2 control-label
+                                <label class="col-md-4 control-label
                                         ">@foreach($elev as $e)
                                         @foreach($e->specialitates()->get() as $den)
                                             {{$den->denumire}}
@@ -34,7 +34,7 @@
                                                    @foreach($elev as $e)
                                                    @if($e->buget1) checked @endif
                                                    @endforeach
-                                            >
+                                                   disabled   >
                                             Buget
                                         </label>
                                     </div>
@@ -45,7 +45,7 @@
                                                @foreach($elev as $e)
                                                @if($e->contract1) checked @endif
                                                 @endforeach
-                                        >
+                                               disabled    >
                                         Contract
                                     </label>
 
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-                                <label class="col-md-2 control-label  ">    @foreach($elev as $e)
+                                <label class="col-md-4 control-label  ">    @foreach($elev as $e)
                                         @foreach($e->specialitates2()->get() as $den)
                                             {{$den->denumire}}
                                         @endforeach
@@ -77,7 +77,7 @@
                                                    @foreach($elev as $e)
                                                    @if($e->buget2) checked @endif
                                                     @endforeach
-                                            >
+                                                   disabled   >
                                             Buget
                                         </label>
                                     </div>
@@ -89,7 +89,7 @@
                                                @foreach($elev as $e)
                                                @if($e->contract2) checked @endif
                                                 @endforeach
-                                        >
+                                               disabled   >
                                         Contract
                                     </label>
 
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-                                <label class="col-md-2 control-label ">
+                                <label class="col-md-4 control-label ">
                                     @foreach($elev as $e)
                                         @foreach($e->specialitates3()->get() as $den)
                                             {{$den->denumire}}
@@ -120,7 +120,7 @@
                                                    @foreach($elev as $e)
                                                    @if($e->buget3) checked @endif
                                                     @endforeach
-                                            >
+                                         disabled   >
                                             Buget
                                         </label>
                                     </div>
@@ -131,7 +131,7 @@
                                                @foreach($elev as $e)
                                                @if($e->contract3) checked @endif
                                                 @endforeach
-                                        >
+                                               disabled     >
                                         Contract
                                     </label>
 
@@ -450,7 +450,7 @@
                                                 <input type="checkbox" @foreach($elev as $e)
                                                 @if($e->gimnaziu) checked @endif
                                                         @endforeach
-                                                >
+                                                disabled    >
                                                 Gimnaziu
                                             </label>
                                         </div>
@@ -461,7 +461,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->livret_militar) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled  >
                                             Livret militar
                                         </label>
 
@@ -478,7 +478,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->aloling) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled  >
                                             Alolingv
                                         </label>
                                     </div>
@@ -488,7 +488,7 @@
                                             <input type="checkbox"  @foreach($elev as $e)
                                             @if($e->cop_orfan) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Copil Orfan
                                         </label>
                                     </div>
@@ -498,7 +498,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->mm_patru_copii) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Copil din familie cu 4 şi mai mulţi copii
                                         </label>
 
@@ -510,7 +510,7 @@
                                             <input type="checkbox" name="indep_serv_mil" @foreach($elev as $e)
                                             @if($e->serv_milit) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             A îndeplinit serviciul militar
                                         </label>
 
@@ -526,7 +526,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->cop_deficiente) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Copil cu deficienţe fizice şi senzoriale
                                         </label>
                                     </div>
@@ -538,7 +538,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->parinti_invalizi) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Copil cu ambii părinţi invalizi
                                         </label>
                                     </div>
@@ -551,7 +551,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->parinti_Cernobil) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Parinţii participanti la act milit şi Cernobîl
                                         </label>
                                     </div>
@@ -561,7 +561,7 @@
                                             <input type="checkbox"  @foreach($elev as $e)
                                             @if($e->cop_roman) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled   >
                                             Copil de etnie romă
                                         </label>
                                     </div>
@@ -573,7 +573,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->raion_est) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled  >
                                             Copil din r-le de Est, Bender
                                         </label>
                                     </div>
@@ -583,7 +583,7 @@
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->ucrainean) checked @endif
                                                     @endforeach
-                                            >
+                                            disabled  >
                                             Cetateni ai ucrainei de natione romani (moldoveni)
                                         </label>
                                     </div>
@@ -594,7 +594,8 @@
                                         <label>
                                             <input type="checkbox" @foreach($elev as $e)
                                             @if($e->un_par_inv) checked @endif
-                                                @endforeach>
+                                                @endforeach
+                                            disabled >
                                             Un parinte invalid
                                         </label>
                                     </div>

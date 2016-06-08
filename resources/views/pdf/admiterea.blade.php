@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
 </head>
 <style>
     body{
-        font-family: "Times New Roman";
+        font-family: DejaVu Sans, sans-serif;
+        font-size: 13px;
     }
     .tab{
         padding-right:5em;
@@ -56,9 +58,11 @@ Data: {{$e->buletin_data_eliberarii}}</p>
     </tr>
     <tr>
         <td>
+
             @if($e->buget1)
             @foreach($e->specialitates()->get() as $den)
-                {{$den->denumire}}
+                {{mb_detect_encoding($den->denumire)}}
+                {{--mb_convert_encoding ($den->denumire, "UTF-8")--}}
             @endforeach
             @endif
         </td>

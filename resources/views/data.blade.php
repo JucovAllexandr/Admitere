@@ -283,7 +283,7 @@
                                 </div>
                             </div>
 
-
+<hr>
                             <div class="form-group">
                                 <label class="col-md-1 control-label
                                 @if($errors->first('raion'))
@@ -301,12 +301,16 @@
                                         @if($errors->first('adresa'))
                                             alert alert-danger
                                              @endif
-                                            " for="adresa">Adresa:</label>
+                                            " for="adresa">Strada:</label>
                                     <div class="col-md-4">
-                                        <input id="adresa" name="adresa" type="text" placeholder="adresa"
+                                        <input  name="strada" type="text" placeholder="strada"
                                                value="{{old('adresa')}}" class="form-control input-md  ">
                                     </div>
 
+                                    <div class="col-md-4">
+                                        <input  name="strada" type="text" placeholder="strada"
+                                                value="{{old('adresa')}}" class="form-control input-md  ">
+                                    </div>
 
                                     <label class="col-md-1 control-label
                                     @if($errors->first('sat_oras'))
@@ -320,7 +324,7 @@
                                         </select>
                                     </div>
                                 </div>
-
+<hr>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-1 control-label

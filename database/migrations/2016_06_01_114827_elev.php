@@ -38,7 +38,7 @@ class Elev extends Migration
             $table->integer('numar_buletin');
             $table->integer('oficiu');
             $table->integer('an_abs');
-            $table->integer('acte');
+            $table->string('acte');
             $table->string('sex');
             $table->date('datanasterii');
             $table->date('certificat_data_eliberarii');

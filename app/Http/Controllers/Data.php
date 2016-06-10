@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Note;
-use App\User;
 use Illuminate\Http\Request;
 use Auth;
 use App\Http\Requests;
@@ -262,21 +261,28 @@ class Data extends Controller
         
         if($request->specialitate1 !=0)
             $media1=($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4;
-        if($request->specialitate2 !=0)
+        if(!is_null($request->specialitate2))
             $media2=($request->opt2_nt1+$request->opt2_nt2+$request->opt2_nt3+$request->opt2_nt4)/4;
-        if($request->specialitate3 !=0)
+        if(!is_null($request->specialitate3))
             $media3=($request->opt3_nt1+$request->opt3_nt2+$request->opt3_nt3+$request->opt3_nt4)/4;
-        
+
+        $id1 = 0;
+        $id2 = 0;
+
+        if(isset($nota2)) $id1=$nota2->id;
+        if(isset($nota3)) $id2=$nota3->id;
+
         $dt = Carbon::parse($request->data_nast);
         $dt2 = Carbon::parse($request->dat_elib);
         $dt3 = Carbon::parse($request->dat_elib2);
-        $elev = Elev::create([
+        Elev::create([
+            'user_id' =>  Auth::user()->id,
             'id_specialitate' => $request->specialitate1,
             'id_specialitate2' => $request->specialitate2,
             'id_specialitate3' => $request->specialitate3,
             'nota1' => $nota1->id,
-            'nota2' => $nota2->id,
-            'nota3' => $nota3->id,
+            'nota2' => $id1,
+            'nota3' => $id2,
             'media1' => $media1,
             'media2' => $media2,
             'media3' => $media3,
@@ -302,18 +308,18 @@ class Data extends Controller
             'raion_est' => ifNull($request->copil_est),
             'ucrainean' => ifNull($request->cetatean_ucr),
             'parint_invalid' => ifNull($request->un_par_inv),
-            'nume' => $request->nume,
-            'prenume' => $request->prenum,
-            'patronimic' => $request->patronim,
+            'nume' => strtolower($request->nume),
+            'prenume' => strtolower($request->prenum),
+            'patronimic' => strtolower($request->patronim),
             'sex' => $request->sex,
             'nationality_id' => $request->natia,
             'datanasterii' => Carbon::createFromDate($dt->year, $dt->month, $dt->day),
 
-            'raion' => $request->raion,
+            'raion' => strtolower($request->raion),
            // 'adresa' => $request->adresa,
             'sat_oras' => $request->sat_oras,
-            'num_sat_oras' => $request->num_sat_oras,
-            'strada' => $request->strada,
+            'num_sat_oras' => strtolower($request->num_sat_oras),
+            'strada' => strtolower($request->strada),
             'nr_bloc' => $request->nr_bloc,
             
             'telefon' => $request->telefon,
@@ -326,10 +332,10 @@ class Data extends Controller
             'oficiu' => $request->oficiu,
             'buletin_data_eliberarii' => Carbon::createFromDate($dt3->year, $dt3->month, $dt3->day),
             'cetatanie' => $request->cetatanie,
-            'tat_nume' => $request->tnume,
-            'tat_prenume' => $request->tprenume,
-            'mam_nume' => $request->mnume,
-            'mam_prenume' => $request->mprenume,
+            'tat_nume' => strtolower($request->tnume),
+            'tat_prenume' => strtolower($request->tprenume),
+            'mam_nume' => strtolower($request->mnume),
+            'mam_prenume' => strtolower($request->mprenume),
             'inst_abs' => $request->instit_abs,
             'an_abs' => $request->anab,
             'acte' => $request->act,
@@ -343,7 +349,7 @@ class Data extends Controller
             'cod_personal' => $request->cod_pers,
         ]);
         //dd(Auth::user()->id);
-        User::where('id', Auth::user()->id)->update(['elev_id' => $elev->id]);
+        //User::where('id', Auth::user()->id)->update(['elev_id' => $elev->id]);
         //dd($request);
        return redirect('/data');
     }

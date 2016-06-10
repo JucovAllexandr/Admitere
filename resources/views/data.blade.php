@@ -28,7 +28,7 @@
                                         ">Selectati Optiunea 1</label>
                                 <div class="col-md-2 ">
                                     <select id="specialitate1" name="specialitate1" class="form-control ">
-                                        <option value="0" id="o1-null">Null</option>
+                                        <option value="" id="o1-null">Null</option>
                                         <option value="1" id="o1-as_l">AS:lucrător social</option>
                                         <option value="2" id="o1-as_p">AS:pedagog social</option>
                                         <option value="3" id="o1-web">Administrarea aplicațiilor WEB</option>
@@ -88,7 +88,7 @@
                                         ">Selectati Optiunea 2</label>
                                 <div class="col-md-2 ">
                                     <select id="specialitate2" name="specialitate2" class="form-control">
-                                        <option value="0" id="o1-null">Null</option>
+                                        <option value="" id="o1-null">Null</option>
                                         <option value="1" id="o2-as_l">AS:lucrător social</option>
                                         <option value="2" id="o2-as_p">AS:pedagog social</option>
                                         <option value="3" id="o2-web">Administrarea aplicațiilor WEB</option>
@@ -151,7 +151,7 @@
                                         ">Selectati Optiunea 3</label>
                                 <div class="col-md-2 ">
                                     <select id="specialitate3" name="specialitate3" class="form-control">
-                                        <option value="0" id="o1-null">Null</option>
+                                        <option value="" id="o1-null">Null</option>
                                         <option value="1" id="o3-as_l">AS:lucrător social</option>
                                         <option value="2" id="o31-as_p">AS:pedagog social</option>
                                         <option value="3" id="o3-web">Administrarea aplicațiilor WEB</option>

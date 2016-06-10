@@ -14,6 +14,7 @@ class Elev extends Migration
     {
         Schema::create('elev', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->unsignedInteger('id_specialitate')->unique();
             $table->unsignedInteger('id_specialitate2')->unique();
             $table->unsignedInteger('id_specialitate3')->unique();

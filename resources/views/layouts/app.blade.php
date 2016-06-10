@@ -32,12 +32,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class=""><a href="{{URL::to('/')}}">Admitere</a></li>
                 @if(Auth::check())
-                    <li class=""><a href="{{URL::to('/data')}}">Datele mele</a></li>
+                    <li class=""><a href="{{URL::to('/data')}}">Adauga elev</a></li>
                 @else
                     <li class=""><a href="{{URL::to('/register')}}">Inregistrare</a></li>
                 @endif
 
-                <li class=""><a href="{{URL::to('/help')}}">Suport</a></li>
+                <li class=""><a href="{{URL::to('/show')}}">Arata</a></li>
                 @if(Auth::check())
                     <li class=""><a href="{{URL::to('/logout')}}">Iesire</a></li>
                     @else
@@ -60,11 +60,11 @@
 
                 <a href="{{URL::to('/')}}">Admitere</a> |
                 @if(Auth::check())
-                    <a href="{{URL::to('/data')}}">Datele mele</a>
+                    <a href="{{URL::to('/data')}}">Adauga elev</a>
                 @else
                     <a href="{{URL::to('/register')}}">Inregistrare</a>
                 @endif
-                    | <a href="{{URL::to('/help')}}">Suport</a> |
+                    | <a href="{{URL::to('/show')}}">Arata</a> |
                 @if(Auth::check())
                     <a href="{{URL::to('/logout')}}">Iesire</a>
                 @else

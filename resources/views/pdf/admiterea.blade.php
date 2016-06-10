@@ -23,9 +23,9 @@
 <h3 align="center" style="text-transform: uppercase;">Colegiul Industrial Pedagogic</h3>
 <h4 align="center">Admiterea {{\Carbon\Carbon::now()->year}}</h4>
 @foreach($elev as $e)
-<span class="tab">Numele: {{$e->nume}} </span>
-<span class="tab">Prenumele: {{$e->prenume}}</span>
-<span class="tab">Patronimicul: {{$e->patronimic}}</span>
+<span class="tab">Numele: {{ucfirst($e->nume)}} </span>
+<span class="tab">Prenumele: {{ucfirst($e->prenume)}}</span>
+<span class="tab">Patronimicul: {{ucfirst($e->patronimic)}}</span>
 <p>Sexul:
 @if($e->sex == 1)
     Masculin
@@ -35,7 +35,14 @@
 </p>
 <p>Data, luna si anul nasterii:@if($t = new \Carbon\Carbon($e->datanasterii)) {{$t->day}}/{{$t->month}}/{{$t->year}} @endif</p>
 <p>Locul nasterii: </p>
-<p>Adresa: r.{{$e->raion}}.,</p>
+<p>Adresa: r.{{ucfirst($e->raion)}}.,
+@if($e->sat_oras==1)
+    s.{{ucfirst($e->num_sat_oras)}}
+@else
+        o.{{ucfirst($e->num_sat_oras)}}
+    @endif
+
+</p>
 <p>Codul personal: {{$e->cod_personal}}</p>
 <p><span class="tab2">Seria: {{$e->seria_buletin}}</span>
    Nr: {{$e->numar_buletin}}</p>
@@ -43,7 +50,7 @@
 Data: {{$e->buletin_data_eliberarii}}</p>
 <p>Nationalitatea:
     @foreach($e->Nationalitys()->get() as $den)
-    {{$den->nationality}}
+    {{ucfirst($den->nationality)}}
     @endforeach
 </p>
 <table border="0">
@@ -61,8 +68,9 @@ Data: {{$e->buletin_data_eliberarii}}</p>
 
             @if($e->buget1)
             @foreach($e->specialitates()->get() as $den)
-                {{mb_detect_encoding($den->denumire)}}
+                {{--mb_detect_encoding($den->denumire)--}}
                 {{--mb_convert_encoding ($den->denumire, "UTF-8")--}}
+                {{ucfirst($den->denumire)}}
             @endforeach
             @endif
         </td>
@@ -74,7 +82,7 @@ Data: {{$e->buletin_data_eliberarii}}</p>
         <td>
             @if($e->contract1)
             @foreach($e->specialitates()->get() as $den)
-                {{$den->denumire}}
+                {{ucfirst($den->denumire)}}
             @endforeach
             @endif
         </td>
@@ -88,7 +96,7 @@ Data: {{$e->buletin_data_eliberarii}}</p>
         <td>
             @if($e->buget2)
                 @foreach($e->specialitates2()->get() as $den)
-                    {{$den->denumire}}
+                    {{ucfirst($den->denumire)}}
                 @endforeach
             @endif
         </td>
@@ -100,7 +108,7 @@ Data: {{$e->buletin_data_eliberarii}}</p>
         <td>
             @if($e->contract2)
                 @foreach($e->specialitates2()->get() as $den)
-                    {{$den->denumire}}
+                    {{ucfirst($den->denumire)}}
                 @endforeach
             @endif
         </td>
@@ -114,7 +122,7 @@ Data: {{$e->buletin_data_eliberarii}}</p>
         <td>
             @if($e->buget3)
                 @foreach($e->specialitates3()->get() as $den)
-                    {{$den->denumire}}
+                    {{ucfirst($den->denumire)}}
                 @endforeach
             @endif
         </td>
@@ -126,7 +134,7 @@ Data: {{$e->buletin_data_eliberarii}}</p>
         <td>
             @if($e->contract3)
                 @foreach($e->specialitates3()->get() as $den)
-                    {{$den->denumire}}
+                    {{ucfirst($den->denumire)}}
                 @endforeach
             @endif
         </td>
@@ -144,12 +152,12 @@ Data: {{$e->buletin_data_eliberarii}}</p>
 Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
 <p>Limba de instruire:
     @foreach($e->languages3()->get() as $den)
-        {{$den->language}}
+        {{ucfirst($den->language)}}
     @endforeach
 </p>
 <p>Limba straina studiata:
     @foreach($e->limb_studiata()->get() as $den)
-        {{$den->language}}
+        {{ucfirst($den->language)}}
     @endforeach
 </p>
 <p>Evidenta militara:

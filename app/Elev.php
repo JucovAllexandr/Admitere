@@ -8,6 +8,7 @@ class Elev extends Model
 {
     protected $table = "elev";
     protected $fillable = [
+        'user_id',
         'id_specialitate',
         'id_specialitate2',
         'id_specialitate3',

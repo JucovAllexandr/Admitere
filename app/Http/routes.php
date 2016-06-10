@@ -14,19 +14,19 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/help',function(){
-    return view('help');
+Route::get('/show',function(){
+    return view('data_out');
 });
 
-Route::post('/help','Help@message');
+//Route::post('/help','Help@message');
 
 Route::get('/data',function(){
-    if(Auth::user()->elev_id == 0)
+    //if(Auth::user()->elev_id == 0)
     return view('data');
-    else{
-        $this->data['elev'] = App\Elev::where('id',Auth::user()->elev_id)->get();
-        return view('data_out',$this->data);
-    }
+    //else{
+     //   $this->data['elev'] = App\Elev::where('id',Auth::user()->elev_id)->get();
+    //    return view('data_out',$this->data);
+    //}
 });
 Route::get('/pdf','PdfController@index');
 Route::post('/data','Data@index');

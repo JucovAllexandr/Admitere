@@ -47,7 +47,11 @@ class Elev extends Model
         'cetatanie',
         'seria_certificat',
         'seria_buletin',
-        'adresa',
+        
+        'num_sat_oras',
+        'strada',
+        'nr_bloc',
+        
         'raion',
         'telefon',
         'telefon_mobil',

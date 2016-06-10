@@ -231,7 +231,7 @@
                                            value="{{old('prenum')}}" type="text" placeholder="prenume">
 
                                 </div>
-                                <label class="col-md-2 control-label
+                                <label class="col-md-1 control-label
                                 @if($errors->first('patronim'))
                                         alert alert-danger
                                         @endif
@@ -254,12 +254,12 @@
                                         <option value="2">femenin</option>
                                     </select>
                                 </div>  <!--sexul-->
-                                <label class="col-md-1 control-label
+                                <label style="margin-right:10px;"  class="col-md-1 control-label
                                        @if($errors->first('natia'))
                                         alert alert-danger
                                          @endif
-                                        ">Etnia</label>
-                                <div class="col-md-3">
+                                        ">Nationalitatea</label>
+                                <div class="col-md-2">
 
                                     <select id="natia" name="natia" class="form-control">
                                         @foreach(\App\Nationality::orderBy('nationality')->get() as $n)
@@ -298,34 +298,51 @@
 
                                 <div class="form-group">
                                     <label class="col-md-1 control-label
-                                        @if($errors->first('adresa'))
-                                            alert alert-danger
-                                             @endif
-                                            " for="adresa">Strada:</label>
-                                    <div class="col-md-4">
-                                        <input  name="strada" type="text" placeholder="strada"
-                                               value="{{old('adresa')}}" class="form-control input-md  ">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <input  name="strada" type="text" placeholder="strada"
-                                                value="{{old('adresa')}}" class="form-control input-md  ">
-                                    </div>
-
-                                    <label class="col-md-1 control-label
                                     @if($errors->first('sat_oras'))
                                             alert alert-danger
                                              @endif
-                                            " for="sat_oras">Sat/Oraș</label>
+                                            " >Sat/Oraș</label>
                                     <div class="col-md-2">
                                         <select id="sat_oras" name="sat_oras" class="form-control">
                                             <option value="1">Sat</option>
                                             <option value="2">Oraș</option>
                                         </select>
                                     </div>
+
+                                    <label class="col-md-2 control-label
+                                        @if($errors->first('num_sat_oras'))
+                                            alert alert-danger
+                                             @endif
+                                            " >Nume (sat/oras):</label>
+                                    <div class="col-md-3">
+                                        <input  name="num_sat_oras" type="text" placeholder="Nume (sat/oras)"
+                                               value="{{old('num_sat_oras')}}" class="form-control input-md  ">
+                                    </div>
+
                                 </div>
-<hr>
                             </div>
+                                <div class="form-group">
+                                    <label class="col-md-1 control-label
+                                        @if($errors->first('strada'))
+                                            alert alert-danger
+                                             @endif
+                                            " >Strada:</label>
+                                    <div class="col-md-3">
+                                        <input  name="strada" type="text" placeholder="Strada"
+                                                value="{{old('strada')}}" class="form-control input-md  ">
+                                    </div>
+
+                                    <label class="col-md-2 control-label
+                                        @if($errors->first('nr_bloc'))
+                                            alert alert-danger
+                                             @endif
+                                            " >Nr bloc/apartament:</label>
+                                    <div class="col-md-3">
+                                        <input  name="nr_bloc" type="text" placeholder="Numar"
+                                                value="{{old('nr_bloc')}}" class="form-control input-md  ">
+                                    </div>
+                                </div>
+                                <hr>
                             <div class="form-group">
                                 <label class="col-md-1 control-label
                                  @if($errors->first('telefon'))

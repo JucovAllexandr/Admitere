@@ -66,9 +66,13 @@ class Data extends Controller
             'sex' => 'required|between:1,2',
             'natia' => '',
             'data_nast' => 'required|date_format:d.m.Y',
+
             'raion' => 'required|string|max:255',
-           // 'adresa' => 'required|string|max:255',
             'sat_oras' => 'required|between:1,2',
+            'num_sat_oras' => 'required|string|max:255',
+            'strada' => 'required|string|max:255',
+            'nr_bloc' => 'required|integer|min:0',
+
             'telefon' => 'required',
             'mobi' => 'required',
             'email' => 'required|email|unique:elev',
@@ -304,9 +308,14 @@ class Data extends Controller
             'sex' => $request->sex,
             'nationality_id' => $request->natia,
             'datanasterii' => Carbon::createFromDate($dt->year, $dt->month, $dt->day),
+
             'raion' => $request->raion,
            // 'adresa' => $request->adresa,
             'sat_oras' => $request->sat_oras,
+            'num_sat_oras' => $request->num_sat_oras,
+            'strada' => $request->strada,
+            'nr_bloc' => $request->nr_bloc,
+            
             'telefon' => $request->telefon,
             'telefon_mobil' => $request->mobi,
             'email' => $request->email,

@@ -154,9 +154,9 @@ Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
 </p>
 <p>Evidenta militara:
     @if($e->serv_milit)
-    Incomporabil
+    Incorporabil
         @else
-    Nu Incomporabil
+    Neincorporabil
     @endif
 </p>
 <p>Telefon fix: {{$e->telefon}}</p>

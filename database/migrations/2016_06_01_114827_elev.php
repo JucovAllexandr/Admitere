@@ -50,8 +50,12 @@ class Elev extends Migration
             $table->string('cetatanie');
             $table->string('seria_certificat');
             $table->string('seria_buletin');
-            $table->string('adresa');
+
+            $table->string('num_sat_oras');
+            $table->string('strada');
             $table->string('raion');
+            $table->integer('nr_bloc');
+
             $table->string('telefon');
             $table->string('telefon_mobil');
             $table->string('sat_oras');

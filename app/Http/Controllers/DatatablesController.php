@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Datatables;
-use App\User;
-use App\Nationality;
+use App\Elev;
 class DatatablesController extends Controller
 {
     public function getIndex()
@@ -17,9 +16,19 @@ class DatatablesController extends Controller
 
     public function anyData()
     {
-        $users = User::select(['id','name','email','created_at','updated_at']);
+        $elevi = Elev::select(['id','id_specialitate','id_specialitate2','id_specialitate3','nume','prenume']);
+
+        //$elevi = Elev::join('users', 'posts.user_id', '=', 'users.id')
+          //  ->select(['id_specialitate','id_specialitate2','id_specialitate3','nume','prenume']);
+
+
         //$users = Nationality::select(['id','name','email','created_at','updated_at']);
-        return Datatables::of($users)->make(true);
+        return Datatables::of($elevi)->addColumn('pdf', function ($elevi) {
+            return '<a href="#edit-'.$elevi->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i>Pdf'.$elevi->id.'</a>';
+        })->addColumn('specialitate', function ($sp) {
+            foreach ($sp->specialitates()->get() as $e)
+        return $e->denumire;
+    })->editColumn('id', '{{$id}}')->make(true);
     }
 
 }

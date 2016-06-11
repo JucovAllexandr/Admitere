@@ -8,11 +8,13 @@
             <table class="table table-bordered" id="users-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
+                    <th>Specialitate 1</th>
+                    <th>Specialitate 2</th>
+                    <th>Specialitate 3</th>
+                    <th>Nume</th>
+                    <th>Prenume</th>
+                    <th>Pdf</th>
+                    <th>Specialitate</th>
                 </tr>
                 </thead>
 
@@ -25,11 +27,13 @@
                         serverSide: true,
                         ajax: '{{ url('show/data') }}',
                         columns: [
-                            {data: 'id', name: 'id'},
-                            {data: 'name', name: 'name'},
-                            {data: 'email', name: 'email'},
-                            {data: 'created_at', name: 'created_at'},
-                            //{data: 'updated_at', name: 'updated_at'}
+                            {data: 'id_specialitate'},
+                            {data: 'id_specialitate2'},
+                            {data: 'id_specialitate3'},
+                            {data: 'nume'},
+                            {data: 'prenume'},
+                            {data: 'pdf', name: 'pdf', orderable: false, searchable: false},
+                            {data: 'specialitate', name: 'specialitate'}
                         ]
                     });
                 });

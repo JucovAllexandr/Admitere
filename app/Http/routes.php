@@ -14,9 +14,12 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/show',function(){
-    return view('data_out');
-});
+/*Route::controller('show', 'DatatablesController', [
+    'anyData'  => 'show.data',
+    'getIndex' => 'show',
+]);*/
+Route::get('/show','DatatablesController@getIndex');
+Route::get('/show/data','DatatablesController@anyData');
 
 //Route::post('/help','Help@message');
 

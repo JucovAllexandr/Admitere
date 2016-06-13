@@ -260,7 +260,22 @@ class Data extends Controller
         }
         
         if($request->specialitate1 !=0)
-            $media1=($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4;
+            //informatica contabilitate , ecologie , as sociala
+            $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
+        $media1 += $request->med_ex_ab * 0.4;
+        //arte coregrafie interpritare muzicala pictura
+        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;
+        $media1 += $request->opt1_nt4 * 0.5;
+        $media1 += $request->med_ex_ab * 0.2;
+        //est
+        //informatica contabilitate , ecologie , as sociala
+        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.4;
+        $media1 += $request->med_ex_ab * 0.6;
+        //arte coregrafie interpritare muzicala pictura
+        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.2;
+        $media1 += $request->opt1_nt4 * 0.5;
+        $media1 += $request->med_ex_ab * 0.3;
+
         if(!is_null($request->specialitate2))
             $media2=($request->opt2_nt1+$request->opt2_nt2+$request->opt2_nt3+$request->opt2_nt4)/4;
         if(!is_null($request->specialitate3))

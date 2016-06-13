@@ -8,13 +8,13 @@
             <table class="table table-bordered" id="users-table">
                 <thead>
                 <tr>
-                    <th>Specialitate 1</th>
-                    <th>Specialitate 2</th>
-                    <th>Specialitate 3</th>
                     <th>Nume</th>
                     <th>Prenume</th>
                     <th>Pdf</th>
-                    <th>Specialitate</th>
+                    <th>Specialitate 1</th>
+                    <th>Media</th>
+                    <th>Specialitate 2</th>
+                    <th>Specialitate 3</th>
                 </tr>
                 </thead>
 
@@ -27,13 +27,13 @@
                         serverSide: true,
                         ajax: '{{ url('show/data') }}',
                         columns: [
-                            {data: 'id_specialitate'},
-                            {data: 'id_specialitate2'},
-                            {data: 'id_specialitate3'},
                             {data: 'nume'},
                             {data: 'prenume'},
                             {data: 'pdf', name: 'pdf', orderable: false, searchable: false},
-                            {data: 'specialitate', name: 'specialitate'}
+                            {data: 'specialitate1', name: 'specialitate1'},
+                            {data: 'media1', name: 'media1'},
+                            {data: 'specialitate2', name: 'specialitate2'},
+                            {data: 'specialitate3', name: 'specialitate3'}
                         ]
                     });
                 });

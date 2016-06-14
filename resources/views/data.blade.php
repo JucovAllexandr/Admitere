@@ -263,7 +263,11 @@
 
                                     <select id="natia" name="natia" class="form-control">
                                         @foreach(\App\Nationality::orderBy('nationality')->get() as $n)
-                                            <option value="{{$n->id}}">{{ucfirst($n->nationality)}}</option>
+                                            @if($n->id == 115)
+                                                <option value="{{$n->id}}" selected >{{ucfirst($n->nationality)}}</option>
+                                            @else
+                                                <option value="{{$n->id}}">{{ucfirst($n->nationality)}}</option>
+                                            @endif
                                             @endforeach
 
                                     </select>

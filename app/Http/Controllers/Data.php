@@ -19,7 +19,7 @@ class Data extends Controller
                 return 0;
             else return 1;
         }
-        //dd($_POST);
+        //dd($request);
         $this->validate($request, [
             'specialitate1' => 'required|exists:specialitates,id|different:specialitate2|different:specialitate3',
             'lib1' => 'required|between:0,1',
@@ -94,8 +94,8 @@ class Data extends Controller
             'camin' => 'boolean',
             'baza_doc' => 'string|max:255',
             'dist' => 'string|max:255',
-            'med_ex_ab' => 'required|numeric|between:1,10',
-            'med_not_ads' => 'required|numeric|between:1,10',
+            'med_ex_ab' => 'required|numeric|between:5,10',
+            'med_not_ads' => 'required|numeric|between:5,10',
             'cod_pers' => 'required|string|max:255',
 
         ]);
@@ -311,12 +311,9 @@ class Data extends Controller
             'limba1' => $request->lib1,
             'limba2' => $request->lib2,
             'limba3' => $request->lib3,
-            'gimnaziu' => ifNull($request->gimnaz),
             'livret_militar' => ifNull($request->liv_mil),
-            'aloling' => ifNull($request->aloling),
             'cop_orfan' => ifNull($request->cop_orf),
             'mm_patru_copii' => ifNull($request->patru_cop),
-            'serv_milit' => ifNull($request->indep_serv_mil),
             'cop_deficiente' => ifNull($request->cop_cu_difect),
             'parinti_invalizi' => ifNull($request->parinti_invalid),
             'parinti_Cernobil' => ifNull($request->par_cernob),
@@ -332,7 +329,6 @@ class Data extends Controller
             'datanasterii' => Carbon::createFromDate($dt->year, $dt->month, $dt->day),
 
             'raion' => strtolower($request->raion),
-           // 'adresa' => $request->adresa,
             'sat_oras' => $request->sat_oras,
             'num_sat_oras' => strtolower($request->num_sat_oras),
             'strada' => strtolower($request->strada),
@@ -364,9 +360,7 @@ class Data extends Controller
             'media_discipline' => $request->med_not_ads,
             'cod_personal' => $request->cod_pers,
         ]);
-        //dd(Auth::user()->id);
-        //User::where('id', Auth::user()->id)->update(['elev_id' => $elev->id]);
-        //dd($request);
+
        return redirect('/data');
     }
 }

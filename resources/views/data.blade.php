@@ -790,8 +790,9 @@
                                              @endif
                                             ">Media notelor de absolvire</label>
                                     <div class="col-md-2">
+
                                         <input name="med_not_ads" type="text" placeholder="media"
-                                               value="{{old('med_not_abs')}}"
+                                               value="{{old('med_not_ads')}}"
                                                class="form-control input-md">
 
                                     </div>

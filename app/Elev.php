@@ -112,6 +112,7 @@ class Elev extends Model
         return $this->belongsTo('App\Language','limba3');
 
     }
+
     public function limb_studiata(){
         return $this->belongsTo('App\Language','limba_studiata');
 

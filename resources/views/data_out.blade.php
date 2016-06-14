@@ -28,17 +28,19 @@
                         processing: true,
                         serverSide: true,
                         ajax: '{{ url('show/data') }}',
+
                         columns: [
                             {data: 'nume'},
                             {data: 'prenume'},
-                            {data: 'specialitate1', name: 'specialitate1'},
+                            {data: 'specialitate1', name: 'id_specialitate'},
                             {data: 'media1', name: 'media1'},
-                            {data: 'specialitate2', name: 'specialitate2'},
+                            {data: 'specialitate2', name: 'id_specialitate2'},
                             {data: 'media2', name: 'media2'},
-                            {data: 'specialitate3', name: 'specialitate3'},
+                            {data: 'specialitate3', name: 'id_specialitate3'},
                             {data: 'media3', name: 'media3'},
                             {data: 'pdf', name: 'pdf', orderable: false, searchable: false}
                         ]
+
                     });
                 });
             </script>

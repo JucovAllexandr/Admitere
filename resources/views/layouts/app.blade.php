@@ -39,9 +39,9 @@
                 @else
                     <li class=""><a href="{{URL::to('/register')}}">Inregistrare</a></li>
                 @endif
-
-                <li class=""><a href="{{URL::to('/show')}}">Arata</a></li>
                 @if(Auth::check())
+                <li class=""><a href="{{URL::to('/show')}}">Arata</a></li>
+
                     <li class=""><a href="{{URL::to('/logout')}}">Iesire</a></li>
                     @else
                 <li class=""><a href="{{URL::to('/login')}}">Logare</a></li>

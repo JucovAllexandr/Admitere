@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Datatables;
 use App\Elev;
+use DB;
 class DatatablesController extends Controller
 {
     public function getIndex()
@@ -20,8 +21,12 @@ class DatatablesController extends Controller
 
         //$elevi = Elev::join('users', 'posts.user_id', '=', 'users.id')
           //  ->select(['id_specialitate','id_specialitate2','id_specialitate3','nume','prenume']);
-
-
+       /* $elevi = DB::table('elev')
+            ->join('specialitates', 'elev.id_specialitate', '=', 'specialitates.id')
+            //->join('specialitates', 'elev.id_specialitate2', '=', 'specialitates.id')
+            ->select('specialitates.denumire', 'elev.nume')
+        ->get();*/
+        
         //$users = Nationality::select(['id','name','email','created_at','updated_at']);
         return Datatables::of($elevi)->addColumn('specialitate1', function ($sp) {
             foreach ($sp->specialitates()->get() as $e)
@@ -35,7 +40,7 @@ class DatatablesController extends Controller
             foreach ($sp->specialitates3()->get() as $e)
                 return $e->denumire;
         })->addColumn('pdf', function ($elevi) {
-            return '<a href="'.url('/pdf/'.$elevi->id).'" class="btn btn-xs btn-primary">Pdf'.$elevi->id.'</a>';
+            return '<a href="'.url('/pdf/'.$elevi->id).'" class="btn btn-xs btn-primary">PDF</a>';
         })->addColumn('media2', function ($sp) {
             return $sp->media2;
         })->addColumn('media3', function ($sp) {

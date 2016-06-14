@@ -12,11 +12,32 @@ return [
         'obiect3',
         'nota3',
         'obiect4',
-        'nota3',
+        'nota4',
     ],
     'edit_fields' => [
-        'admin' => [
-            'nota2' => 'number',
+        'obiect1' => [
+            'type' => 'text',
+        ],
+        'nota1' => [
+            'type' => 'text',
+        ],
+        'obiect2' => [
+            'type' => 'text',
+        ],
+        'nota2' => [
+            'type' => 'text',
+        ],
+        'obiect3' => [
+            'type' => 'text',
+        ],
+        'nota3' => [
+            'type' => 'text',
+        ],
+        'obiect4' => [
+            'type' => 'text',
+        ],
+        'nota4' => [
+            'type' => 'text',
         ],
     ],
     'action_permissions'=> [

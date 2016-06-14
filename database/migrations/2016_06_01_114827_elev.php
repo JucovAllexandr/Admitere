@@ -20,8 +20,8 @@ class Elev extends Migration
             $table->unsignedInteger('id_specialitate3');
             $table->unsignedInteger('nationality_id');
             $table->unsignedInteger('nota1')->unique();
-            $table->unsignedInteger('nota2')->unique();
-            $table->unsignedInteger('nota3')->unique();
+            $table->unsignedInteger('nota2');
+            $table->unsignedInteger('nota3');
             $table->boolean('buget1');
             $table->boolean('buget2');
             $table->boolean('buget3');
@@ -70,10 +70,10 @@ class Elev extends Migration
             $table->decimal('media1');
             $table->decimal('media2');
             $table->decimal('media3');
-            $table->boolean('gimnaziu');
+            //$table->boolean('gimnaziu');
             $table->boolean('livret_militar');
             $table->boolean('camin');
-            $table->boolean('aloling');
+            //$table->boolean('aloling');
             $table->boolean('cop_orfan');
             $table->boolean('cop_invalid');
             $table->boolean('cop_deficiente');
@@ -82,7 +82,7 @@ class Elev extends Migration
             $table->boolean('mm_patru_copii');
             $table->boolean('raion_est');
             $table->boolean('cop_roman');
-            $table->boolean('serv_milit');
+            //$table->boolean('serv_milit');
             $table->boolean('ucrainean');
             $table->boolean('un_par_inv');
             //$table->boolean('dipl_rep');

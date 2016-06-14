@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
-
     function TogleEnable($select, $option) {
         if ($($select + ' :selected').val() == 0) {
             $($option).prop("disabled", true);

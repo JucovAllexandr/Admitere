@@ -16,4 +16,10 @@ return [
             'type' => 'text',
         ]
     ],
+    'action_permissions'=> [
+        'create' => function($model)
+        {
+            return true;
+        }
+    ],
 ];

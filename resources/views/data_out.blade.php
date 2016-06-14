@@ -10,11 +10,13 @@
                 <tr>
                     <th>Nume</th>
                     <th>Prenume</th>
-                    <th>Pdf</th>
                     <th>Specialitate 1</th>
                     <th>Media</th>
                     <th>Specialitate 2</th>
+                    <th>Media</th>
                     <th>Specialitate 3</th>
+                    <th>Media</th>
+                    <th>Pdf</th>
                 </tr>
                 </thead>
 
@@ -29,11 +31,13 @@
                         columns: [
                             {data: 'nume'},
                             {data: 'prenume'},
-                            {data: 'pdf', name: 'pdf', orderable: false, searchable: false},
                             {data: 'specialitate1', name: 'specialitate1'},
                             {data: 'media1', name: 'media1'},
                             {data: 'specialitate2', name: 'specialitate2'},
-                            {data: 'specialitate3', name: 'specialitate3'}
+                            {data: 'media2', name: 'media2'},
+                            {data: 'specialitate3', name: 'specialitate3'},
+                            {data: 'media3', name: 'media3'},
+                            {data: 'pdf', name: 'pdf', orderable: false, searchable: false}
                         ]
                     });
                 });

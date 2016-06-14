@@ -23,9 +23,7 @@ class DatatablesController extends Controller
 
 
         //$users = Nationality::select(['id','name','email','created_at','updated_at']);
-        return Datatables::of($elevi)->addColumn('pdf', function ($elevi) {
-            return '<a href="#edit-'.$elevi->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i>Pdf'.$elevi->id.'</a>';
-        })->addColumn('specialitate1', function ($sp) {
+        return Datatables::of($elevi)->addColumn('specialitate1', function ($sp) {
             foreach ($sp->specialitates()->get() as $e)
         return $e->denumire;
         })->addColumn('media1', function ($sp) {
@@ -36,6 +34,12 @@ class DatatablesController extends Controller
         })->addColumn('specialitate3', function ($sp) {
             foreach ($sp->specialitates3()->get() as $e)
                 return $e->denumire;
+        })->addColumn('pdf', function ($elevi) {
+            return '<a href="'.url('/pdf/'.$elevi->id).'" class="btn btn-xs btn-primary">Pdf'.$elevi->id.'</a>';
+        })->addColumn('media2', function ($sp) {
+            return $sp->media2;
+        })->addColumn('media3', function ($sp) {
+            return $sp->media3;
         })->editColumn('id', '{{$id}}')->make(true);
     }
 

@@ -34,7 +34,7 @@
     @endif
 </p>
 <p>Data, luna si anul nasterii:@if($t = new \Carbon\Carbon($e->datanasterii)) {{$t->day}}/{{$t->month}}/{{$t->year}} @endif</p>
-<p>Locul nasterii: </p>
+{{--<p>Locul nasterii: </p>--}}
 <p>Adresa: r.{{ucfirst($e->raion)}}.,
 @if($e->sat_oras==1)
     s.{{ucfirst($e->num_sat_oras)}}

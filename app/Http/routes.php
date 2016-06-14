@@ -31,7 +31,7 @@ Route::get('/data',function(){
     //    return view('data_out',$this->data);
     //}
 });
-Route::get('/pdf','PdfController@index');
+Route::get('/pdf/{id}','PdfController@index');
 Route::post('/data','Data@index');
 Route::auth();
 

@@ -261,7 +261,8 @@ class Data extends Controller
         
         if($request->specialitate1 !=0)
             //informatica contabilitate , ecologie , as sociala
-            $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
+            $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4);
+           // $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
       /*$media1 += $request->med_ex_ab * 0.4;
         //arte coregrafie interpritare muzicala pictura
         $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;

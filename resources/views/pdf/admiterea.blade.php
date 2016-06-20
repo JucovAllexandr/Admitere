@@ -18,6 +18,9 @@
     .center{
         text-align: center;
     }
+     .page-break {
+         page-break-after: always;
+     }
 </style>
 <body>
 <h3 align="center" style="text-transform: uppercase;">Colegiul Industrial Pedagogic</h3>
@@ -177,7 +180,40 @@ Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
     @endif
 </p>
 <p>Data complectarii: {{$e->updated_at}}</p>
-<p>Responsabil: </p>
+<p>Responsabil: <span style="border-bottom: 1px solid black; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></p>
 @endforeach
+<div class="page-break"></div>
+<h3 style="text-transform: uppercase; text-align: center">Colegiul Industrial Pedagogic</h3>
+<h1 style="text-transform: uppercase; text-align: center; vertical-align: middle;
+    margin-top: 20%;" >Fisa de incriere <br>la concursul de admitere <br>NR.<span style="border-bottom: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<br>anul {{\Carbon\Carbon::now()->year}}</h1>
+<div class="page-break"></div>
+<p style="padding-left: 5em;"><b><span style=" font-family: 'Arial Black'; font-size: 13px; ">
+        I</span> Date personale</b></p>
+<p><b>1.Numele:</b>{{ucfirst($e->nume)}} <b  style="padding-left: 2em;">Prenume:</b> {{ucfirst($e->prenume)}}<b  style="padding-left: 2em;">Patronimicul:</b>{{ucfirst($e->patronimic)}}</p>
+<p><b>2.Sexul:</b>@if($e->sex == 1)
+        Masculin
+    @else
+        Femenin
+    @endif </p>
+<p><b>3.Data, luna si anul nasterii:</b>@if($t = new \Carbon\Carbon($e->datanasterii)) {{$t->day}}/{{$t->month}}/{{$t->year}} @endif</p>
+<p><b>4.Locul nasterii:</b></p>
+<p><b>5.Mediul de trai:</b>@if($e->sat_oras==1)
+        Sat
+    @else
+        Oras
+    @endif</p>
+<p><b>6.Viza de domiciliu permanent:</b></p>
+<p style="padding-left: 1em;"><b>Raionul:</b> {{ucfirst($e->raion)}}</p>
+<p style="padding-left: 1em;"><b>Localitatea:</b> {{ucfirst($e->num_sat_oras)}}</p>
+<p style="padding-left: 1em;"><b>Adresa:</b> r.{{ucfirst($e->raion)}}.,
+    @if($e->sat_oras==1)
+        s.{{ucfirst($e->num_sat_oras)}}
+    @else
+        o.{{ucfirst($e->num_sat_oras)}}
+    @endif</p>
+<p><b>7.Telefon fix:</b>{{$e->telefon}} <b style="padding-left: 1em;">Telefon mobil:</b>{{$e->telefon_mobil}}</p>
 </body>
 </html>

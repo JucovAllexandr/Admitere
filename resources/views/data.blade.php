@@ -403,7 +403,15 @@
                                     <input type="text" name="dat_elib" class="form-control input-md"
                                            value="{{old('dat_elib')}}" placeholder="zi.luna.an">
                                 </div>
-
+                                <label class="col-md-2 control-label
+                                @if($errors->first('loc_nas'))
+                                        alert alert-danger
+                                         @endif
+                                        ">Locul naștеri</label>
+                                <div class="col-md-3">
+                                    <input type="text" name="loc_nas" class="form-control input-md"
+                                           value="{{old('dat_elib')}}" placeholder="Locul naștеri">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Buletin de identitate al candidatului</label>
@@ -739,11 +747,13 @@
                                             @if($errors->first('liv_mil'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="liv_mil" value="1"
+                                            <input type="checkbox" id="liv_mil" name="liv_mil" value="1"
                                                    @if(old('liv_mil')) checked @endif
                                             >
                                             Livret militar
+
                                         </label>
+                                        <input type="text" id="liv_mil_nr" name="liv_mil_nr" value="" placeholder="Nr/S livret militar" disabled>
 
                                     </div>
 

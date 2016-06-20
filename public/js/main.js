@@ -1,4 +1,10 @@
+
 $(document).ready(function () {
+    $("#liv_mil").click(function () {
+        if($("#liv_mil").is(':checked')){
+            $("#liv_mil_nr").prop("disabled",false);
+        }else  $("#liv_mil_nr").prop("disabled",true);
+    });
     function TogleEnable($select, $option) {
         if ($($select + ' :selected').val() == 0) {
             $($option).prop("disabled", true);

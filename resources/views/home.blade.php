@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div  id="top"class="jumbotron">
+    <div  id="top"class="jumbotron ">
 
         <h1>Sistem informatic pentru admiterea în instituţie de invăţământ 2016</h1>
 

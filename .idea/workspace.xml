@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47a853ae-c8bb-4067-8728-3eef202c3ad9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php" afterPath="$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php" />
     </list>
     <ignored path="dip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="admiterea.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="216" column="69" selection-start-line="216" selection-start-column="69" selection-end-line="216" selection-end-column="69" />
+            <state relative-caret-position="420">
+              <caret line="237" column="36" selection-start-line="237" selection-start-column="36" selection-end-line="237" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#18;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,6 +54,15 @@
                 <element signature="n#style#0;n#p#27;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#28;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#1;n#p#29;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#32;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#1;n#p#32;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#34;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#1;n#p#34;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#35;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#1;n#p#35;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#36;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#38;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#40;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +71,8 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="338" column="26" selection-start-line="338" selection-start-column="13" selection-end-line="338" selection-end-column="26" />
+            <state relative-caret-position="473">
+              <caret line="350" column="24" selection-start-line="350" selection-start-column="13" selection-end-line="350" selection-end-column="24" />
               <folding>
                 <element signature="e#8251#8820#0#PHP" expanded="false" />
                 <element signature="e#8829#9296#0#PHP" expanded="false" />
@@ -94,7 +101,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DatatablesController.php" />
         <option value="$PROJECT_DIR$/resources/views/data_out.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
@@ -103,6 +109,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php" />
       </list>
     </option>
   </component>
@@ -1320,11 +1327,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466413945927</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="data show">
+      <created>1466414166987</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1466414166987</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38403000" />
+    <option name="totallyTimeSpent" value="41616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1648,19 +1662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="338" column="26" selection-start-line="338" selection-start-column="13" selection-end-line="338" selection-end-column="26" />
-          <folding>
-            <element signature="e#8251#8820#0#PHP" expanded="false" />
-            <element signature="e#8829#9296#0#PHP" expanded="false" />
-            <element signature="e#9305#9850#0#PHP" expanded="false" />
-            <element signature="e#9859#10362#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PdfController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1755,10 +1756,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="350" column="24" selection-start-line="350" selection-start-column="13" selection-end-line="350" selection-end-column="24" />
+          <folding>
+            <element signature="e#8251#8820#0#PHP" expanded="false" />
+            <element signature="e#8829#9296#0#PHP" expanded="false" />
+            <element signature="e#9305#9850#0#PHP" expanded="false" />
+            <element signature="e#9859#10362#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="216" column="69" selection-start-line="216" selection-start-column="69" selection-end-line="216" selection-end-column="69" />
+        <state relative-caret-position="420">
+          <caret line="237" column="36" selection-start-line="237" selection-start-column="36" selection-end-line="237" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#18;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1773,6 +1787,15 @@
             <element signature="n#style#0;n#p#27;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#28;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#1;n#p#29;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#32;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#p#32;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#34;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#p#34;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#35;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#p#35;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#36;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#38;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#40;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

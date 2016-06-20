@@ -215,5 +215,27 @@ Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
         o.{{ucfirst($e->num_sat_oras)}}
     @endif</p>
 <p><b>7.Telefon fix:</b>{{$e->telefon}} <b style="padding-left: 1em;">Telefon mobil:</b>{{$e->telefon_mobil}}</p>
+<p><b>8.E-mail: </b>{{$e->email}}</p>
+<p><b>9.Certificat de nastere:</b></p>
+<p style="padding-left: 1em;"><b>Eliberat: </b>
+    @if($t = new \Carbon\Carbon($e->certificat_data_eliberarii)) {{$t->day}}/{{$t->month}}/{{$t->year}} @endif
+    <b style="padding-left: 1em;">Seria Nr: </b>{{strtoupper($e->seria_certificat)}}</p>
+<p><b>10.Buletinul de identitate ai candidatului</b></p>
+<p style="padding-left: 1em;"><b>Seria: </b>{{strtoupper($e->seria_buletin)}} <b style="padding-left: 1em;">Nr: </b>{{$e->numar_buletin}}</p>
+<p style="padding-left: 1em;"><b>Eliberat de of: </b>{{$e->oficiu}} <b style="padding-left: 1em;">Data: </b>{{$e->buletin_data_eliberarii}}</p>
+<p style="padding-left: 1em;"><b>Codul personal: </b>{{$e->cod_personal}}</p>
+<p><b>11.Nationalitatea: </b> @foreach($e->Nationalitys()->get() as $den)
+        {{ucfirst($den->nationality)}}
+    @endforeach</p>
+<p style="padding-left: 1em;"><b>Cetatenia: </b>{{$e->cetatanie}}</p>
+<p><b>12.Evidenta militara: </b>@if($e->serv_milit)
+        Incorporabil
+    @else
+        Neincorporabil
+    @endif</p>
+<p style="padding-left: 1em;" ><b>Livret militar nr: </b></p>
+<p><b>13.Numele si prenumele parintilor: </b></p>
+<p><b>Tatal: </b>{{$e->tat_nume.' '.$e->tat_prenume}}</p>
+<p><b>Mama: </b>{{$e->mam_nume.' '.$e->mam_prenume}}</p>
 </body>
 </html>

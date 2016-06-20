@@ -67,7 +67,11 @@
                 @else
                     <a href="{{URL::to('/register')}}">Inregistrare</a>
                 @endif
-                    | <a href="{{URL::to('/show')}}">Arata</a> |
+                |
+                @if(Auth::check())
+                     <a href="{{URL::to('/show')}}">Arata</a> |
+                @endif
+
                 @if(Auth::check())
                     <a href="{{URL::to('/logout')}}">Iesire</a>
                 @else

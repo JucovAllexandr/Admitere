@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "frozennode/administrator": " 5.*",
         "barryvdh/laravel-dompdf": "0.6.*",
-        "yajra/laravel-datatables-oracle": "^6.11"
+        "yajra/laravel-datatables-oracle": "^6.11",
+        "maatwebsite/excel": "~2.1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

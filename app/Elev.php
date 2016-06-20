@@ -39,6 +39,7 @@ class Elev extends Model
         'acte',
         'sex',
         'datanasterii',
+        'loc_nas',
         'certificat_data_eliberarii',
         'buletin_data_eliberarii',
         'tat_nume',
@@ -64,10 +65,8 @@ class Elev extends Model
         'limba_studiata',
         'media_discipline',
         'media_exam',
-        'gimnaziu',
         'livret_militar',
         'camin',
-        'aloling',
         'cop_orfan',
         'cop_invalid',
         'cop_deficiente',
@@ -76,9 +75,9 @@ class Elev extends Model
         'mm_patru_copii',
         'raion_est',
         'cop_roman',
-        'serv_milit',
         'ucrainean',
         'un_par_inv',
+        'created_at',
     ];
 
     /**

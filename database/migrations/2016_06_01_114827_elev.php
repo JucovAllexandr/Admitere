@@ -49,6 +49,7 @@ class Elev extends Migration
             $table->string('mam_nume');
             $table->string('mam_prenume');
             $table->string('cetatanie');
+            $table->string('loc_nas');
             $table->string('seria_certificat');
             $table->string('seria_buletin');
 

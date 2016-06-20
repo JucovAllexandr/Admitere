@@ -74,7 +74,7 @@ class Data extends Controller
 
             'telefon' => 'required',
             'mobi' => 'required',
-            'email' => 'required|email|unique:elev',
+            'email' => 'email|unique:elev',
             'seria1' => 'required|string|max:255',
             'dat_elib' => 'required|date_format:d.m.Y',
             'seria2' => 'required|string|max:255',
@@ -97,6 +97,7 @@ class Data extends Controller
             'med_ex_ab' => 'required|numeric|between:5,10',
             'med_not_ads' => 'required|numeric|between:5,10',
             'cod_pers' => 'required|string|max:255',
+            'loc_nas' => 'required|string|max:255',
 
         ]);
 
@@ -321,7 +322,7 @@ class Data extends Controller
             'cop_roman' => ifNull($request->cop_romin),
             'raion_est' => ifNull($request->copil_est),
             'ucrainean' => ifNull($request->cetatean_ucr),
-            'parint_invalid' => ifNull($request->un_par_inv),
+            'un_par_inv' => ifNull($request->un_par_inv),
             'nume' => strtolower($request->nume),
             'prenume' => strtolower($request->prenum),
             'patronimic' => strtolower($request->patronim),
@@ -360,6 +361,7 @@ class Data extends Controller
             'media_exam' => $request->med_ex_ab,
             'media_discipline' => $request->med_not_ads,
             'cod_personal' => $request->cod_pers,
+            'loc_nas' => $request->loc_nas,
         ]);
 
        return redirect('/data');

@@ -149,11 +149,12 @@ class Data extends Controller
         }
 
         function med_coreg($not1,$not2,$not3,$aptitudini,$med_exam_abs){
-            $media1=(($not1+$not2+$not3+$aptitudini)/4)*0.3;
-            $media1 += $aptitudini * 0.5;
-            $media1 += $med_exam_abs * 0.2;
+            $media=(($not1+$not2+$not3+$aptitudini)/4)*0.3;
+            $media += $aptitudini * 0.5;
+            $media += $med_exam_abs * 0.2;
+            return $media;
         }
-        
+
         if ($request->specialitate1 == 8 || $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
             $nota1 = Note::create($informatica);
 

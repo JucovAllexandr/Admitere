@@ -4,7 +4,6 @@
     <list default="true" id="47a853ae-c8bb-4067-8728-3eef202c3ad9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Data.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/data.blade.php" afterPath="$PROJECT_DIR$/resources/views/data.blade.php" />
     </list>
     <ignored path="dip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+            <state relative-caret-position="467">
+              <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -376,8 +375,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/composer.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/data.blade.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/data_out.blade.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/layouts/app.blade.php</PATH>
         </FILE-GROUP>
@@ -527,7 +524,7 @@
       <workItem from="1465903403844" duration="6463000" />
       <workItem from="1466411350620" duration="2503000" />
       <workItem from="1466432731267" duration="9821000" />
-      <workItem from="1466498719484" duration="11187000" />
+      <workItem from="1466498719484" duration="11315000" />
     </task>
     <task id="LOCAL-00001" summary="data">
       <created>1465579727133</created>
@@ -655,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466507915253</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="data show">
+      <created>1466511379743</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1466511379743</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62654000" />
+    <option name="totallyTimeSpent" value="62782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1094,8 +1098,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+        <state relative-caret-position="467">
+          <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
           <folding />
         </state>
       </provider>

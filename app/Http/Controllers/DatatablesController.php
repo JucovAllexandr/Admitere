@@ -8,11 +8,16 @@ use App\Http\Requests;
 use Datatables;
 use App\Elev;
 use DB;
+use Illuminate\Support\Facades\Auth;
+
 class DatatablesController extends Controller
 {
     public function getIndex()
     {
+        if(Auth::check())
         return view('data_out');
+        else
+            redirect('/');
     }
 
     public function anyData()

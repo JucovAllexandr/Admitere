@@ -34,7 +34,7 @@ class Elev extends Migration
             $table->string('nume');
             $table->string('prenume');
             $table->string('patronimic');
-            $table->string('email')->unique();
+            $table->string('email')->nullable();
             $table->integer('cod_personal');
             $table->integer('numar_buletin');
             $table->integer('oficiu');
@@ -52,7 +52,7 @@ class Elev extends Migration
             $table->string('loc_nas');
             $table->string('seria_certificat');
             $table->string('seria_buletin');
-            $table->string('liv_mil_nr');
+            $table->string('liv_mil_nr')->nullable();
 
             $table->string('num_sat_oras');
             $table->string('strada');
@@ -87,7 +87,7 @@ class Elev extends Migration
             //$table->boolean('serv_milit');
             $table->boolean('ucrainean');
             $table->boolean('un_par_inv');
-            //$table->boolean('dipl_rep');
+            $table->boolean('copil_inv_gr_I_II');
 
             $table->timestamps();
         });

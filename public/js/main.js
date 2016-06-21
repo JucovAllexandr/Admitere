@@ -5,7 +5,6 @@ $(document).ready(function () {
             $("#liv_mil_nr").prop("disabled",false);
         }else  $("#liv_mil_nr").prop("disabled",true);
     });
-    
     function TogleEnable($select, $option) {
         if ($($select + ' :selected').val() == 0) {
             $($option).prop("disabled", true);
@@ -14,99 +13,200 @@ $(document).ready(function () {
             $($option).prop("disabled", false);
         }
     }
-    function predmet($select, $media1 , $media2, $media3) {
+    function predmet($select) {
         
         var value = $($select+' :selected').val();
         var inf_mat=new Array(8,3,4,5);
         var eco = [7];
         var cor = [6,9,10];
         var asist = [1,2];
-
+       $('#lim_instruire').prop("disabled",false);
         if($.inArray(parseInt(value), inf_mat)!= -1){
-            $($media1).text('Limba staina');
-            $($media2).text('Matematica');
-            $($media3).text('Informatica');
+            // $($pd1).text('Limba staina');
+            // $($pd2).text('Matematica');
+            // $($pd3).text('Informatica');
+            $('#lim_straina').prop("disabled",false);
+            $('#matem').prop("disabled",false);
+            $('#informatica').prop("disabled",false);
         }
         if($.inArray(parseInt(value), eco)!= -1){
-            $($media1).text('Biologie');
-            $($media2).text('Chimie');
-            $($media3).text('Matematica');
+            // $($pd1).text('Biologie');
+            // $($pd2).text('Chimie');
+            // $($pd3).text('Matematica');
+            $('#biologia').prop("disabled",false);
+            $('#chimia').prop("disabled",false);
+            $('#matem').prop("disabled",false);
         }
         if($.inArray(parseInt(value), cor)!= -1){
-            $($media1).text('Limba staina');
-            $($media2).text('Istoria');
-            $($media3).text('Proba de aptitudini');
+            // $($pd1).text('Limba staina');
+            // $($pd2).text('Istoria');
+            // $($pd3).text('Proba de aptitudini');
+            $('#lim_straina').prop("disabled",false);
+            $('#istoria').prop("disabled",false);
+            $('#aptitudini').prop("disabled",false);
         }
         if($.inArray(parseInt(value), asist)!= -1){
-            $($media1).text('Limba staina');
-            $($media2).text('Matematica');
-            $($media3).text('Istoria');
+            // $($pd1).text('Limba staina');
+            // $($pd2).text('Matematica');
+            // $($pd3).text('Istoria');
+            $('#lim_straina').prop("disabled",false);
+            $('#matem').prop("disabled",false);
+            $('#istoria').prop("disabled",false);
         }
     }
-    function null_options ($text,$media1 , $media2, $media3) {
-        $($media1).text($text);
-        $($media2).text($text);
-        $($media3).text($text);
+    function null_options () {
+        $('#lim_instruire').prop("disabled",true);
+        $('#lim_straina').prop("disabled",true);
+        $('#matem').prop("disabled",true);
+        $('#informatica').prop("disabled",true);
+        $('#istoria').prop("disabled",true);
+        $('#aptitudini').prop("disabled",true);
+        $('#biologia').prop("disabled",true);
+        $('#chimia').prop("disabled",true);
     }
 
-    null_options('Selectati Optiunea 1','#opt1p1','#opt1p2','#opt1p3');
-    null_options('Selectati Optiunea 2','#opt2p1','#opt2p2','#opt2p3');
-    null_options('Selectati Optiunea 3','#opt3p1','#opt3p2','#opt3p3');
+    // null_options('Selectati Optiunea 1','#opt1p1','#opt1p2','#opt1p3');
+    // null_options('Selectati Optiunea 2','#opt2p1','#opt2p2','#opt2p3');
+    // null_options('Selectati Optiunea 3','#opt3p1','#opt3p2','#opt3p3');
 
-    TogleEnable('#specialitate1', '.opt1');
-    TogleEnable('#specialitate2', '.opt2');
-    TogleEnable('#specialitate3', '.opt3');
+    // TogleEnable('#specialitate1', '.opt1');
+    // TogleEnable('#specialitate2', '.opt2');
+    // TogleEnable('#specialitate3', '.opt3');
 
-    predmet('#specialitate1','#opt1p1','#opt1p2','#opt1p3');
-    predmet('#specialitate2','#opt2p1','#opt2p2','#opt2p3');
-    predmet('#specialitate3','#opt3p1','#opt3p2','#opt3p3');
+    predmet('#specialitate1');
+    predmet('#specialitate2');
+    predmet('#specialitate3');
 
     $('#specialitate1').change(function () {
         var value = $('#specialitate1').val();
         if(value==0)
-            null_options('Selectati Optiunea 1','#opt1p1','#opt1p2','#opt1p3');
-
-        predmet('#specialitate1','#opt1p1','#opt1p2','#opt1p3');
-        TogleEnable('#specialitate1', '.opt1');
+            null_options();
+        null_options();
+        predmet('#specialitate1');
+        predmet('#specialitate2');
+        predmet('#specialitate3');
+       // TogleEnable('#specialitate1', '.opt1');
     });
     $('#specialitate2').change(function () {
         var value = $('#specialitate2').val();
         if(value==0)
-            null_options('Selectati Optiunea 2','#opt2p1','#opt2p2','#opt2p3');
+            null_options();
 
-        predmet('#specialitate2','#opt2p1','#opt2p2','#opt2p3');
-        TogleEnable('#specialitate2', '.opt2');
+        null_options();
+        predmet('#specialitate1');
+        predmet('#specialitate2');
+        predmet('#specialitate3');
+        //TogleEnable('#specialitate2', '.opt2');
     });
     $('#specialitate3').change(function () {
         var value = $('#specialitate3').val();
         if(value==0)
-            null_options('Selectati Optiunea 3','#opt3p1','#opt3p2','#opt3p3');
+            null_options();
 
-        predmet('#specialitate3','#opt3p1','#opt3p2','#opt3p3');
-        TogleEnable('#specialitate3', '.opt3');
+        null_options();
+        predmet('#specialitate1');
+        predmet('#specialitate2');
+        predmet('#specialitate3');
+        //TogleEnable('#specialitate3', '.opt3');
     });
+
+    function med_inf( $not1, $not2, $not3, $not4, $med_exam_abs, $est)
+    {
+        // console.log($not1);
+        // console.log($not2);
+        // console.log($not3);
+        // console.log($not4);
+        // console.log($med_exam_abs);
+
+        if ($est) {
+            $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.4;
+            $media += $med_exam_abs * 0.6;
+        } else {
+            $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
+            $media += $med_exam_abs * 0.4;
+        }
+        return $media;
+    }
+
+    function med_coreg($not1, $not2, $not3, $aptitudini, $med_exam_abs, $est)
+    {
+
+        if ($est) {
+            $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.2;
+            $media += $aptitudini * 0.5;
+            $media += $med_exam_abs * 0.3;
+        } else {
+            $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.3;
+            $media += $aptitudini * 0.5;
+            $media += $med_exam_abs * 0.2;
+        }
+        return $media;
+    }
 
     $('#calc').click(function () {
         var sum = 0;
+        var  lim_instruire = parseInt($('#lim_instruire').val());
+        var lim_straina = parseInt($('#lim_straina').val());
+        var matem = parseInt($('#matem').val());
+        var informatica = parseInt($('#informatica').val());
+        var istoria = parseInt($('#istoria').val());
+        var aptitudini = parseInt($('#aptitudini').val());
+        var biologia = parseInt($('#biologia').val());
+        var chimia = parseInt($('#chimia').val());
+        var med_ex_ab = parseFloat($('#med_ex_ab').val());
+        var est = $('#copil_est').is(':checked');
         if ($('#specialitate1 :selected').val() != 0) {
-            for (var i = 0; i < $('.nt1').length; i++) {
-                sum += parseInt($('.nt1').eq(i).val());
+            var sp = $('#specialitate1 :selected').val();
+            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
-            $('#media1').val(sum / 4);
+            if (sp == 7) {
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+            }
+            if (sp == 6 || sp == 9 || sp == 10) {
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+            }
+            if (sp == 1 || sp == 2) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
+            }
+            $('#media1').val($media1);
+            $('#md1').text("Media "+$('#specialitate1 :selected').text());
         }
         sum = 0;
         if ($('#specialitate2 :selected').val() != 0) {
-            for (var i = 0; i < $('.nt2').length; i++) {
-                sum += parseInt($('.nt2').eq(i).val());
+            var sp = $('#specialitate2 :selected').val();
+            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
-            $('#media2').val(sum / 4);
+            if (sp == 7) {
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+            }
+            if (sp == 6 || sp == 9 || sp == 10) {
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+            }
+            if (sp == 1 || sp == 2) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
+            }
+            $('#media2').val($media1);
+            $('#md2').text("Media "+$('#specialitate2 :selected').text());
         }
         sum = 0;
         if ($('#specialitate3 :selected').val() != 0) {
-            for (var i = 0; i < $('.nt3').length; i++) {
-                sum += parseInt($('.nt3').eq(i).val());
+            var sp = $('#specialitate3 :selected').val();
+            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
-            $('#media3').val(sum / 4);
+            if (sp == 7) {
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+            }
+            if (sp == 6 || sp == 9 || sp == 10) {
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+            }
+            if (sp == 1 || sp == 2) {
+                $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
+            }
+            $('#media3').val($media1);
+            $('#md3').text("Media "+$('#specialitate3 :selected').text());
         }
     });
 

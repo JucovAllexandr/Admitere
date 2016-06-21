@@ -40,7 +40,7 @@
             <td>{{$elev->media1}}</td>
             <td>{{$elev->created_at}}</td>
             <td>{{$elev->cop_orfan}}</td>
-            <td>{{--????--}}0</td>
+            <td>{{$elev->copil_inv_gr_I_II}}</td>
             <td>{{$elev->cop_deficiente}}</td>
             <td>{{$elev->un_par_inv}}</td>
             <td>{{$elev->parinti_Cernobil}}</td>
@@ -49,8 +49,8 @@
             <td>{{$elev->cop_roman}}</td>
             <td>{{$elev->livret_militar}}</td>
             <td>{{$elev->ucrainean}}</td>
-            <td>{{--???--}}0</td>
-            <td>{{--$elev->--}}0</td>
+            <td>{{$elev->distinc_abs}}</td>
+            <td>{{$elev->media_discipline}}</td>
             <td>{{$elev->buget1}}</td>
             <td>{{$elev->contract1}}</td>
             <td>{{$elev->acte}}</td>

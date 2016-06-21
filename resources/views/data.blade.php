@@ -43,11 +43,11 @@
                                         <option value="9" id="o1-ii">Interpretare instrumentala</option>
                                         <option value="10" id="o1-pic">Pictura</option>
                                     </select>
-                                        @if(old('specialitate1')!=null)
+                                    @if(old('specialitate1')!=null)
                                         <script>
-                                            $('#specialitate1 option[value="{{old('specialitate1')}}"]').attr('selected','selected');
+                                            $('#specialitate1 option[value="{{old('specialitate1')}}"]').attr('selected', 'selected');
                                         </script>
-                                        @endif
+                                    @endif
 
                                 </div>
                                 <!--select-->
@@ -87,7 +87,7 @@
                                     </select>
                                     @if(old('lib1')!=null)
                                         <script>
-                                            $('#lib1 option[value="{{old('lib1')}}"]').attr('selected','selected');
+                                            $('#lib1 option[value="{{old('lib1')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -115,7 +115,7 @@
                                     </select>
                                     @if(old('specialitate2')!=null)
                                         <script>
-                                            $('#specialitate2 option[value="{{old('specialitate2')}}"]').attr('selected','selected');
+                                            $('#specialitate2 option[value="{{old('specialitate2')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -159,7 +159,7 @@
                                     </select>
                                     @if(old('lib2')!=null)
                                         <script>
-                                            $('#lib2 option[value="{{old('lib2')}}"]').attr('selected','selected');
+                                            $('#lib2 option[value="{{old('lib2')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -187,7 +187,7 @@
                                     </select>
                                     @if(old('specialitate3')!=null)
                                         <script>
-                                            $('#specialitate3 option[value="{{old('specialitate3')}}"]').attr('selected','selected');
+                                            $('#specialitate3 option[value="{{old('specialitate3')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -234,7 +234,7 @@
                                     </select>
                                     @if(old('lib3')!=null)
                                         <script>
-                                            $('#lib3 option[value="{{old('lib3')}}"]').attr('selected','selected');
+                                            $('#lib3 option[value="{{old('lib3')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -285,11 +285,11 @@
                                     </select>
                                     @if(old('sex')!=null)
                                         <script>
-                                            $('#sex option[value="{{old('sex')}}"]').attr('selected','selected');
+                                            $('#sex option[value="{{old('sex')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
-                                <label style="margin-right:10px;"  class="col-md-1 control-label
+                                <label style="margin-right:10px;" class="col-md-1 control-label
                                        @if($errors->first('natia'))
                                         alert alert-danger
                                          @endif
@@ -299,16 +299,17 @@
                                     <select id="natia" name="natia" class="form-control">
                                         @foreach(\App\Nationality::orderBy('nationality')->get() as $n)
                                             @if($n->id == 115)
-                                                <option value="{{$n->id}}" selected >{{ucfirst($n->nationality)}}</option>
+                                                <option value="{{$n->id}}"
+                                                        selected>{{ucfirst($n->nationality)}}</option>
                                             @else
                                                 <option value="{{$n->id}}">{{ucfirst($n->nationality)}}</option>
                                             @endif
-                                            @endforeach
+                                        @endforeach
 
                                     </select>
                                     @if(old('natia')!=null)
                                         <script>
-                                            $('#natia option[value="{{old('natia')}}"]').attr('selected','selected');
+                                            $('#natia option[value="{{old('natia')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -327,7 +328,7 @@
                                 </div>
                             </div>
 
-<hr>
+                            <hr>
                             <div class="form-group">
                                 <label class="col-md-1 control-label
                                 @if($errors->first('raion'))
@@ -345,7 +346,7 @@
                                     @if($errors->first('sat_oras'))
                                             alert alert-danger
                                              @endif
-                                            " >Sat/Oraș</label>
+                                            ">Sat/Oraș</label>
                                     <div class="col-md-2">
                                         <select id="sat_oras" name="sat_oras" class="form-control">
                                             <option value="1">Sat</option>
@@ -353,7 +354,7 @@
                                         </select>
                                         @if(old('sat_oras')!=null)
                                             <script>
-                                                $('#sat_oras option[value="{{old('sat_oras')}}"]').attr('selected','selected');
+                                                $('#sat_oras option[value="{{old('sat_oras')}}"]').attr('selected', 'selected');
                                             </script>
                                         @endif
                                     </div>
@@ -362,36 +363,36 @@
                                         @if($errors->first('num_sat_oras'))
                                             alert alert-danger
                                              @endif
-                                            " >Nume (sat/oras):</label>
+                                            ">Nume (sat/oras):</label>
                                     <div class="col-md-3">
-                                        <input  name="num_sat_oras" type="text" placeholder="Nume (sat/oras)"
+                                        <input name="num_sat_oras" type="text" placeholder="Nume (sat/oras)"
                                                value="{{old('num_sat_oras')}}" class="form-control input-md  ">
                                     </div>
 
                                 </div>
                             </div>
-                                <div class="form-group">
-                                    <label class="col-md-1 control-label
+                            <div class="form-group">
+                                <label class="col-md-1 control-label
                                         @if($errors->first('strada'))
-                                            alert alert-danger
-                                             @endif
-                                            " >Strada:</label>
-                                    <div class="col-md-3">
-                                        <input  name="strada" type="text" placeholder="Strada"
-                                                value="{{old('strada')}}" class="form-control input-md  ">
-                                    </div>
-
-                                    <label class="col-md-2 control-label
-                                        @if($errors->first('nr_bloc'))
-                                            alert alert-danger
-                                             @endif
-                                            " >Nr bloc/apartament:</label>
-                                    <div class="col-md-3">
-                                        <input  name="nr_bloc" type="text" placeholder="Numar"
-                                                value="{{old('nr_bloc')}}" class="form-control input-md  ">
-                                    </div>
+                                        alert alert-danger
+                                         @endif
+                                        ">Strada:</label>
+                                <div class="col-md-3">
+                                    <input name="strada" type="text" placeholder="Strada"
+                                           value="{{old('strada')}}" class="form-control input-md  ">
                                 </div>
-                                <hr>
+
+                                <label class="col-md-2 control-label
+                                        @if($errors->first('nr_bloc'))
+                                        alert alert-danger
+                                         @endif
+                                        ">Nr bloc/apartament:</label>
+                                <div class="col-md-3">
+                                    <input name="nr_bloc" type="text" placeholder="Numar"
+                                           value="{{old('nr_bloc')}}" class="form-control input-md  ">
+                                </div>
+                            </div>
+                            <hr>
                             <div class="form-group">
                                 <label class="col-md-1 control-label
                                  @if($errors->first('telefon'))
@@ -529,7 +530,7 @@
                                     </select>
                                     @if(old('cetatanie')!=null)
                                         <script>
-                                            $('#cetatanie option[value="{{old('cetatanie')}}"]').attr('selected','selected');
+                                            $('#cetatanie option[value="{{old('cetatanie')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -634,7 +635,7 @@
                                     </select>
                                     @if(old('lib_inst')!=null)
                                         <script>
-                                            $('#lib_inst option[value="{{old('lib_inst')}}"]').attr('selected','selected');
+                                            $('#lib_inst option[value="{{old('lib_inst')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -651,7 +652,7 @@
                                     </select>
                                     @if(old('lib_stud')!=null)
                                         <script>
-                                            $('#lib_stud option[value="{{old('lib_stud')}}"]').attr('selected','selected');
+                                            $('#lib_stud option[value="{{old('lib_stud')}}"]').attr('selected', 'selected');
                                         </script>
                                     @endif
                                 </div>
@@ -672,22 +673,24 @@
                                                 <input type="radio" name="camin" value="0" checked>
                                                 Nu
                                             </label>
-                                            @else
-                                        <label class="radio-inline">
-                                            <input type="radio" name="camin" value="1" checked>
-                                            Da
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="camin" value="0">
-                                            Nu
-                                        </label>
-                                            @endif
+                                        @else
+                                            <label class="radio-inline">
+                                                <input type="radio" name="camin" value="1" checked>
+                                                Da
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="camin" value="0">
+                                                Nu
+                                            </label>
+                                        @endif
                                     </div>
 
                                 </div>
 
 
-<hr>                              <div class="form-group"> <label class="col-md-3 control-label " for="grup">Cota de 15%</label></div>
+                                <hr>
+                                <div class="form-group"><label class="col-md-3 control-label " for="grup">Cota de
+                                        15%</label></div>
 
                                 <div class="form-group checkbox">
                                     <label class="col-md-2 control-label " for="grup"></label>
@@ -702,7 +705,8 @@
                                             >
                                             Copil Orfan
                                         </label>
-                                    </div><label class="col-md-2 control-label " for="grup"></label>
+                                    </div>
+                                    <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
                                             @if($errors->first('patru_cop'))
@@ -797,17 +801,17 @@
                                     <label class="col-md-6 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
-                                            @if($errors->first('copil_invalid'))
+                                            @if($errors->first('copil_inv_gr_I_II'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="copil_invalid" value="1"
+                                            <input type="checkbox" name="copil_inv_gr_I_II" value="1"
                                                    @if(old('copil_invalid')) checked @endif>
-                                                Copil Invalid de gradul I şi II
+                                            Copil Invalid de gradul I şi II
                                         </label>
                                     </div>
                                 </div>
 
-<hr>
+                                <hr>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
@@ -815,7 +819,7 @@
                                             @if($errors->first('copil_est'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="copil_est" value="1"
+                                            <input type="checkbox" name="copil_est" id="copil_est" value="1"
                                                    @if(old('copil_est')) checked @endif
                                             >
                                             Copil din r-le de Est, Bender
@@ -833,7 +837,8 @@
                                             Livret militar
 
                                         </label>
-                                        <input type="text" id="liv_mil_nr" name="liv_mil_nr" value="" placeholder="Nr/S livret militar" disabled>
+                                        <input type="text" id="liv_mil_nr" name="liv_mil_nr" value=""
+                                               placeholder="Nr/S livret militar" disabled>
 
                                     </div>
 
@@ -874,7 +879,7 @@
                                              @endif
                                             ">Media examen de absolvire</label>
                                     <div class="col-md-2">
-                                        <input name="med_ex_ab" type="text" placeholder="media"
+                                        <input name="med_ex_ab" id="med_ex_ab" type="text" placeholder="media"
                                                value="{{old('med_ex_ab')}}"
                                                class="form-control input-md">
                                     </div>
@@ -891,122 +896,121 @@
 
                                     </div>
                                 </div>
-                                </div>
-                                <hr>
-                                <table>
-                                    <tr >
-                                        <td>
-                                            <label id="lim_instruire" class="col-md-6 control-label">Limba de instruire</label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="lim_instruire"
-                                                       class="form-control input-md ">
-                                            </div>
+                            </div>
+                            <hr>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label class="col-md-6 control-label">Limba de
+                                            instruire</label>
+                                        <div class="col-md-4">
+                                            <input type="number" placeholder="nota" id="lim_instruire" name="lim_instruire"
+                                                   value="{{old('lim_instruire')}}"  class="form-control input-md " >
+                                        </div>
 
-                                </td>
-                                        <td>
-                                            <label id="lim_straina" class="col-md-6 control-label">
-                                                Limba străină
-                                            </label>
-                                            <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="lim_straina"
-                                                       class="form-control input-md ">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <label id="matem" class="col-md-5 control-label">
-                                                Matematica
-                                            </label>
-                                            <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="matem"
-                                                       class="form-control input-md ">
-                                            </div>
+                                    </td>
+                                    <td>
+                                        <label class="col-md-6 control-label">
+                                            Limba străină
+                                        </label>
+                                        <div class="col-md-5">
+                                            <input type="number" placeholder="nota" id="lim_straina" name="lim_straina"
+                                              value="{{old('lim_straina')}}" class="form-control input-md " disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label  class="col-md-5 control-label">
+                                            Matematica
+                                        </label>
+                                        <div class="col-md-5">
+                                            <input type="number" placeholder="nota" id="matem" name="matem"
+                                             value="{{old('matem')}}" class="form-control input-md " disabled>
+                                        </div>
 
-                                        </td>
-                                        <td>
-                                            <label id="biologia" class="col-md-4 control-label">
-                                                Biolegia
-                                            </label>
-                                            <div class="col-md-5 ">
-                                                <input type="number" placeholder="nota" name="biologia"
-                                                       class="form-control input-md ">
-                                            </div>
+                                    </td>
+                                    <td>
+                                        <label  class="col-md-4 control-label">
+                                            Biolegia
+                                        </label>
+                                        <div class="col-md-5 ">
+                                            <input type="number" placeholder="nota" id="biologia" name="biologia"
+                                            value="{{old('biologia')}}" class="form-control input-md " disabled>
+                                        </div>
 
-                                        </td>
-                                    </tr>
+                                    </td>
+                                </tr>
 
-                                    <tr>
-                                        <td>
-                                            <label id="istoria" class="col-md-6 control-label">Istoria</label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="istoria"
-                                                       class="form-control input-md ">
-                                            </div>
+                                <tr>
+                                    <td>
+                                        <label class="col-md-6 control-label">Istoria</label>
+                                        <div class="col-md-4">
+                                            <input type="number" placeholder="nota" id="istoria" name="istoria"
+                                             value="{{old('istoria')}}" class="form-control input-md " disabled>
+                                        </div>
 
-                                        </td>
-                                        <td>
-                                            <label id="chimia" class="col-md-6 control-label">
-                                                Chimia
-                                            </label>
-                                            <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="chimia"
-                                                       class="form-control input-md ">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <label id="informatica" class="col-md-5 control-label">
-                                                Informatica
-                                            </label>
-                                            <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="informatica"
-                                                       class="form-control input-md ">
-                                            </div>
+                                    </td>
+                                    <td>
+                                        <label class="col-md-6 control-label">
+                                            Chimia
+                                        </label>
+                                        <div class="col-md-5">
+                                            <input type="number" placeholder="nota" id="chimia" name="chimia"
+                                             value="{{old('chimia')}}" class="form-control input-md " disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label class="col-md-5 control-label">
+                                            Informatica
+                                        </label>
+                                        <div class="col-md-5">
+                                            <input type="number" placeholder="nota" id="informatica" name="informatica"
+                                             value="{{old('informatica')}}" class="form-control input-md " disabled>
+                                        </div>
 
-                                        </td>
-                                        <td>
-                                            <label id="aptitudini" class="col-md-4 control-label">
-                                                Proba de aptitudini
-                                            </label>
-                                            <div class="col-md-5 ">
-                                                <input type="number" placeholder="nota" name="aptitudini"
-                                                       class="form-control input-md ">
-                                            </div>
+                                    </td>
+                                    <td>
+                                        <label class="col-md-4 control-label">
+                                            Proba de aptitudini
+                                        </label>
+                                        <div class="col-md-5 ">
+                                            <input type="number" placeholder="nota" id="aptitudini" name="aptitudini"
+                                             value="{{old('aptitudini')}}" class="form-control input-md " disabled>
+                                        </div>
 
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div align="center" style="margin-bottom: 30px;margin-top:30px;">
-                                    <INPUT id="calc"  class="btn btn-primary btn-lg" type="button" value="Calculeaza">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div align="center" style="margin-bottom: 30px;margin-top:30px;">
+                                <INPUT id="calc" class="btn btn-primary btn-lg" type="button" value="Calculeaza">
 
-                                </div>
-                                <table>
-                                    <tr>
-                                        <td> <label class="col-md-6 control-label">Media Optiunea I</label>
-                                            <div class="col-md-4 ">
-                                                <input type="text" id="media1" placeholder="media" name="opt1_md"
-                                                       class="form-control input-md " disabled>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td><label id="md1" class="col-md-6 control-label">Media Optiunea I</label>
+                                        <div class="col-md-4 ">
+                                            <input type="text" placeholder="media" id="media1" name="opt1_md"
+                                                   class="form-control input-md " disabled>
 
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <label class="col-md-6 control-label">Media Optiunea II</label>
-                                            <div class="col-md-4 ">
-                                                <input type="text" placeholder="media" id="media2" name="opt2_md"
-                                                       class="form-control input-md " disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label id="md2" class="col-md-6 control-label">Media Optiunea II</label>
+                                        <div class="col-md-4 ">
+                                            <input type="text" placeholder="media" id="media2" name="opt2_md"
+                                                   class="form-control input-md " disabled>
 
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <label class="col-md-6 control-label">Media Optiunea III</label>
-                                            <div class="col-md-4 ">
-                                                <input type="text" placeholder="media" id="media3" name="opt3_md"
-                                                       class="form-control input-md " disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label id="md3" class="col-md-6 control-label">Media Optiunea III</label>
+                                        <div class="col-md-4 ">
+                                            <input type="text" placeholder="media" id="media3" name="opt3_md"
+                                                   class="form-control input-md " disabled>
 
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-
-
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
 
 
                             <p><a href="#" class="simple-back-to-top btn-lg"><span

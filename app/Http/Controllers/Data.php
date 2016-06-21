@@ -57,6 +57,8 @@ class Data extends Controller
             'copil_est' => 'boolean',
             'cetatean_ucr' => 'boolean',
             'parint_invalid' => 'boolean',
+            'copil_inv_gr_I_II' => 'boolean',
+
             'nume' => 'required|string|max:255',
             'prenum' => 'required|string|max:255',
             'patronim' => 'required|string|max:255',
@@ -67,8 +69,8 @@ class Data extends Controller
             'raion' => 'required|string|max:255',
             'sat_oras' => 'required|between:1,2',
             'num_sat_oras' => 'required|string|max:255',
-            'strada' => 'required|string|max:255',
-            'nr_bloc' => 'required|integer|min:0',
+            'strada' => 'string|max:255',
+            'nr_bloc' => 'integer|min:0',
 
             'telefon' => 'required',
             'mobi' => 'required',
@@ -96,7 +98,7 @@ class Data extends Controller
             'med_not_ads' => 'required|numeric|between:5,10',
             'cod_pers' => 'required|string|max:255',
             'loc_nas' => 'required|string|max:255',
-            'liv_mil_nr' => 'required|string|max:255',
+            'liv_mil_nr' => 'string|max:255',
 
         ]);
         $informatica = [
@@ -142,82 +144,106 @@ class Data extends Controller
             'nota4' => $request->istoria,
         ];
 
-        function med_inf($not1,$not2,$not3,$not4,$med_exam_abs){
-            $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
-            $media += $med_exam_abs * 0.4;
+        function med_inf($not1, $not2, $not3, $not4, $med_exam_abs, $est)
+        {
+            if ($est) {
+                $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.4;
+                $media += $med_exam_abs * 0.6;
+            } else {
+                $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
+                $media += $med_exam_abs * 0.4;
+            }
             return $media;
         }
 
-        function med_coreg($not1,$not2,$not3,$aptitudini,$med_exam_abs){
-            $media=(($not1+$not2+$not3+$aptitudini)/4)*0.3;
-            $media += $aptitudini * 0.5;
-            $media += $med_exam_abs * 0.2;
+        function med_coreg($not1, $not2, $not3, $aptitudini, $med_exam_abs, $est)
+        {
+            if ($est) {
+                $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.2;
+                $media += $aptitudini * 0.5;
+                $media += $med_exam_abs * 0.3;
+            } else {
+                $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.3;
+                $media += $aptitudini * 0.5;
+                $media += $med_exam_abs * 0.2;
+            }
             return $media;
         }
 
         if ($request->specialitate1 == 8 || $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
             $nota1 = Note::create($informatica);
-
+            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate1 == 7) {
             $nota1 = Note::create($ecologia);
+            $media1 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10) {
             $nota1 = Note::create($coregrafie);
+            $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate1 == 1 || $request->specialitate1 == 2) {
             $nota1 = Note::create($as);
+            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
 
         if ($request->specialitate2 == 8 || $request->specialitate2 == 3 || $request->specialitate2 == 4 || $request->specialitate2 == 5) {
             $nota2 = Note::create($informatica);
+            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate2 == 7) {
             $nota2 = Note::create($ecologia);
+            $media2 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate2 == 6 || $request->specialitate2 == 9 || $request->specialitate2 == 10) {
             $nota2 = Note::create($coregrafie);
+            $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate2 == 1 || $request->specialitate2 == 2) {
             $nota2 = Note::create($as);
+            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
 
         if ($request->specialitate3 == 8 || $request->specialitate3 == 3 || $request->specialitate3 == 4 || $request->specialitate3 == 5) {
             $nota3 = Note::create($informatica);
+            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate3 == 7) {
             $nota3 = Note::create($ecologia);
+            $media3 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate3 == 6 || $request->specialitate3 == 9 || $request->specialitate3 == 10) {
             $nota3 = Note::create($coregrafie);
+            $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate3 == 1 || $request->specialitate3 == 2) {
             $nota3 = Note::create($as);
+            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
 
-        if ($request->specialitate1 != 0)
-            //informatica contabilitate , ecologie , as sociala
-            $media1 = (($request->opt1_nt1 + $request->opt1_nt2 + $request->opt1_nt3 + $request->opt1_nt4) / 4);
-        // $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
-        /*$media1 += $request->med_ex_ab * 0.4;
-          //arte coregrafie interpritare muzicala pictura
-          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;
-          $media1 += $request->opt1_nt4 * 0.5;
-          $media1 += $request->med_ex_ab * 0.2;
-          //est
-          //informatica contabilitate , ecologie , as sociala
-          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.4;
-          $media1 += $request->med_ex_ab * 0.6;
-          //arte coregrafie interpritare muzicala pictura
-          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.2;
-          $media1 += $request->opt1_nt4 * 0.5;
-          $media1 += $request->med_ex_ab * 0.3;
-          */
-
-        if (!is_null($request->specialitate2))
-            $media2 = ($request->opt2_nt1 + $request->opt2_nt2 + $request->opt2_nt3 + $request->opt2_nt4) / 4;
-        if (!is_null($request->specialitate3))
-            $media3 = ($request->opt3_nt1 + $request->opt3_nt2 + $request->opt3_nt3 + $request->opt3_nt4) / 4;
+//        if ($request->specialitate1 != 0)
+//            //informatica contabilitate , ecologie , as sociala
+//            $media1 = (($request->opt1_nt1 + $request->opt1_nt2 + $request->opt1_nt3 + $request->opt1_nt4) / 4);
+//        // $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
+//        /*$media1 += $request->med_ex_ab * 0.4;
+//          //arte coregrafie interpritare muzicala pictura
+//          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;
+//          $media1 += $request->opt1_nt4 * 0.5;
+//          $media1 += $request->med_ex_ab * 0.2;
+//          //est
+//          //informatica contabilitate , ecologie , as sociala
+//          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.4;
+//          $media1 += $request->med_ex_ab * 0.6;
+//          //arte coregrafie interpritare muzicala pictura
+//          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.2;
+//          $media1 += $request->opt1_nt4 * 0.5;
+//          $media1 += $request->med_ex_ab * 0.3;
+//          */
+//
+//        if (!is_null($request->specialitate2))
+//            $media2 = ($request->opt2_nt1 + $request->opt2_nt2 + $request->opt2_nt3 + $request->opt2_nt4) / 4;
+//        if (!is_null($request->specialitate3))
+//            $media3 = ($request->opt3_nt1 + $request->opt3_nt2 + $request->opt3_nt3 + $request->opt3_nt4) / 4;
 
         $id1 = 0;
         $id2 = 0;
@@ -257,7 +283,8 @@ class Data extends Controller
             'cop_roman' => ifNull($request->cop_romin),
             'raion_est' => ifNull($request->copil_est),
             'ucrainean' => ifNull($request->cetatean_ucr),
-            'un_par_inv' => ifNull($request->un_par_inv),
+            'un_par_inv' => ifNull($request->parint_invalid),
+            'copil_inv_gr_I_II' => ifNull($request->copil_inv_gr_I_II),
             'nume' => strtolower($request->nume),
             'prenume' => strtolower($request->prenum),
             'patronimic' => strtolower($request->patronim),

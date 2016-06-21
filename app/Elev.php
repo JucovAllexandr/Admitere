@@ -76,6 +76,7 @@ class Elev extends Model
         'raion_est',
         'cop_roman',
         'ucrainean',
+        'copil_inv_gr_I_II',
         'un_par_inv',
         'liv_mil_nr',
         'created_at',

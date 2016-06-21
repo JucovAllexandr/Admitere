@@ -98,6 +98,7 @@ class Data extends Controller
             'med_not_ads' => 'required|numeric|between:5,10',
             'cod_pers' => 'required|string|max:255',
             'loc_nas' => 'required|string|max:255',
+            'liv_mil_nr' => 'required|string|max:255',
 
         ]);
 
@@ -362,6 +363,7 @@ class Data extends Controller
             'media_discipline' => $request->med_not_ads,
             'cod_personal' => $request->cod_pers,
             'loc_nas' => $request->loc_nas,
+            'liv_mil_nr' => $request->liv_mil_nr,
         ]);
 
        return redirect('/data');

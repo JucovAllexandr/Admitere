@@ -233,7 +233,7 @@ Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
     @else
         Neincorporabil
     @endif</p>
-<p style="padding-left: 1em;" ><b>Livret militar nr: </b></p>
+<p style="padding-left: 1em;" ><b>Livret militar nr: </b>{{$elev->liv_mil_nr}}</p>
 <p><b>13.Numele si prenumele parintilor: </b></p>
 <p><b>Tatal: </b>{{$e->tat_nume.' '.$e->tat_prenume}}</p>
 <p><b>Mama: </b>{{$e->mam_nume.' '.$e->mam_prenume}}</p>

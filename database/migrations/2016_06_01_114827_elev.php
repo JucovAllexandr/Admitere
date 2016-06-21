@@ -52,6 +52,7 @@ class Elev extends Migration
             $table->string('loc_nas');
             $table->string('seria_certificat');
             $table->string('seria_buletin');
+            $table->string('liv_mil_nr');
 
             $table->string('num_sat_oras');
             $table->string('strada');

@@ -27,6 +27,7 @@
                                         @endif
                                         ">Selectati Optiunea 1</label>
                                 <div class="col-md-2 ">
+
                                     <select id="specialitate1" name="specialitate1" class="form-control ">
                                         <option value="" id="o1-null">Null</option>
                                         <option value="1" id="o1-as_l">AS:lucrător social</option>
@@ -41,6 +42,12 @@
                                         <option value="9" id="o1-ii">Interpretare instrumentala</option>
                                         <option value="10" id="o1-pic">Pictura</option>
                                     </select>
+                                        @if(old('specialitate1')!=null)
+                                        <script>
+                                            $('#specialitate1 option[value="{{old('specialitate1')}}"]').attr('selected','selected');
+                                        </script>
+                                        @endif
+
                                 </div>
                                 <!--select-->
                                 <div class="col-md-1">
@@ -73,11 +80,15 @@
                                         @endif
                                         ">Limba de instruire Optiunea 1</label>
                                 <div class="col-md-2 ">
-                                    <select name="lib1" class="form-control">
+                                    <select id="lib1" name="lib1" class="form-control">
                                         <option value="1">Română</option>
                                         <option value="2">Rusă</option>
-
                                     </select>
+                                    @if(old('lib1')!=null)
+                                        <script>
+                                            $('#lib1 option[value="{{old('lib1')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group ">
@@ -101,6 +112,11 @@
                                         <option value="9" id="o2-ii">Interpretare instrumentala</option>
                                         <option value="10" id="o2-pic">Pictura</option>
                                     </select>
+                                    @if(old('specialitate2')!=null)
+                                        <script>
+                                            $('#specialitate2 option[value="{{old('specialitate2')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                                 <!--select-->
                                 <div class="col-md-1">
@@ -136,11 +152,15 @@
                                         @endif
                                         ">Limba de instruire Optiunea 2</label>
                                 <div class="col-md-2 ">
-                                    <select name="lib2" class="form-control">
+                                    <select id="lib2" name="lib2" class="form-control">
                                         <option value="1">Română</option>
                                         <option value="2">Rusă</option>
-
                                     </select>
+                                    @if(old('lib2')!=null)
+                                        <script>
+                                            $('#lib2 option[value="{{old('lib2')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group ">
@@ -164,6 +184,11 @@
                                         <option value="9" id="o3-ii">Interpretare instrumentala</option>
                                         <option value="10" id="o3-pic">Pictura</option>
                                     </select>
+                                    @if(old('specialitate3')!=null)
+                                        <script>
+                                            $('#specialitate3 option[value="{{old('specialitate3')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
 
 
@@ -202,11 +227,15 @@
                                         @endif
                                         ">Limba de instruire Optiunea 3</label>
                                 <div class="col-md-2 ">
-                                    <select name="lib3" class="form-control">
+                                    <select id="lib3" name="lib3" class="form-control">
                                         <option value="1">Română</option>
                                         <option value="2">Rusă</option>
-
                                     </select>
+                                    @if(old('lib3')!=null)
+                                        <script>
+                                            $('#lib3 option[value="{{old('lib3')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                             </div>
 
@@ -253,7 +282,12 @@
                                         <option value="1">masculin</option>
                                         <option value="2">femenin</option>
                                     </select>
-                                </div>  <!--sexul-->
+                                    @if(old('sex')!=null)
+                                        <script>
+                                            $('#sex option[value="{{old('sex')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
+                                </div>
                                 <label style="margin-right:10px;"  class="col-md-1 control-label
                                        @if($errors->first('natia'))
                                         alert alert-danger
@@ -271,6 +305,11 @@
                                             @endforeach
 
                                     </select>
+                                    @if(old('natia')!=null)
+                                        <script>
+                                            $('#natia option[value="{{old('natia')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
 
                                 <!--natie-->
@@ -311,6 +350,11 @@
                                             <option value="1">Sat</option>
                                             <option value="2">Oraș</option>
                                         </select>
+                                        @if(old('sat_oras')!=null)
+                                            <script>
+                                                $('#sat_oras option[value="{{old('sat_oras')}}"]').attr('selected','selected');
+                                            </script>
+                                        @endif
                                     </div>
 
                                     <label class="col-md-2 control-label
@@ -476,12 +520,17 @@
                                          @endif
                                         ">Cetatenie</label>
                                 <div class="col-md-2">
-                                    <select name="cetatanie" class="form-control">
+                                    <select id="cetatanie" name="cetatanie" class="form-control">
                                         <option value="1">MD</option>
                                         <option value="2">RO</option>
                                         <option value="3">RU</option>
                                         <option value="4">UA</option>
                                     </select>
+                                    @if(old('cetatanie')!=null)
+                                        <script>
+                                            $('#cetatanie option[value="{{old('cetatanie')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group">
@@ -578,11 +627,15 @@
                                          @endif
                                         ">Limba de instruire </label>
                                 <div class="col-md-2 ">
-                                    <select name="lib_inst" class="form-control">
+                                    <select id="lib_inst" name="lib_inst" class="form-control">
                                         <option value="1">Română</option>
                                         <option value="2">Rusă</option>
-
                                     </select>
+                                    @if(old('lib_inst')!=null)
+                                        <script>
+                                            $('#lib_inst option[value="{{old('lib_inst')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
                                 <label class="col-md-3 control-label
                                 @if($errors->first('lib_stud'))
@@ -590,11 +643,16 @@
                                          @endif
                                         ">Limba străină studiată </label>
                                 <div class="col-md-2 ">
-                                    <select name="lib_stud" class="form-control">
+                                    <select id="lib_stud" name="lib_stud" class="form-control">
                                         <option value="3">Franceză</option>
                                         <option value="4">Engleză</option>
                                         <option value="5">Germană</option>
                                     </select>
+                                    @if(old('lib_stud')!=null)
+                                        <script>
+                                            $('#lib_stud option[value="{{old('lib_stud')}}"]').attr('selected','selected');
+                                        </script>
+                                    @endif
                                 </div>
 
                                 <div class="form-group">
@@ -604,14 +662,25 @@
                                              @endif
                                             ">Necesitatea cazări în camin</label>
                                     <div class="col-md-4">
+                                        @if(old('camin')==0)
+                                            <label class="radio-inline">
+                                                <input type="radio" name="camin" value="1">
+                                                Da
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="camin" value="0" checked>
+                                                Nu
+                                            </label>
+                                            @else
                                         <label class="radio-inline">
-                                            <input type="radio" name="camin" value="1" checked="checked">
+                                            <input type="radio" name="camin" value="1" checked>
                                             Da
                                         </label>
                                         <label class="radio-inline">
                                             <input type="radio" name="camin" value="0">
                                             Nu
                                         </label>
+                                            @endif
                                     </div>
 
                                 </div>

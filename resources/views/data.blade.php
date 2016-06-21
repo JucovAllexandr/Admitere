@@ -888,7 +888,7 @@
                                         <td>
                                             <label id="lim_instruire" class="col-md-6 control-label">Limba de instruire</label>
                                             <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt1_nt1"
+                                                <input type="number" placeholder="nota" name="lim_instruire"
                                                        class="form-control input-md ">
                                             </div>
 
@@ -898,7 +898,7 @@
                                                 Limba străină
                                             </label>
                                             <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="opt1_nt2"
+                                                <input type="number" placeholder="nota" name="lim_straina"
                                                        class="form-control input-md ">
                                             </div>
                                         </td>
@@ -907,7 +907,7 @@
                                                 Matematica
                                             </label>
                                             <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                <input type="number" placeholder="nota" name="matem"
                                                        class="form-control input-md ">
                                             </div>
 
@@ -917,7 +917,7 @@
                                                 Biolegia
                                             </label>
                                             <div class="col-md-5 ">
-                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                <input type="number" placeholder="nota" name="biologia"
                                                        class="form-control input-md ">
                                             </div>
 
@@ -928,17 +928,17 @@
                                         <td>
                                             <label id="istoria" class="col-md-6 control-label">Istoria</label>
                                             <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt1_nt1"
+                                                <input type="number" placeholder="nota" name="istoria"
                                                        class="form-control input-md ">
                                             </div>
 
                                         </td>
                                         <td>
-                                            <label id="Chimia" class="col-md-6 control-label">
+                                            <label id="chimia" class="col-md-6 control-label">
                                                 Chimia
                                             </label>
                                             <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="opt1_nt2"
+                                                <input type="number" placeholder="nota" name="chimia"
                                                        class="form-control input-md ">
                                             </div>
                                         </td>
@@ -947,7 +947,7 @@
                                                 Informatica
                                             </label>
                                             <div class="col-md-5">
-                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                <input type="number" placeholder="nota" name="informatica"
                                                        class="form-control input-md ">
                                             </div>
 
@@ -957,7 +957,7 @@
                                                 Proba de aptitudini
                                             </label>
                                             <div class="col-md-5 ">
-                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                <input type="number" placeholder="nota" name="aptitudini"
                                                        class="form-control input-md ">
                                             </div>
 

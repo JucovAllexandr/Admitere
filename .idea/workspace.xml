@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="021892d4-1c73-4a15-bb51-e63c91137dc4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/data_out.blade.php" afterPath="$PROJECT_DIR$/resources/views/data_out.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <ignored path="Admitere.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1280,11 +1278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466504920484</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="panel-data_out">
+      <created>1466511270641</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1466511270641</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62231000" />
+    <option name="totallyTimeSpent" value="62291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1347,7 +1352,8 @@
     <MESSAGE value="data" />
     <MESSAGE value="data in" />
     <MESSAGE value="data show" />
-    <option name="LAST_COMMIT_MESSAGE" value="data show" />
+    <MESSAGE value="panel-data_out" />
+    <option name="LAST_COMMIT_MESSAGE" value="panel-data_out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

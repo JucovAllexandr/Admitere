@@ -27,7 +27,9 @@ Route::get('/export','ExportExcel@export');
 
 Route::get('/data',function(){
     //if(Auth::user()->elev_id == 0)
+    if(Auth::check())
     return view('data');
+    else return redirect('/');
     //else{
      //   $this->data['elev'] = App\Elev::where('id',Auth::user()->elev_id)->get();
     //    return view('data_out',$this->data);

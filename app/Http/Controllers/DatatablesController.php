@@ -8,8 +8,7 @@ use App\Http\Requests;
 use Datatables;
 use App\Elev;
 use DB;
-use Illuminate\Support\Facades\Auth;
-
+use Auth;
 class DatatablesController extends Controller
 {
     public function getIndex()
@@ -17,7 +16,7 @@ class DatatablesController extends Controller
         if(Auth::check())
         return view('data_out');
         else
-            redirect('/');
+            return redirect('/');
     }
 
     public function anyData()

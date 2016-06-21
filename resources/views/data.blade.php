@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="panel panel-info">
@@ -880,156 +881,124 @@
 
                                     </div>
                                 </div>
+                                </div>
                                 <hr>
-
-                                <div class="col-md-offset-1">
-                                    <div class="form-group col-md-4 " style=" width:350px;">
-                                        <label class="col-md-7 control-label">Optiunea I</label>
-                                        <div class="form-group">
-
-                                            <label class="col-md-6 control-label">Limba de instruire</label>
+                                <table>
+                                    <tr >
+                                        <td>
+                                            <label id="lim_instruire" class="col-md-6 control-label">Limba de instruire</label>
                                             <div class="col-md-4">
                                                 <input type="number" placeholder="nota" name="opt1_nt1"
-                                                       class="form-control input-md opt1 nt1">
+                                                       class="form-control input-md ">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt1p1" class="col-md-6 control-label">
-                                                Selectati Optiunea 1
+
+                                </td>
+                                        <td>
+                                            <label id="lim_straina" class="col-md-6 control-label">
+                                                Limba străină
                                             </label>
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <input type="number" placeholder="nota" name="opt1_nt2"
-                                                       class="form-control input-md opt1 nt1">
+                                                       class="form-control input-md ">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt1p2" class="col-md-6 control-label">
-                                                Selectati Optiunea 1
+                                        </td>
+                                        <td>
+                                            <label id="matem" class="col-md-5 control-label">
+                                                Matematica
                                             </label>
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <input type="number" placeholder="nota" name="opt1_nt3"
-                                                       class="form-control input-md opt1 nt1">
+                                                       class="form-control input-md ">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt1p3" class="col-md-6 control-label">
-                                                Selectati Optiunea 1
+
+                                        </td>
+                                        <td>
+                                            <label id="biologia" class="col-md-4 control-label">
+                                                Biolegia
                                             </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt1_nt4"
-                                                       class="form-control input-md opt1 nt1">
+                                            <div class="col-md-5 ">
+                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                       class="form-control input-md ">
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-6 control-label">Media Optiunea I</label>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label id="istoria" class="col-md-6 control-label">Istoria</label>
+                                            <div class="col-md-4">
+                                                <input type="number" placeholder="nota" name="opt1_nt1"
+                                                       class="form-control input-md ">
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <label id="Chimia" class="col-md-6 control-label">
+                                                Chimia
+                                            </label>
+                                            <div class="col-md-5">
+                                                <input type="number" placeholder="nota" name="opt1_nt2"
+                                                       class="form-control input-md ">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label id="informatica" class="col-md-5 control-label">
+                                                Informatica
+                                            </label>
+                                            <div class="col-md-5">
+                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                       class="form-control input-md ">
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <label id="aptitudini" class="col-md-4 control-label">
+                                                Proba de aptitudini
+                                            </label>
+                                            <div class="col-md-5 ">
+                                                <input type="number" placeholder="nota" name="opt1_nt3"
+                                                       class="form-control input-md ">
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div align="center" style="margin-bottom: 30px;margin-top:30px;">
+                                    <INPUT id="calc"  class="btn btn-primary btn-lg" type="button" value="Calculeaza">
+
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td> <label class="col-md-6 control-label">Media Optiunea I</label>
                                             <div class="col-md-4 ">
                                                 <input type="text" id="media1" placeholder="media" name="opt1_md"
                                                        class="form-control input-md " disabled>
 
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-4" style="width: 350px">
-                                        <label class="col-md-7 control-label">Optiunea II</label>
-                                        <div class="form-group">
-
-                                            <label class="col-md-6 control-label">Limba de instruire</label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt2_nt1"
-                                                       class="form-control input-md opt2 nt2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt2p1" class="col-md-6 control-label">
-                                                Selectati Optiunea 2
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt2_nt2"
-                                                       class="form-control input-md opt2 nt2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt2p2" class="col-md-6 control-label">
-                                                Selectati Optiunea 2
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt2_nt3"
-                                                       class="form-control input-md opt2 nt2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt2p3" class="col-md-6 control-label">
-                                                Selectati Optiunea 2
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt2_nt4"
-                                                       class="form-control input-md opt2 nt2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
+                                        </td>
+                                        <td>
                                             <label class="col-md-6 control-label">Media Optiunea II</label>
                                             <div class="col-md-4 ">
                                                 <input type="text" placeholder="media" id="media2" name="opt2_md"
                                                        class="form-control input-md " disabled>
 
                                             </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-4" style="width: 350px">
-                                        <label class="col-md-7 control-label">Optiunea III</label>
-                                        <div class="form-group">
-
-                                            <label class="col-md-6 control-label">Limba de instruire</label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt3_nt1"
-                                                       class="form-control input-md opt3 nt3">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt3p1" class="col-md-6 control-label">
-                                                Selectati Optiunea 3
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt3_nt2"
-                                                       class="form-control input-md opt3 nt3">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt3p2" class="col-md-6 control-label">
-                                                Selectati Optiunea 3
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt3_nt3"
-                                                       class="form-control input-md opt3 nt3">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label id="opt3p3" class="col-md-6 control-label">
-                                                Selectati Optiunea 3
-                                            </label>
-                                            <div class="col-md-4">
-                                                <input type="number" placeholder="nota" name="opt3_nt4"
-                                                       class="form-control input-md opt3 nt3">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
+                                        </td>
+                                        <td>
                                             <label class="col-md-6 control-label">Media Optiunea III</label>
                                             <div class="col-md-4 ">
                                                 <input type="text" placeholder="media" id="media3" name="opt3_md"
                                                        class="form-control input-md " disabled>
 
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
+                                        </td>
+                                    </tr>
+                                </table>
 
-                                <div class="form-group" style="margin-left:100px;">
-                                    <INPUT id="calc" class="btn btn-primary btn-lg" type="button" value="Calculeaza">
 
-                                </div>
-                            </div>
+
+
                             <p><a href="#" class="simple-back-to-top btn-lg"><span
                                             class="glyphicon glyphicon-circle-arrow-up btn-lg "
                                             style="font-size: 33px;"></span></a></p>

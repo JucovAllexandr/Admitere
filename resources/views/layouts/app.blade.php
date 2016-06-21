@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
 
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    <style>
+        tr{
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
@@ -71,15 +76,14 @@
                 @if(Auth::check())
                      <a href="{{URL::to('/show')}}">Arata</a> |
                 @endif
-
                 @if(Auth::check())
                     <a href="{{URL::to('/logout')}}">Iesire</a>
                 @else
                     <a href="{{URL::to('/login')}}">Logare</a>
                 @endif
             </div>
-            <div class="col-md-4">
-                <p class="">© 2016 </p>
+            <div class="col-md-3">
+                <p class=""> © 2016</p>
             </div>
         </div>
     </div>

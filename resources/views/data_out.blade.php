@@ -3,7 +3,8 @@
 @section('content')
 
     <div class="row">
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-12 col-md-12 ">
+            <div class=""></div>
             <a href="{{URL::to('/export')}}" class="btn btn-primary">Export</a>
             <table class="table table-bordered" id="users-table">
                 <thead>

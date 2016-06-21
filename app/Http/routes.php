@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/show','DatatablesController@getIndex');
 Route::get('/show/data','DatatablesController@anyData');
 
-Route::get('/export','ExportExcel@export');
+Route::get('/export/{sp}','ExportExcel@export');
 
 //Route::post('/help','Help@message');
 

@@ -5,10 +5,13 @@
 <style>
     th{
         transform: rotate(90deg);
+        width: auto;
     }
+
 </style>
 <body>
 <table>
+    <tr><th colspan="20" style="text-align: center; background-color: #12306f; ">{{$specialitate}}</th></tr>
 <tr>
     <th>Numele, prenumele</th>
     <th>Specilaitate</th>
@@ -34,9 +37,7 @@
     @foreach($elevi as $elev)
         <tr>
             <td>{{$elev->nume.' '.$elev->prenume}}</td>
-            <td>@foreach($elev->specialitates()->get() as $den)
-                    {{ucfirst($den->denumire)}}
-                @endforeach</td>
+            <td>{{$specialitate}}</td>
             <td>{{$elev->media1}}</td>
             <td>{{$elev->created_at}}</td>
             <td>{{$elev->cop_orfan}}</td>

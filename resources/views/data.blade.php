@@ -709,8 +709,7 @@
                                                 class=" alert alert-danger"
                                             @endif
                                             <input type="checkbox" name="patru_cop" value="1"
-                                                   @if(old('patru_cop')) checked @endif
-                                            >
+                                                   @if(old('patru_cop')) checked @endif>
                                             Copil din familie cu 4 şi mai mulţi copii
                                         </label>
 
@@ -793,6 +792,17 @@
                                             <input type="checkbox" name="parint_invalid" value="1"
                                                    @if(old('parint_invalid')) checked @endif>
                                             Copil din familie unul din părinți Invalid de gradul I sau II
+                                        </label>
+                                    </div>
+                                    <label class="col-md-6 control-label " for="grup"></label>
+                                    <div class=" col-md-4 checkbox">
+                                        <label>
+                                            @if($errors->first('copil_invalid'))
+                                                class=" alert alert-danger"
+                                            @endif
+                                            <input type="checkbox" name="copil_invalid" value="1"
+                                                   @if(old('copil_invalid')) checked @endif>
+                                                Copil Invalid de gradul I şi II
                                         </label>
                                     </div>
                                 </div>

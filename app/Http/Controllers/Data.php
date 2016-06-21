@@ -19,6 +19,7 @@ class Data extends Controller
                 return 0;
             else return 1;
         }
+
         //dd($request);
         $this->validate($request, [
             'specialitate1' => 'required|exists:specialitates,id|different:specialitate2|different:specialitate3',
@@ -33,22 +34,19 @@ class Data extends Controller
             'cont2' => 'boolean',
             'bug3' => 'boolean',
             'cont3' => 'boolean',
-            'opt1_nt1' => 'required|integer|between:5,10',
-            'opt1_nt2' => 'required|integer|between:5,10',
-            'opt1_nt3' => 'required|integer|between:5,10',
-            'opt1_nt4' => 'required|integer|between:5,10',
-            'opt2_nt1' => 'between:5,10|integer',
-            'opt2_nt2' => 'between:5,10|integer',
-            'opt2_nt3' => 'between:5,10|integer',
-            'opt2_nt4' => 'between:5,10|integer',
-            'opt3_nt1' => 'between:5,10|integer',
-            'opt3_nt2' => 'between:5,10|integer',
-            'opt3_nt3' => 'between:5,10|integer',
-            'opt3_nt4' => 'between:5,10|integer',
 
-            'gimnaz' => 'boolean',
+
+            'lim_instruire' => 'required|integer|between:5,10',
+            'lim_straina' => 'integer|between:5,10',
+            'matem' => 'integer|between:5,10',
+            'biologia' => 'integer|between:5,10',
+            'istoria' => 'between:5,10|integer',
+            'chimia' => 'between:5,10|integer',
+            'informatica' => 'between:5,10|integer',
+            'aptitudini' => 'between:5,10|integer',
+
+
             'liv_mil' => 'boolean',
-            'aloling' => 'boolean',
             'cop_orf' => 'boolean',
             'patru_cop' => 'boolean',
             'indep_serv_mil' => 'boolean',
@@ -101,201 +99,136 @@ class Data extends Controller
             'liv_mil_nr' => 'required|string|max:255',
 
         ]);
+        $informatica = [
+            'obiect1' => 'Limba de instruire',
+            'nota1' => $request->lim_instruire,
+            'obiect2' => 'Limba staina',
+            'nota2' => $request->lim_straina,
+            'obiect3' => 'Matematica',
+            'nota3' => $request->matem,
+            'obiect4' => 'Informatica',
+            'nota4' => $request->informatica,
+        ];
+        $ecologia = [
+            'obiect1' => 'Limba de instruire',
+            'nota1' => $request->lim_instruire,
+            'obiect2' => 'Biologie',
+            'nota2' => $request->biologia,
+            'obiect3' => 'Chimie',
+            'nota3' => $request->chimia,
+            'obiect4' => 'Matematica',
+            'nota4' => $request->matem,
+        ];
 
-        if($request->specialitate1 == 8 || $request->specialitate1 ==3 || $request->specialitate1 ==4 || $request->specialitate1 == 5)
-        {
-            $nota1 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt1_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt1_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt1_nt3,
-                'obiect4' => 'Informatica',
-                'nota4' => $request->opt1_nt4,
-            ]);
-        }
-        if($request->specialitate1 == 7 )
-        {
-            $nota1 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt1_nt1,
-                'obiect2' => 'Biologie',
-                'nota2' => $request->opt1_nt2,
-                'obiect3' => 'Chimie',
-                'nota3' => $request->opt1_nt3,
-                'obiect4' => 'Matematica',
-                'nota4' => $request->opt1_nt4,
-            ]);
-        }
-        if($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10)
-        {
-            $nota1 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt1_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt1_nt2,
-                'obiect3' => 'Istoria',
-                'nota3' => $request->opt1_nt3,
-                'obiect4' => 'Proba de aptitudini',
-                'nota4' => $request->opt1_nt4,
-            ]);
-        }
-        if($request->specialitate1 == 1 || $request->specialitate1 == 2)
-        {
-            $nota1 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt1_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt1_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt1_nt3,
-                'obiect4' => 'Istoria',
-                'nota4' => $request->opt1_nt4,
-            ]);
+        $coregrafie = [
+            'obiect1' => 'Limba de instruire',
+            'nota1' => $request->lim_instruire,
+            'obiect2' => 'Limba staina',
+            'nota2' => $request->lim_straina,
+            'obiect3' => 'Istoria',
+            'nota3' => $request->istoria,
+            'obiect4' => 'Proba de aptitudini',
+            'nota4' => $request->aptitudini,
+        ];
+
+        $as = [
+            'obiect1' => 'Limba de instruire',
+            'nota1' => $request->lim_instruire,
+            'obiect2' => 'Limba staina',
+            'nota2' => $request->lim_straina,
+            'obiect3' => 'Matematica',
+            'nota3' => $request->matem,
+            'obiect4' => 'Istoria',
+            'nota4' => $request->istoria,
+        ];
+
+        function med_inf($not1,$not2,$not3,$not4,$med_exam_abs){
+            $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
+            $media += $med_exam_abs * 0.4;
+            return $media;
         }
 
-        if($request->specialitate2 == 8 || $request->specialitate2 ==3 || $request->specialitate2 ==4 || $request->specialitate2 == 5)
-        {
-            $nota2 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt2_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt2_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt2_nt3,
-                'obiect4' => 'Informatica',
-                'nota4' => $request->opt2_nt4,
-            ]);
-        }
-        if($request->specialitate2 == 7 )
-        {
-            $nota2 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt2_nt1,
-                'obiect2' => 'Biologie',
-                'nota2' => $request->opt2_nt2,
-                'obiect3' => 'Chimie',
-                'nota3' => $request->opt2_nt3,
-                'obiect4' => 'Matematica',
-                'nota4' => $request->opt2_nt4,
-            ]);
-        }
-        if($request->specialitate2 == 6 || $request->specialitate2 == 9 || $request->specialitate2 == 10)
-        {
-            $nota2 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt2_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt2_nt2,
-                'obiect3' => 'Istoria',
-                'nota3' => $request->opt2_nt3,
-                'obiect4' => 'Proba de aptitudini',
-                'nota4' => $request->opt2_nt4,
-            ]);
-        }
-        if($request->specialitate2 == 1 || $request->specialitate2 == 2)
-        {
-            $nota2 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt2_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt2_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt2_nt3,
-                'obiect4' => 'Istoria',
-                'nota4' => $request->opt2_nt4,
-            ]);
-        }
-
-        if($request->specialitate3 == 8 || $request->specialitate3 ==3 || $request->specialitate3 ==4 || $request->specialitate3 == 5)
-        {
-            $nota3 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt3_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt3_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt3_nt3,
-                'obiect4' => 'Informatica',
-                'nota4' => $request->opt3_nt4,
-            ]);
-        }
-        if($request->specialitate3 == 7 )
-        {
-            $nota3 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt3_nt1,
-                'obiect2' => 'Biologie',
-                'nota2' => $request->opt3_nt2,
-                'obiect3' => 'Chimie',
-                'nota3' => $request->opt3_nt3,
-                'obiect4' => 'Matematica',
-                'nota4' => $request->opt3_nt4,
-            ]);
-        }
-        if($request->specialitate3 == 6 || $request->specialitate3 == 9 || $request->specialitate3 == 10)
-        {
-            $nota3 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt3_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt3_nt2,
-                'obiect3' => 'Istoria',
-                'nota3' => $request->opt3_nt3,
-                'obiect4' => 'Proba de aptitudini',
-                'nota4' => $request->opt3_nt4,
-            ]);
-        }
-        if($request->specialitate3 == 1 || $request->specialitate3 == 2)
-        {
-            $nota3 = Note::create([
-                'obiect1' => 'Limba de instruire',
-                'nota1' => $request->opt3_nt1,
-                'obiect2' => 'Limba staina',
-                'nota2' => $request->opt3_nt2,
-                'obiect3' => 'Matematica',
-                'nota3' => $request->opt3_nt3,
-                'obiect4' => 'Istoria',
-                'nota4' => $request->opt3_nt4,
-            ]);
+        function med_coreg($not1,$not2,$not3,$aptitudini,$med_exam_abs){
+            $media1=(($not1+$not2+$not3+$aptitudini)/4)*0.3;
+            $media1 += $aptitudini * 0.5;
+            $media1 += $med_exam_abs * 0.2;
         }
         
-        if($request->specialitate1 !=0)
+        if ($request->specialitate1 == 8 || $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
+            $nota1 = Note::create($informatica);
+
+        }
+        if ($request->specialitate1 == 7) {
+            $nota1 = Note::create($ecologia);
+        }
+        if ($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10) {
+            $nota1 = Note::create($coregrafie);
+        }
+        if ($request->specialitate1 == 1 || $request->specialitate1 == 2) {
+            $nota1 = Note::create($as);
+        }
+
+        if ($request->specialitate2 == 8 || $request->specialitate2 == 3 || $request->specialitate2 == 4 || $request->specialitate2 == 5) {
+            $nota2 = Note::create($informatica);
+        }
+        if ($request->specialitate2 == 7) {
+            $nota2 = Note::create($ecologia);
+        }
+        if ($request->specialitate2 == 6 || $request->specialitate2 == 9 || $request->specialitate2 == 10) {
+            $nota2 = Note::create($coregrafie);
+        }
+        if ($request->specialitate2 == 1 || $request->specialitate2 == 2) {
+            $nota2 = Note::create($as);
+        }
+
+        if ($request->specialitate3 == 8 || $request->specialitate3 == 3 || $request->specialitate3 == 4 || $request->specialitate3 == 5) {
+            $nota3 = Note::create($informatica);
+        }
+        if ($request->specialitate3 == 7) {
+            $nota3 = Note::create($ecologia);
+        }
+        if ($request->specialitate3 == 6 || $request->specialitate3 == 9 || $request->specialitate3 == 10) {
+            $nota3 = Note::create($coregrafie);
+        }
+        if ($request->specialitate3 == 1 || $request->specialitate3 == 2) {
+            $nota3 = Note::create($as);
+        }
+
+        if ($request->specialitate1 != 0)
             //informatica contabilitate , ecologie , as sociala
-            $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4);
-           // $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
-      /*$media1 += $request->med_ex_ab * 0.4;
-        //arte coregrafie interpritare muzicala pictura
-        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;
-        $media1 += $request->opt1_nt4 * 0.5;
-        $media1 += $request->med_ex_ab * 0.2;
-        //est
-        //informatica contabilitate , ecologie , as sociala
-        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.4;
-        $media1 += $request->med_ex_ab * 0.6;
-        //arte coregrafie interpritare muzicala pictura
-        $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.2;
-        $media1 += $request->opt1_nt4 * 0.5;
-        $media1 += $request->med_ex_ab * 0.3;
-        */
-        
-        if(!is_null($request->specialitate2))
-            $media2=($request->opt2_nt1+$request->opt2_nt2+$request->opt2_nt3+$request->opt2_nt4)/4;
-        if(!is_null($request->specialitate3))
-            $media3=($request->opt3_nt1+$request->opt3_nt2+$request->opt3_nt3+$request->opt3_nt4)/4;
+            $media1 = (($request->opt1_nt1 + $request->opt1_nt2 + $request->opt1_nt3 + $request->opt1_nt4) / 4);
+        // $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.6;
+        /*$media1 += $request->med_ex_ab * 0.4;
+          //arte coregrafie interpritare muzicala pictura
+          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.3;
+          $media1 += $request->opt1_nt4 * 0.5;
+          $media1 += $request->med_ex_ab * 0.2;
+          //est
+          //informatica contabilitate , ecologie , as sociala
+          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.4;
+          $media1 += $request->med_ex_ab * 0.6;
+          //arte coregrafie interpritare muzicala pictura
+          $media1=(($request->opt1_nt1+$request->opt1_nt2+$request->opt1_nt3+$request->opt1_nt4)/4)*0.2;
+          $media1 += $request->opt1_nt4 * 0.5;
+          $media1 += $request->med_ex_ab * 0.3;
+          */
+
+        if (!is_null($request->specialitate2))
+            $media2 = ($request->opt2_nt1 + $request->opt2_nt2 + $request->opt2_nt3 + $request->opt2_nt4) / 4;
+        if (!is_null($request->specialitate3))
+            $media3 = ($request->opt3_nt1 + $request->opt3_nt2 + $request->opt3_nt3 + $request->opt3_nt4) / 4;
 
         $id1 = 0;
         $id2 = 0;
 
-        if(isset($nota2)) $id1=$nota2->id;
-        if(isset($nota3)) $id2=$nota3->id;
+        if (isset($nota2)) $id1 = $nota2->id;
+        if (isset($nota3)) $id2 = $nota3->id;
 
         $dt = Carbon::parse($request->data_nast);
         $dt2 = Carbon::parse($request->dat_elib);
         $dt3 = Carbon::parse($request->dat_elib2);
         Elev::create([
-            'user_id' =>  Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'id_specialitate' => $request->specialitate1,
             'id_specialitate2' => $request->specialitate2,
             'id_specialitate3' => $request->specialitate3,
@@ -336,7 +269,7 @@ class Data extends Controller
             'num_sat_oras' => strtolower($request->num_sat_oras),
             'strada' => strtolower($request->strada),
             'nr_bloc' => $request->nr_bloc,
-            
+
             'telefon' => $request->telefon,
             'telefon_mobil' => $request->mobi,
             'email' => $request->email,
@@ -366,6 +299,6 @@ class Data extends Controller
             'liv_mil_nr' => $request->liv_mil_nr,
         ]);
 
-       return redirect('/data');
+        return redirect('/data');
     }
 }

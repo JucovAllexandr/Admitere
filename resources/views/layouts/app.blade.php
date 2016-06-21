@@ -19,6 +19,17 @@
         tr{
             height: 20px;
         }
+        ul {
+            list-style: none;
+
+        }
+
+        li {
+            display: inline-block;
+
+            padding-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>

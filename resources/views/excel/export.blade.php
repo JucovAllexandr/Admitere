@@ -5,7 +5,7 @@
 <style>
     th{
         transform: rotate(90deg);
-        width: auto;
+        width: 5px;
     }
 
 </style>

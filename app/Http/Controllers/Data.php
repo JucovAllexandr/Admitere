@@ -74,7 +74,7 @@ class Data extends Controller
 
             'telefon' => 'required',
             'mobi' => 'required',
-            'email' => 'email|unique:elev',
+            'email' => 'email',
             'seria1' => 'string|max:255',
             'dat_elib' => 'date_format:d.m.Y',
             'seria2' => 'required|string|max:255',

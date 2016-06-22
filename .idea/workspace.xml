@@ -4,7 +4,6 @@
     <list default="true" id="47a853ae-c8bb-4067-8728-3eef202c3ad9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Data.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php" afterPath="$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php" />
     </list>
     <ignored path="dip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,35 +25,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Data.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Data.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
               <folding>
-                <element signature="e#5322#5727#0#PHP" expanded="false" />
-                <element signature="e#5737#6252#0#PHP" expanded="false" />
-                <element signature="e#6262#6616#0#PHP" expanded="false" />
-                <element signature="e#6625#6872#0#PHP" expanded="false" />
-                <element signature="e#6881#7206#0#PHP" expanded="false" />
-                <element signature="e#7215#7492#0#PHP" expanded="false" />
-                <element signature="e#7502#7856#0#PHP" expanded="false" />
-                <element signature="e#7865#8112#0#PHP" expanded="false" />
-                <element signature="e#8121#8446#0#PHP" expanded="false" />
-                <element signature="e#8455#8732#0#PHP" expanded="false" />
-                <element signature="e#8742#9096#0#PHP" expanded="false" />
-                <element signature="e#9105#9352#0#PHP" expanded="false" />
-                <element signature="e#9361#9686#0#PHP" expanded="false" />
-                <element signature="e#9695#9972#0#PHP" expanded="false" />
+                <element signature="e#5310#5715#0#PHP" expanded="false" />
+                <element signature="e#5725#6240#0#PHP" expanded="false" />
+                <element signature="e#6250#6604#0#PHP" expanded="false" />
+                <element signature="e#6613#6860#0#PHP" expanded="false" />
+                <element signature="e#6869#7194#0#PHP" expanded="false" />
+                <element signature="e#7203#7480#0#PHP" expanded="false" />
+                <element signature="e#7490#7844#0#PHP" expanded="false" />
+                <element signature="e#7853#8100#0#PHP" expanded="false" />
+                <element signature="e#8109#8434#0#PHP" expanded="false" />
+                <element signature="e#8443#8720#0#PHP" expanded="false" />
+                <element signature="e#8730#9084#0#PHP" expanded="false" />
+                <element signature="e#9093#9340#0#PHP" expanded="false" />
+                <element signature="e#9349#9674#0#PHP" expanded="false" />
+                <element signature="e#9683#9960#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_06_01_114827_elev.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_06_01_114827_elev.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="470">
               <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
               <folding />
             </state>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" />
         <option value="$PROJECT_DIR$/config/administrator/users.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
       </list>
     </option>
   </component>
@@ -724,11 +723,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466581502213</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="data add">
+      <created>1466582247749</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1466582247749</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69152000" />
+    <option name="totallyTimeSpent" value="69340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1160,34 +1166,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-          <folding>
-            <element signature="e#5322#5727#0#PHP" expanded="false" />
-            <element signature="e#5737#6252#0#PHP" expanded="false" />
-            <element signature="e#6262#6616#0#PHP" expanded="false" />
-            <element signature="e#6625#6872#0#PHP" expanded="false" />
-            <element signature="e#6881#7206#0#PHP" expanded="false" />
-            <element signature="e#7215#7492#0#PHP" expanded="false" />
-            <element signature="e#7502#7856#0#PHP" expanded="false" />
-            <element signature="e#7865#8112#0#PHP" expanded="false" />
-            <element signature="e#8121#8446#0#PHP" expanded="false" />
-            <element signature="e#8455#8732#0#PHP" expanded="false" />
-            <element signature="e#8742#9096#0#PHP" expanded="false" />
-            <element signature="e#9105#9352#0#PHP" expanded="false" />
-            <element signature="e#9361#9686#0#PHP" expanded="false" />
-            <element signature="e#9695#9972#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="470">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_01_114827_elev.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+          <folding>
+            <element signature="e#5310#5715#0#PHP" expanded="false" />
+            <element signature="e#5725#6240#0#PHP" expanded="false" />
+            <element signature="e#6250#6604#0#PHP" expanded="false" />
+            <element signature="e#6613#6860#0#PHP" expanded="false" />
+            <element signature="e#6869#7194#0#PHP" expanded="false" />
+            <element signature="e#7203#7480#0#PHP" expanded="false" />
+            <element signature="e#7490#7844#0#PHP" expanded="false" />
+            <element signature="e#7853#8100#0#PHP" expanded="false" />
+            <element signature="e#8109#8434#0#PHP" expanded="false" />
+            <element signature="e#8443#8720#0#PHP" expanded="false" />
+            <element signature="e#8730#9084#0#PHP" expanded="false" />
+            <element signature="e#9093#9340#0#PHP" expanded="false" />
+            <element signature="e#9349#9674#0#PHP" expanded="false" />
+            <element signature="e#9683#9960#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

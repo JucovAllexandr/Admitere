@@ -7,12 +7,16 @@ return [
         'name',
         'email',
         'admin',
+        'moderator',
         'elev_id',
     ],
     'edit_fields' => [
       'admin' => [
         'type' => 'bool',
       ],
+        'moderator' => [
+            'type' => 'bool',
+        ],
     ],
     'action_permissions'=> [
         'create' => function($model)

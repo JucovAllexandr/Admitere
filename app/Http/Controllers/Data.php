@@ -96,7 +96,7 @@ class Data extends Controller
             'dist' => 'string|max:255',
             'med_ex_ab' => 'required|numeric|between:5,10',
             'med_not_ads' => 'required|numeric|between:5,10',
-            'cod_pers' => 'required|string|max:255|unique:elev',
+            'cod_pers' => 'required|string|max:13|unique:elev',
             'loc_nas' => 'string|max:255',
             'liv_mil_nr' => 'string|max:255',
 

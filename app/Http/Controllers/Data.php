@@ -143,7 +143,8 @@ class Data extends Controller
             'obiect4' => 'Istoria',
             'nota4' => $request->istoria,
         ];
-
+        $media2=0;
+        $media3=0;
         function med_inf($not1, $not2, $not3, $not4, $med_exam_abs, $est)
         {
             if ($est) {

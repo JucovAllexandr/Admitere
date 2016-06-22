@@ -28,19 +28,19 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="104" column="46" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+            <state relative-caret-position="276">
+              <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
               <folding>
-                <element signature="e#5298#5703#0#PHP" expanded="false" />
-                <element signature="e#6109#6463#0#PHP" expanded="false" />
-                <element signature="e#6472#6719#0#PHP" expanded="false" />
-                <element signature="e#7041#7318#0#PHP" expanded="false" />
-                <element signature="e#7328#7682#0#PHP" expanded="false" />
-                <element signature="e#7691#7938#0#PHP" expanded="false" />
-                <element signature="e#8260#8537#0#PHP" expanded="false" />
-                <element signature="e#8547#8901#0#PHP" expanded="false" />
-                <element signature="e#8910#9157#0#PHP" expanded="false" />
-                <element signature="e#9479#9756#0#PHP" expanded="false" />
+                <element signature="e#5335#5740#0#PHP" expanded="false" />
+                <element signature="e#6146#6500#0#PHP" expanded="false" />
+                <element signature="e#6509#6756#0#PHP" expanded="false" />
+                <element signature="e#7078#7355#0#PHP" expanded="false" />
+                <element signature="e#7365#7719#0#PHP" expanded="false" />
+                <element signature="e#7728#7975#0#PHP" expanded="false" />
+                <element signature="e#8297#8574#0#PHP" expanded="false" />
+                <element signature="e#8584#8938#0#PHP" expanded="false" />
+                <element signature="e#8947#9194#0#PHP" expanded="false" />
+                <element signature="e#9516#9793#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -825,11 +825,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466584031219</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="data add">
+      <created>1466584377991</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1466584377991</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71282000" />
+    <option name="totallyTimeSpent" value="71392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1272,19 +1279,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="104" column="46" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+        <state relative-caret-position="276">
+          <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
           <folding>
-            <element signature="e#5298#5703#0#PHP" expanded="false" />
-            <element signature="e#6109#6463#0#PHP" expanded="false" />
-            <element signature="e#6472#6719#0#PHP" expanded="false" />
-            <element signature="e#7041#7318#0#PHP" expanded="false" />
-            <element signature="e#7328#7682#0#PHP" expanded="false" />
-            <element signature="e#7691#7938#0#PHP" expanded="false" />
-            <element signature="e#8260#8537#0#PHP" expanded="false" />
-            <element signature="e#8547#8901#0#PHP" expanded="false" />
-            <element signature="e#8910#9157#0#PHP" expanded="false" />
-            <element signature="e#9479#9756#0#PHP" expanded="false" />
+            <element signature="e#5335#5740#0#PHP" expanded="false" />
+            <element signature="e#6146#6500#0#PHP" expanded="false" />
+            <element signature="e#6509#6756#0#PHP" expanded="false" />
+            <element signature="e#7078#7355#0#PHP" expanded="false" />
+            <element signature="e#7365#7719#0#PHP" expanded="false" />
+            <element signature="e#7728#7975#0#PHP" expanded="false" />
+            <element signature="e#8297#8574#0#PHP" expanded="false" />
+            <element signature="e#8584#8938#0#PHP" expanded="false" />
+            <element signature="e#8947#9194#0#PHP" expanded="false" />
+            <element signature="e#9516#9793#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

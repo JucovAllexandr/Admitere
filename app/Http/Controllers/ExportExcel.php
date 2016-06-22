@@ -34,7 +34,7 @@ class ExportExcel extends Controller
                             });
                             $sheet->setHeight(2, 360);
                         });
-                    })->export('xlsx');
+                    })->export('xls');
 
             }else
                 abort(404);

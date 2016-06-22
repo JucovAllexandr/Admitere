@@ -132,12 +132,10 @@ $(document).ready(function () {
     {
 
         if ($est) {
-            $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.2;
-            $media += $aptitudini * 0.5;
+            $media = (($not1 + $not2 + $not3 ) / 3) * 0.2;
             $media += $med_exam_abs * 0.3;
         } else {
-            $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.3;
-            $media += $aptitudini * 0.5;
+            $media = (($not1 + $not2 + $not3 ) / 3) * 0.3;
             $media += $med_exam_abs * 0.2;
         }
         return $media;
@@ -164,7 +162,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
-                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
             if (sp == 1 || sp == 2) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
@@ -182,7 +180,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
-                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
             if (sp == 1 || sp == 2) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
@@ -200,7 +198,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
-                $media1 = med_coreg(lim_instruire,lim_straina,istoria,aptitudini,med_ex_ab,est);
+                $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
             if (sp == 1 || sp == 2) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);

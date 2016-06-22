@@ -156,15 +156,13 @@ class Data extends Controller
             return $media;
         }
 
-        function med_coreg($not1, $not2, $not3, $aptitudini, $med_exam_abs, $est)
+        function med_coreg($not1, $not2, $not3, $med_exam_abs, $est)
         {
             if ($est) {
-                $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.2;
-                $media += $aptitudini * 0.5;
+                $media = (($not1 + $not2 + $not3 ) / 3) * 0.2;
                 $media += $med_exam_abs * 0.3;
             } else {
-                $media = (($not1 + $not2 + $not3 + $aptitudini) / 4) * 0.3;
-                $media += $aptitudini * 0.5;
+                $media = (($not1 + $not2 + $not3 ) / 3) * 0.3;
                 $media += $med_exam_abs * 0.2;
             }
             return $media;
@@ -180,7 +178,7 @@ class Data extends Controller
         }
         if ($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10) {
             $nota1 = Note::create($coregrafie);
-            $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
+            $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate1 == 1 || $request->specialitate1 == 2) {
             $nota1 = Note::create($as);
@@ -197,7 +195,7 @@ class Data extends Controller
         }
         if ($request->specialitate2 == 6 || $request->specialitate2 == 9 || $request->specialitate2 == 10) {
             $nota2 = Note::create($coregrafie);
-            $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
+            $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate2 == 1 || $request->specialitate2 == 2) {
             $nota2 = Note::create($as);
@@ -214,7 +212,7 @@ class Data extends Controller
         }
         if ($request->specialitate3 == 6 || $request->specialitate3 == 9 || $request->specialitate3 == 10) {
             $nota3 = Note::create($coregrafie);
-            $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->aptitudini,$request->med_ex_ab,ifNull($request->copil_est));
+            $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
         if ($request->specialitate3 == 1 || $request->specialitate3 == 2) {
             $nota3 = Note::create($as);

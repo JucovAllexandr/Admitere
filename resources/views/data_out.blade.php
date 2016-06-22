@@ -56,7 +56,7 @@
                     $('#users-table').DataTable({
                         processing: true,
                         serverSide: true,
-                        ajax: '{{ url('show/data') }}',
+                        ajax: '{{ URL::to('show/data') }}',
 
                         columns: [
                             {data: 'nume'},

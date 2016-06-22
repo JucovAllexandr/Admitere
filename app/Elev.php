@@ -122,4 +122,17 @@ class Elev extends Model
         return $this->belongsTo('App\Language','limba_de_instruire');
 
     }
+
+    public function nota1(){
+        return $this->belongsTo('App\Note','nota1');
+
+    }
+    public function nota2(){
+        return $this->belongsTo('App\Note','nota2');
+
+    }
+    public function nota3(){
+        return $this->belongsTo('App\Note','nota3');
+
+    }
 }

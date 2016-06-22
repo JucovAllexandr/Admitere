@@ -20,13 +20,13 @@
                             @endforeach
 
                             <p class="alert alert-warning"><span class="glyphicon glyphicon-alert"></span> Datele
-                                introduse NU pot fi modificata.Completati cu atentie datele!</p>
+                                introduse NU pot fi modificate.Completați cu atenție datele!</p>
                             <div class="form-group ">
                                 <label class="col-md-2 control-label
                                 @if($errors->first('specialitate1'))
                                         alert alert-danger
                                         @endif
-                                        ">Selectati Optiunea 1</label>
+                                        ">Selectați Opțiunea 1</label>
                                 <div class="col-md-2 ">
 
                                     <select id="specialitate1" name="specialitate1" class="form-control ">
@@ -40,8 +40,8 @@
                                         <option value="6" id="o1-cor">Coregrafie</option>
                                         <option value="7" id="o1-eco">Ecologie și protecția mediului</option>
                                         <option value="8" id="o1-con">Contabilitate</option>
-                                        <option value="9" id="o1-ii">Interpretare instrumentala</option>
-                                        <option value="10" id="o1-pic">Pictura</option>
+                                        <option value="9" id="o1-ii">Interpretare instrumentală</option>
+                                        <option value="10" id="o1-pic">Pictură</option>
                                     </select>
                                     @if(old('specialitate1')!=null)
                                         <script>
@@ -79,7 +79,7 @@
                                 @if($errors->first('lib1'))d
                                         alert alert-danger
                                         @endif
-                                        ">Limba de instruire Optiunea 1</label>
+                                        ">Limba de instruire Opțiunea 1</label>
                                 <div class="col-md-2 ">
                                     <select id="lib1" name="lib1" class="form-control">
                                         <option value="1">Română</option>
@@ -97,7 +97,7 @@
                                 @if($errors->first('specialitate2'))
                                         alert alert-danger
                                         @endif
-                                        ">Selectati Optiunea 2</label>
+                                        ">Selectați Opțiunea 2</label>
                                 <div class="col-md-2 ">
                                     <select id="specialitate2" name="specialitate2" class="form-control">
                                         <option value="" id="o1-null">Null</option>
@@ -151,7 +151,7 @@
                                 @if($errors->first('lib2'))
                                         alert alert-danger
                                         @endif
-                                        ">Limba de instruire Optiunea 2</label>
+                                        ">Limba de instruire Opțiunea 2</label>
                                 <div class="col-md-2 ">
                                     <select id="lib2" name="lib2" class="form-control">
                                         <option value="1">Română</option>
@@ -169,7 +169,7 @@
                                 @if($errors->first('specialitate3'))
                                         alert alert-danger
                                         @endif
-                                        ">Selectati Optiunea 3</label>
+                                        ">Selectați Opțiunea 3</label>
                                 <div class="col-md-2 ">
                                     <select id="specialitate3" name="specialitate3" class="form-control">
                                         <option value="" id="o1-null">Null</option>
@@ -182,8 +182,8 @@
                                         <option value="6" id="o3-cor">Coregrafie</option>
                                         <option value="7" id="o3-eco">Ecologie și protecția mediului</option>
                                         <option value="8" id="o3-con">Contabilitate</option>
-                                        <option value="9" id="o3-ii">Interpretare instrumentala</option>
-                                        <option value="10" id="o3-pic">Pictura</option>
+                                        <option value="9" id="o3-ii">Interpretare instrumentală</option>
+                                        <option value="10" id="o3-pic">Pictură</option>
                                     </select>
                                     @if(old('specialitate3')!=null)
                                         <script>
@@ -226,7 +226,7 @@
                                 @if($errors->first('lib3'))
                                         alert alert-danger
                                         @endif
-                                        ">Limba de instruire Optiunea 3</label>
+                                        ">Limba de instruire Opțiunea 3</label>
                                 <div class="col-md-2 ">
                                     <select id="lib3" name="lib3" class="form-control">
                                         <option value="1">Română</option>
@@ -293,7 +293,7 @@
                                        @if($errors->first('natia'))
                                         alert alert-danger
                                          @endif
-                                        ">Nationalitatea</label>
+                                        ">Naționalitatea</label>
                                 <div class="col-md-2">
 
                                     <select id="natia" name="natia" class="form-control">
@@ -363,7 +363,7 @@
                                         @if($errors->first('num_sat_oras'))
                                             alert alert-danger
                                              @endif
-                                            ">Nume (sat/oras):</label>
+                                            ">Nume (sat/oraș):</label>
                                     <div class="col-md-3">
                                         <input name="num_sat_oras" type="text" placeholder="Nume (sat/oras)"
                                                value="{{old('num_sat_oras')}}" class="form-control input-md  ">
@@ -386,7 +386,7 @@
                                         @if($errors->first('nr_bloc'))
                                         alert alert-danger
                                          @endif
-                                        ">Nr bloc/apartament:</label>
+                                        ">Nr. bloc/apartament:</label>
                                 <div class="col-md-3">
                                     <input name="nr_bloc" type="text" placeholder="Numar"
                                            value="{{old('nr_bloc')}}" class="form-control input-md  ">
@@ -498,7 +498,7 @@
                                 @if($errors->first('dat_elib2'))
                                         alert alert-danger
                                          @endif
-                                        ">Data eliberari</label>
+                                        ">Data eliberări</label>
                                 <div class="col-md-2">
                                     <input type="text" name="dat_elib2" class="form-control input-md"
                                            value="{{old('dat_elib2')}}"
@@ -520,7 +520,7 @@
                                 @if($errors->first('tara'))
                                         alert alert-danger
                                          @endif
-                                        ">Cetatenie</label>
+                                        ">Cetățenie</label>
                                 <div class="col-md-2">
                                     <select id="cetatanie" name="cetatanie" class="form-control">
                                         <option value="1">MD</option>
@@ -784,7 +784,7 @@
                                             <input type="checkbox" name="cetatean_ucr" value="1"
 
                                                    @if(old('cetatean_ucr')) checked @endif>
-                                            Cetateni ai ucrainei de natione romani (moldoveni)
+                                            Cetăteni ai ucrainei de natione romani (moldoveni)
                                         </label>
                                     </div>
                                     <label class="col-md-1 control-label " for="grup"></label>
@@ -930,7 +930,7 @@
                                     </td>
                                     <td>
                                         <label  class="col-md-4 control-label">
-                                            Biolegia
+                                            Biologia
                                         </label>
                                         <div class="col-md-5 ">
                                             <input type="number" placeholder="nota" id="biologia" name="biologia"
@@ -986,7 +986,7 @@
                             </div>
                             <table>
                                 <tr>
-                                    <td><label id="md1" class="col-md-6 control-label">Media Optiunea I</label>
+                                    <td><label id="md1" class="col-md-6 control-label">Media Opțiunea I</label>
                                         <div class="col-md-4 ">
                                             <input type="text" placeholder="media" id="media1" name="opt1_md"
                                                    class="form-control input-md " disabled>
@@ -994,7 +994,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <label id="md2" class="col-md-6 control-label">Media Optiunea II</label>
+                                        <label id="md2" class="col-md-6 control-label">Media Opțiunea II</label>
                                         <div class="col-md-4 ">
                                             <input type="text" placeholder="media" id="media2" name="opt2_md"
                                                    class="form-control input-md " disabled>
@@ -1002,7 +1002,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <label id="md3" class="col-md-6 control-label">Media Optiunea III</label>
+                                        <label id="md3" class="col-md-6 control-label">Media Opțiunea III</label>
                                         <div class="col-md-4 ">
                                             <input type="text" placeholder="media" id="media3" name="opt3_md"
                                                    class="form-control input-md " disabled>

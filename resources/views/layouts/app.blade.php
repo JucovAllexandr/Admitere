@@ -94,7 +94,8 @@
                 @endif
             </div>
             <div class="col-md-3">
-                <p class=""> © 2016</p>
+                <p class=""> Autori:Lucaș Octavian<br>
+                   Jucov Alexandru<br>Ciobanu Alina 2016</p>
             </div>
         </div>
     </div>

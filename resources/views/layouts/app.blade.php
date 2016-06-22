@@ -56,7 +56,7 @@
                     <li class=""><a href="{{URL::to('/register')}}">Inregistrare</a></li>
                 @endif
                 @if(Auth::check())
-                <li class=""><a href="{{URL::to('/show')}}">Arata</a></li>
+                <li class=""><a href="{{URL::to('/show')}}">Afişează lista</a></li>
 
                     <li class=""><a href="{{URL::to('/logout')}}">Iesire</a></li>
                     @else
@@ -85,7 +85,7 @@
                 @endif
                 |
                 @if(Auth::check())
-                     <a href="{{URL::to('/show')}}">Arata</a> |
+                     <a href="{{URL::to('/show')}}">Afişează lista</a> |
                 @endif
                 @if(Auth::check())
                     <a href="{{URL::to('/logout')}}">Iesire</a>

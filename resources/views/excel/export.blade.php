@@ -31,7 +31,7 @@
     <th>Nota medie din actul de studii</th>
     <th>Buget</th>
     <th>Contract</th>
-    <th>Actele retrase</th>
+    {{--<th>Actele retrase</th>--}}
     <th>Naţionalitatea</th>
 </tr>
     @foreach($elevi as $elev)
@@ -54,7 +54,7 @@
             <td>{{$elev->media_discipline}}</td>
             <td>{{$elev->buget1}}</td>
             <td>{{$elev->contract1}}</td>
-            <td>{{$elev->acte}}</td>
+            {{--<td>{{$elev->acte}}</td>--}}
             <td>@foreach($elev->Nationalitys()->get() as $den)
                     {{ucfirst($den->nationality)}}
                 @endforeach</td>

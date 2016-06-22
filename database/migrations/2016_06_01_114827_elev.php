@@ -37,20 +37,20 @@ class Elev extends Migration
             $table->string('email')->nullable();
             $table->integer('cod_personal');
             $table->integer('numar_buletin');
-            $table->integer('oficiu');
+            $table->string('oficiu');
             $table->integer('an_abs');
             $table->string('acte');
             $table->string('sex');
             $table->date('datanasterii');
-            $table->date('certificat_data_eliberarii');
+            $table->date('certificat_data_eliberarii')->nullable();
             $table->date('buletin_data_eliberarii');
             $table->string('tat_nume');
             $table->string('tat_prenume');
             $table->string('mam_nume');
             $table->string('mam_prenume');
             $table->string('cetatanie');
-            $table->string('loc_nas');
-            $table->string('seria_certificat');
+            $table->string('loc_nas')->nullable();
+            $table->string('seria_certificat')->nullable();
             $table->string('seria_buletin');
             $table->string('liv_mil_nr')->nullable();
 

@@ -75,11 +75,11 @@ class Data extends Controller
             'telefon' => 'required',
             'mobi' => 'required',
             'email' => 'email|unique:elev',
-            'seria1' => 'required|string|max:255',
-            'dat_elib' => 'required|date_format:d.m.Y',
+            'seria1' => 'string|max:255',
+            'dat_elib' => 'date_format:d.m.Y',
             'seria2' => 'required|string|max:255',
             'nr' => 'required|integer',
-            'oficiu' => 'required|integer',
+            'oficiu' => 'required|string|max:255',
             'dat_elib2' => 'required|date_format:d.m.Y',
             'cetatanie' => 'required',
             'tnume' => 'required|string|max:255',
@@ -97,7 +97,7 @@ class Data extends Controller
             'med_ex_ab' => 'required|numeric|between:5,10',
             'med_not_ads' => 'required|numeric|between:5,10',
             'cod_pers' => 'required|string|max:255',
-            'loc_nas' => 'required|string|max:255',
+            'loc_nas' => 'string|max:255',
             'liv_mil_nr' => 'string|max:255',
 
         ]);

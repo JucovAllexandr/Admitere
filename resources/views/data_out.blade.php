@@ -7,7 +7,7 @@
             <div class="panel panel-default">
             <div class="panel-heading" >Generare de Rapoarte </div>
                 <div class="panel-body">
-                <label class="col-md-3">Exportă de raport în Excel:</label>
+                <label class="col-md-3">Exportă de raport în PDF:</label>
                 <ul class="col-md-12 ">
                             <li><a href="{{URL::to('/export')}}" class="btn btn-primary">AS:lucrător social</a></li>
                             <li><a href="{{URL::to('/export')}}" class="btn btn-primary">AS:pedagog social</a></li>
@@ -19,7 +19,7 @@
                             <li><a href="{{URL::to('/export')}}" class="btn btn-primary">Ecologie și protecția mediului</a></li>
                             <li> <a href="{{URL::to('/export')}}" class="btn btn-primary">Programarea și analiza produselor de program</a></li>
                 </ul>
-                <label class="col-md-3">Exportă liste de concurs în PDF:</label>
+                <label class="col-md-3">Exportă liste de concurs în Excel:</label>
                 <ul class="col-md-12 ">
                     <li><a href="{{URL::to('/export/1')}}" class="btn btn-primary">AS:lucrător social</a></li>
                     <li><a href="{{URL::to('/export/2')}}" class="btn btn-primary">AS:pedagog social</a></li>

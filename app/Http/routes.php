@@ -27,7 +27,7 @@ Route::get('/export/{sp}','ExportExcel@export');
 
 Route::get('/data',function(){
     //if(Auth::user()->elev_id == 0)
-    if(Auth::check())
+    if(Auth::check() && (Auth::user()->moderator || Auth::user()->admin))
     return view('data');
     else return redirect('/');
     //else{

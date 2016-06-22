@@ -13,7 +13,9 @@ class PdfController extends Controller
 {
     public function index(Request $request)
     {
-        if (Auth::check()) {
+        if(Auth::check() && (Auth::user()->moderator || Auth::user()->admin))
+
+        {
             if (Elev::where('id', $request->id)->count()) {
                 $elev = Elev::where('id', $request->id)->get();
                 $pdf = PDF::loadView('pdf.admiterea', ['elev' => $elev]);

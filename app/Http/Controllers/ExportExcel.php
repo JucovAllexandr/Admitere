@@ -12,7 +12,9 @@ use App\Specialitate;
 class ExportExcel extends Controller
 {
     public function export(Request $request){
-        if (Auth::check()) {
+        if(Auth::check() && (Auth::user()->moderator || Auth::user()->admin))
+
+        {
             if (Elev::all()->count()>0) {
                     $spec = Specialitate::find($request->sp);
                     Excel::create($spec->denumire, function ($excel) use($request) {

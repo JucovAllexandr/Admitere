@@ -13,7 +13,7 @@ class DatatablesController extends Controller
 {
     public function getIndex()
     {
-        if(Auth::check())
+        if(Auth::check() && (Auth::user()->moderator || Auth::user()->admin))
         return view('data_out');
         else
             return redirect('/');

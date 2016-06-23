@@ -123,15 +123,15 @@ class Elev extends Model
 
     }
 
-    public function nota1(){
+    public function nt1(){
         return $this->belongsTo('App\Note','nota1');
 
     }
-    public function nota2(){
+    public function nt2(){
         return $this->belongsTo('App\Note','nota2');
 
     }
-    public function nota3(){
+    public function nt3(){
         return $this->belongsTo('App\Note','nota3');
 
     }

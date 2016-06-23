@@ -379,7 +379,7 @@
         <th>Discipline de profil</th>
         <th>Nota</th>
     </tr>
-    @foreach($e->nota1()->get() as $den)
+    @foreach($e->nt1()->get() as $den)
         <tr>
             <td>
                 {{ucfirst($den->obiect1)}}
@@ -444,7 +444,7 @@
         <th>Discipline de profil</th>
         <th>Nota</th>
     </tr>
-    @foreach($e->nota2()->get() as $den)
+    @foreach($e->nt2()->get() as $den)
         <tr>
             <td>
                 {{ucfirst($den->obiect1)}}
@@ -510,7 +510,7 @@
         <th>Discipline de profil</th>
         <th>Nota</th>
     </tr>
-    @foreach($e->nota3()->get() as $den)
+    @foreach($e->nt3()->get() as $den)
         <tr>
             <td>
                 {{ucfirst($den->obiect1)}}

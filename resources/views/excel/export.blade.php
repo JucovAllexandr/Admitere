@@ -1,9 +1,9 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <style>
-    th{
+    th {
         transform: rotate(90deg);
         width: 5px;
     }
@@ -11,34 +11,46 @@
 </style>
 <body>
 <table>
-    <tr><th colspan="20" style="text-align: center; background-color: #12306f; ">{{$specialitate}}</th></tr>
-<tr>
-    <th>Numele, prenumele</th>
-    <th>Specilaitate</th>
-    <th>Media Concursului</th>
-    <th>Data depunerii</th>
-    <th>Copil Orfan</th>
-    <th>Copil Invalid de gradul I şi II</th>
-    <th>Copil cu deficienţe fizice şi senzoriale</th>
-    <th>Copii ai căror unul din părinţi este invalid de gradul I</th>
-    <th>Parinţii participanti la act milit şi Cernobîl</th>
-    <th>Copil din familie cu 4 şi mai mulţi copii</th>
-    <th>Copil din r-le de Est, Bender</th>
-    <th>Copil ţigan</th>
-    <th>A îndeplinit serviciul militar</th>
-    <th>Cetateni ai ucrainei de nation romani (moldoveni)</th>
-    <th>Distincţiile acordate la absolvire</th>
-    <th>Nota medie din actul de studii</th>
-    <th>Buget</th>
-    <th>Contract</th>
-    <th>Actele retrase</th>
-    <th>Naţionalitatea</th>
-</tr>
+    <tr>
+        <th colspan="20" style="text-align: center; background-color: #12306f; ">{{$specialitate}}</th>
+    </tr>
+    <tr>
+        <th>Numele, prenumele</th>
+        <th>Specilaitate</th>
+        <th>Media Concursului</th>
+        <th>Data depunerii</th>
+        <th>Copil Orfan</th>
+        <th>Copil Invalid de gradul I şi II</th>
+        <th>Copil cu deficienţe fizice şi senzoriale</th>
+        <th>Copii ai căror unul din părinţi este invalid de gradul I</th>
+        <th>Parinţii participanti la act milit şi Cernobîl</th>
+        <th>Copil din familie cu 4 şi mai mulţi copii</th>
+        <th>Copil din r-le de Est, Bender</th>
+        <th>Copil ţigan</th>
+        <th>A îndeplinit serviciul militar</th>
+        <th>Cetateni ai ucrainei de nation romani (moldoveni)</th>
+        <th>Distincţiile acordate la absolvire</th>
+        <th>Nota medie din actul de studii</th>
+        <th>Buget</th>
+        <th>Contract</th>
+        <th>Actele retrase</th>
+        <th>Naţionalitatea</th>
+    </tr>
     @foreach($elevi as $elev)
         <tr>
             <td>{{$elev->nume.' '.$elev->prenume}}</td>
             <td>{{$specialitate}}</td>
-            <td>{{$elev->media1}}</td>
+            <td>
+                @if($elev->id_specialitate == $cod_sp)
+                    {{$elev->media1}}
+                @endif
+                @if($elev->id_specialitate2 == $cod_sp)
+                    {{$elev->media2}}
+                @endif
+                @if($elev->id_specialitate3 == $cod_sp)
+                    {{$elev->media3}}
+                @endif
+            </td>
             <td>{{$elev->created_at}}</td>
             <td>{{$elev->cop_orfan}}</td>
             <td>{{$elev->copil_inv_gr_I_II}}</td>
@@ -59,7 +71,7 @@
                     {{ucfirst($den->nationality)}}
                 @endforeach</td>
         </tr>
-        @endforeach
+    @endforeach
 </table>
 </body>
 </html>

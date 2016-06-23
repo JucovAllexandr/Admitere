@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Generare de Rapoarte</div>
                 <div class="panel-body">
-                    <label class="col-md-3">Exportă de raport în PDF:</label>
+                    <label class="col-md-3">Exportă de raport în Excel:</label>
                     <ul class="col-md-12 ">
                         <li><a href="{{URL::to('/raport/1')}}" class="btn btn-primary">AS:lucrător social</a></li>
                         <li><a href="{{URL::to('/raport/2')}}" class="btn btn-primary">AS:pedagog social</a></li>

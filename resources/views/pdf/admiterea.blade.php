@@ -478,7 +478,9 @@
                 {{ucfirst($den->obiect1)}}
             </td>
             <td class="center">
+                @if($den->nota1 != 0)
                 {{$den->nota1}}
+                    @endif
             </td>
         </tr>
         <tr>
@@ -486,7 +488,9 @@
                 {{ucfirst($den->obiect2)}}
             </td>
             <td class="center">
+                @if($den->nota2 != 0)
                 {{$den->nota2}}
+                    @endif
             </td>
         </tr>
         <tr>
@@ -494,7 +498,9 @@
                 {{ucfirst($den->obiect3)}}
             </td>
             <td class="center">
+                @if($den->nota3 != 0)
                 {{$den->nota3}}
+                    @endif
             </td>
         </tr>
         <tr >
@@ -502,7 +508,9 @@
                 {{ucfirst($den->obiect4)}}
             </td>
             <td class="center">
+                @if($den->nota4 != 0)
                 {{$den->nota4}}
+                    @endif
             </td>
         </tr>
         <tr>
@@ -548,7 +556,9 @@
                 {{ucfirst($den->obiect1)}}
             </td>
             <td class="center">
+                @if($den->nota1 != 0)
                 {{$den->nota1}}
+                    @endif
             </td>
         </tr>
         <tr>
@@ -556,7 +566,9 @@
                 {{ucfirst($den->obiect2)}}
             </td>
             <td class="center">
+                @if($den->nota2 != 0)
                 {{$den->nota2}}
+                    @endif
             </td>
         </tr>
         <tr>
@@ -564,7 +576,9 @@
                 {{ucfirst($den->obiect3)}}
             </td>
             <td class="center">
+                @if($den->nota3 != 0)
                 {{$den->nota3}}
+                    @endif
             </td>
         </tr>
         <tr >
@@ -572,7 +586,9 @@
                 {{ucfirst($den->obiect4)}}
             </td>
             <td class="center">
+                @if($den->nota4 != 0)
                 {{$den->nota4}}
+                    @endif
             </td>
         </tr>
         <tr>

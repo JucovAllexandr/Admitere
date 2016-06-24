@@ -83,7 +83,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate != 6)
+                @if($e->id_specialitate != 6 || $e->id_specialitate != 9 || $e->id_specialitate != 10)
                 @if($e->buget1)
                     {{$e->media1}}
                 @endif
@@ -97,7 +97,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate != 6)
+                @if($e->id_specialitate != 6 || $e->id_specialitate != 9 || $e->id_specialitate != 10)
                 @if($e->contract1)
                     {{$e->media1}}
                 @endif
@@ -113,7 +113,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate2 != 6)
+                @if($e->id_specialitate2 != 6 || $e->id_specialitate2 != 9 || $e->id_specialitate2 != 10)
                 @if($e->buget2)
                     {{$e->media2}}
                 @endif
@@ -127,7 +127,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate2 != 6)
+                @if($e->id_specialitate2 != 6 || $e->id_specialitate2 != 9 || $e->id_specialitate2 != 10)
                 @if($e->contract2)
                     {{$e->media2}}
                 @endif
@@ -143,7 +143,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate3 != 6)
+                @if($e->id_specialitate3 != 6 || $e->id_specialitate3 != 9 || $e->id_specialitate3 != 10)
                 @if($e->buget3)
                     {{$e->media3}}
                 @endif
@@ -158,7 +158,7 @@
             </td>
             <td class="center">
                 @if($e->contract3)
-                    @if($e->id_specialitate3 != 6)
+                    @if($e->id_specialitate3 != 6 || $e->id_specialitate3 != 9 || $e->id_specialitate3 != 10)
                     {{$e->media3}}
                 @endif
                 @endif

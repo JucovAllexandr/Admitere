@@ -28,8 +28,8 @@
       <file leaf-file-name="admiterea.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="393" column="13" selection-start-line="393" selection-start-column="13" selection-end-line="393" selection-end-column="13" />
+            <state relative-caret-position="452">
+              <caret line="443" column="26" selection-start-line="443" selection-start-column="26" selection-end-line="443" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -487,7 +487,7 @@
       <workItem from="1466577583361" duration="551000" />
       <workItem from="1466616204521" duration="6370000" />
       <workItem from="1466666123918" duration="6401000" />
-      <workItem from="1466749424933" duration="3764000" />
+      <workItem from="1466749424933" duration="3888000" />
     </task>
     <task id="LOCAL-00001" summary="data">
       <created>1465579727133</created>
@@ -811,11 +811,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466753435748</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="data add">
+      <created>1466753702207</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1466753702207</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91032000" />
+    <option name="totallyTimeSpent" value="91156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -1252,8 +1259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="393" column="13" selection-start-line="393" selection-start-column="13" selection-end-line="393" selection-end-column="13" />
+        <state relative-caret-position="452">
+          <caret line="443" column="26" selection-start-line="443" selection-start-column="26" selection-end-line="443" selection-end-column="26" />
           <folding />
         </state>
       </provider>

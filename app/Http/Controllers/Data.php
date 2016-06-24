@@ -101,7 +101,7 @@ class Data extends Controller
             'liv_mil_nr' => 'string|max:255',
 
         ]);
-
+        dd($request->num_sat_oras);
          dd(strtolower($request->num_sat_oras));
 
         $informatica = [

@@ -16,11 +16,12 @@ $(document).ready(function () {
     function predmet($select) {
         
         var value = $($select+' :selected').val();
-        var inf_mat=new Array(8,3,4,5);
+        var inf_mat=new Array(3,4,5);
         var eco = [7];
         var cor = [6,9,10];
-        var asist = [1,2];
+        var asist = [1,2,8];
        $('#lim_instruire').prop("disabled",false);
+
         if($.inArray(parseInt(value), inf_mat)!= -1){
             // $($pd1).text('Limba staina');
             // $($pd2).text('Matematica');
@@ -155,7 +156,7 @@ $(document).ready(function () {
         var est = $('#copil_est').is(':checked');
         if ($('#specialitate1 :selected').val() != 0) {
             var sp = $('#specialitate1 :selected').val();
-            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+            if ( sp == 3 || sp == 4 || sp == 5) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
@@ -164,7 +165,7 @@ $(document).ready(function () {
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
-            if (sp == 1 || sp == 2) {
+            if (sp == 1 || sp == 2 || sp == 8 ) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
             }
             $('#media1').val($media1);
@@ -173,7 +174,7 @@ $(document).ready(function () {
         sum = 0;
         if ($('#specialitate2 :selected').val() != 0) {
             var sp = $('#specialitate2 :selected').val();
-            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+            if ( sp == 3 || sp == 4 || sp == 5) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
@@ -182,7 +183,7 @@ $(document).ready(function () {
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
-            if (sp == 1 || sp == 2) {
+            if (sp == 1 || sp == 2 || sp == 8) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
             }
             $('#media2').val($media1);
@@ -191,7 +192,7 @@ $(document).ready(function () {
         sum = 0;
         if ($('#specialitate3 :selected').val() != 0) {
             var sp = $('#specialitate3 :selected').val();
-            if (sp == 8 || sp == 3 || sp == 4 || sp == 5) {
+            if (sp == 3 || sp == 4 || sp == 5) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
@@ -200,7 +201,7 @@ $(document).ready(function () {
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
             }
-            if (sp == 1 || sp == 2) {
+            if (sp == 1 || sp == 2 || sp == 8) {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,istoria,med_ex_ab,est);
             }
             $('#media3').val($media1);

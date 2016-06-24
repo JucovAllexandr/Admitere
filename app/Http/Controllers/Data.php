@@ -172,7 +172,7 @@ class Data extends Controller
             return $media;
         }
 
-        if ($request->specialitate1 == 8 || $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
+        if (  $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
             $nota1 = Note::create($informatica);
             $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }
@@ -184,7 +184,7 @@ class Data extends Controller
             $nota1 = Note::create($coregrafie);
             $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
-        if ($request->specialitate1 == 1 || $request->specialitate1 == 2) {
+        if ($request->specialitate1 == 1 || $request->specialitate1 == 2 || $request->specialitate1 == 8) {
             $nota1 = Note::create($as);
             $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
@@ -201,7 +201,7 @@ class Data extends Controller
             $nota2 = Note::create($coregrafie);
             $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
-        if ($request->specialitate2 == 1 || $request->specialitate2 == 2) {
+        if ($request->specialitate2 == 1 || $request->specialitate2 == 2 || $request->specialitate2 == 8) {
             $nota2 = Note::create($as);
             $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
@@ -218,7 +218,7 @@ class Data extends Controller
             $nota3 = Note::create($coregrafie);
             $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
-        if ($request->specialitate3 == 1 || $request->specialitate3 == 2) {
+        if ($request->specialitate3 == 1 || $request->specialitate3 == 2 || $request->specialitate3 == 8) {
             $nota3 = Note::create($as);
             $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }

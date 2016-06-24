@@ -192,7 +192,7 @@
 <div class="page-break"></div>
 <h3 style="text-transform: uppercase; text-align: center">Colegiul Industrial Pedagogic</h3>
 <h1 style="text-transform: uppercase; text-align: center; vertical-align: middle;
-    margin-top: 20%;">Fisa de incriere <br>la concursul de admitere <br>NR.<span
+    margin-top: 20%;">Fisa de inscriere <br>la concursul de admitere <br>NR.<span
             style="border-bottom: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     <br>anul {{\Carbon\Carbon::now()->year}}</h1>
 <div class="page-break"></div>
@@ -245,8 +245,8 @@
     @endif</p>
 <p style="padding-left: 1em;"><b>Livret militar nr: </b>{{$e->liv_mil_nr}}</p>
 <p><b>13.Numele si prenumele parintilor: </b></p>
-<p><b>Tatal: </b>{{$e->tat_nume.' '.$e->tat_prenume}}</p>
-<p><b>Mama: </b>{{$e->mam_nume.' '.$e->mam_prenume}}</p>
+<p><b>Tatal: </b>{{ucfirst($e->tat_nume).' '.ucfirst($e->tat_prenume)}}</p>
+<p><b>Mama: </b>{{ucfirst($e->mam_nume).' '.ucfirst($e->mam_prenume)}}</p>
 <div class="page-break"></div>
 
 <p><b>14.Institutia de invatamint absolvita: </b>{{$e->inst_abs}}</p>

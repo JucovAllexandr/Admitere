@@ -303,8 +303,10 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
             @if($e->buget1)
                 {{$e->media1}}
+            @endif
             @endif
         </td>
         <td>
@@ -315,9 +317,11 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
             @if($e->contract1)
                 {{$e->media1}}
             @endif
+            @endif
         </td>
     </tr>
     <tr>
@@ -329,8 +333,10 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
             @if($e->buget2)
                 {{$e->media2}}
+            @endif
             @endif
         </td>
         <td>
@@ -341,8 +347,10 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
             @if($e->contract2)
                 {{$e->media2}}
+            @endif
             @endif
         </td>
     </tr>
@@ -355,8 +363,10 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
             @if($e->buget3)
                 {{$e->media3}}
+            @endif
             @endif
         </td>
         <td>
@@ -367,8 +377,10 @@
             @endif
         </td>
         <td class="center">
+            @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
             @if($e->contract3)
                 {{$e->media3}}
+            @endif
             @endif
         </td>
     </tr>
@@ -434,7 +446,11 @@
         </tr>
         <tr>
             <td><b>MC</b></td>
-            <td class="center">{{$e->media1}}</td>
+            <td class="center">
+                @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
+                {{$e->media1}}
+                    @endif
+            </td>
         </tr>
     @endforeach
 </table>
@@ -499,7 +515,11 @@
         </tr>
         <tr>
             <td><b>MC</b></td>
-            <td class="center">{{$e->media2}}</td>
+            <td class="center">
+                @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
+                {{$e->media2}}
+                    @endif
+            </td>
         </tr>
     @endforeach
 </table>
@@ -565,7 +585,11 @@
         </tr>
         <tr>
             <td><b>MC</b></td>
-            <td class="center">{{$e->media3}}</td>
+            <td class="center">
+                @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
+                {{$e->media3}}
+                    @endif
+            </td>
         </tr>
     @endforeach
 </table>

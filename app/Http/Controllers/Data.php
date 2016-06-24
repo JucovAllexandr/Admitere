@@ -101,6 +101,9 @@ class Data extends Controller
             'liv_mil_nr' => 'string|max:255',
 
         ]);
+
+         dd(strtolower($request->num_sat_oras));
+
         $informatica = [
             'obiect1' => 'Limba de instruire',
             'nota1' => $request->lim_instruire,

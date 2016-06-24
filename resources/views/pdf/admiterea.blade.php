@@ -113,7 +113,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate != 6)
+                @if($e->id_specialitate2 != 6)
                 @if($e->buget2)
                     {{$e->media2}}
                 @endif
@@ -127,7 +127,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate != 6)
+                @if($e->id_specialitate2 != 6)
                 @if($e->contract2)
                     {{$e->media2}}
                 @endif
@@ -143,7 +143,7 @@
                 @endif
             </td>
             <td class="center">
-                @if($e->id_specialitate != 6)
+                @if($e->id_specialitate3 != 6)
                 @if($e->buget3)
                     {{$e->media3}}
                 @endif
@@ -158,7 +158,7 @@
             </td>
             <td class="center">
                 @if($e->contract3)
-                    @if($e->id_specialitate != 6)
+                    @if($e->id_specialitate3 != 6)
                     {{$e->media3}}
                 @endif
                 @endif

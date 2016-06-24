@@ -35,7 +35,7 @@ class Elev extends Migration
             $table->string('prenume');
             $table->string('patronimic');
             $table->string('email')->nullable();
-            $table->integer('cod_personal');
+            $table->string('cod_personal');
             $table->integer('numar_buletin')->nullable();
             $table->string('oficiu')->nullable();
             $table->integer('an_abs');

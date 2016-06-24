@@ -83,9 +83,11 @@
                 @endif
             </td>
             <td class="center">
+                @if($e->id_specialitate != 6)
                 @if($e->buget1)
                     {{$e->media1}}
                 @endif
+                    @endif
             </td>
             <td>
                 @if($e->contract1)
@@ -95,9 +97,11 @@
                 @endif
             </td>
             <td class="center">
+                @if($e->id_specialitate != 6)
                 @if($e->contract1)
                     {{$e->media1}}
                 @endif
+                    @endif
             </td>
         </tr>
         <tr>
@@ -109,8 +113,10 @@
                 @endif
             </td>
             <td class="center">
+                @if($e->id_specialitate != 6)
                 @if($e->buget2)
                     {{$e->media2}}
+                @endif
                 @endif
             </td>
             <td>
@@ -121,8 +127,10 @@
                 @endif
             </td>
             <td class="center">
+                @if($e->id_specialitate != 6)
                 @if($e->contract2)
                     {{$e->media2}}
+                @endif
                 @endif
             </td>
         </tr>
@@ -135,8 +143,10 @@
                 @endif
             </td>
             <td class="center">
+                @if($e->id_specialitate != 6)
                 @if($e->buget3)
                     {{$e->media3}}
+                @endif
                 @endif
             </td>
             <td>
@@ -148,7 +158,9 @@
             </td>
             <td class="center">
                 @if($e->contract3)
+                    @if($e->id_specialitate != 6)
                     {{$e->media3}}
+                @endif
                 @endif
             </td>
         </tr>

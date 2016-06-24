@@ -102,7 +102,7 @@ class Data extends Controller
 
         ]);
         //dd($request->num_sat_oras);
-         dd(mb_strtolower($request->num_sat_oras));
+         //dd(mb_strtolower($request->num_sat_oras));
 
         $informatica = [
             'obiect1' => 'Limba de instruire',
@@ -287,17 +287,17 @@ class Data extends Controller
             'ucrainean' => ifNull($request->cetatean_ucr),
             'un_par_inv' => ifNull($request->parint_invalid),
             'copil_inv_gr_I_II' => ifNull($request->copil_inv_gr_I_II),
-            'nume' => strtolower($request->nume),
-            'prenume' => strtolower($request->prenum),
-            'patronimic' => strtolower($request->patronim),
+            'nume' => mb_strtolower($request->nume),
+            'prenume' => mb_strtolower($request->prenum),
+            'patronimic' => mb_strtolower($request->patronim),
             'sex' => $request->sex,
             'nationality_id' => $request->natia,
             'datanasterii' => Carbon::createFromDate($dt->year, $dt->month, $dt->day),
 
-            'raion' => strtolower($request->raion),
+            'raion' => mb_strtolower($request->raion),
             'sat_oras' => $request->sat_oras,
-            'num_sat_oras' => strtolower($request->num_sat_oras),
-            'strada' => strtolower($request->strada),
+            'num_sat_oras' => mb_strtolower($request->num_sat_oras),
+            'strada' => mb_strtolower($request->strada),
             'nr_bloc' => $request->nr_bloc,
 
             'telefon' => $request->telefon,
@@ -310,10 +310,10 @@ class Data extends Controller
             'oficiu' => $request->oficiu,
             'buletin_data_eliberarii' => Carbon::createFromDate($dt3->year, $dt3->month, $dt3->day),
             'cetatanie' => $request->cetatanie,
-            'tat_nume' => strtolower($request->tnume),
-            'tat_prenume' => strtolower($request->tprenume),
-            'mam_nume' => strtolower($request->mnume),
-            'mam_prenume' => strtolower($request->mprenume),
+            'tat_nume' => mb_strtolower($request->tnume),
+            'tat_prenume' => mb_strtolower($request->tprenume),
+            'mam_nume' => mb_strtolower($request->mnume),
+            'mam_prenume' => mb_strtolower($request->mprenume),
             'inst_abs' => $request->instit_abs,
             'an_abs' => $request->anab,
             'acte' => $request->act,

@@ -179,7 +179,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
-                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);
@@ -197,7 +197,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
-                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);

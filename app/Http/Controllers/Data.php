@@ -179,6 +179,7 @@ class Data extends Controller
         if ($request->specialitate1 == 7) {
             $nota1 = Note::create($ecologia);
             $media1 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
+            dd($media1);
         }
         if ($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10) {
             $nota1 = Note::create($coregrafie);

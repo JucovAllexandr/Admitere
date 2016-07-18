@@ -111,7 +111,7 @@ $(document).ready(function () {
         //TogleEnable('#specialitate3', '.opt3');
     });
 
-    function med_inf( $not1, $not2, $not3, $not4, $med_exam_abs, $est)
+    function med_inf($not1, $not2, $not3, $not4, $med_exam_abs, $est)
     {
         // console.log($not1);
         // console.log($not2);
@@ -123,8 +123,9 @@ $(document).ready(function () {
             $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.4;
             $media += $med_exam_abs * 0.6;
         } else {
-            $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
-            $media += $med_exam_abs * 0.4;
+            $media = ((parseInt($not1) + parseInt($not2) + parseInt($not3) + parseInt($not4)) / 4) * 0.6;
+            $media += parseFloat($med_exam_abs) * 0.4
+
         }
         return $media;
     }
@@ -160,7 +161,7 @@ $(document).ready(function () {
                 $media1 = med_inf(lim_instruire,lim_straina,matem,informatica,med_ex_ab,est);
             }
             if (sp == 7) {
-                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,copil_est);
+                $media1 = med_inf(lim_instruire,biologia,matem,chimia,med_ex_ab,est);
             }
             if (sp == 6 || sp == 9 || sp == 10) {
                 $media1 = med_coreg(lim_instruire,lim_straina,istoria,med_ex_ab,est);

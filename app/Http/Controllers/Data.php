@@ -206,7 +206,7 @@ class Data extends Controller
             $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
 
-        if ($request->specialitate3 == 8 || $request->specialitate3 == 3 || $request->specialitate3 == 4 || $request->specialitate3 == 5) {
+        if ($request->specialitate3 == 3 || $request->specialitate3 == 4 || $request->specialitate3 == 5) {
             $nota3 = Note::create($informatica);
             $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }

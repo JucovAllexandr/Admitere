@@ -449,14 +449,6 @@
             <td class="center">{{$e->media_discipline}}</td>
         </tr>
         <tr>
-            <td><b>MNDP</b></td>
-            <td class="center">
-                @foreach($e->nt1()->get() as $den)
-                {{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}
-                    @endforeach
-            </td>
-        </tr>
-        <tr>
             <td><b>MNEA</b></td>
             <td class="center">{{$e->media_exam}}</td>
         </tr>
@@ -532,14 +524,6 @@
         <tr>
             <td><b>MNAS</b></td>
             <td class="center">{{$e->media_discipline}}</td>
-        </tr>
-        <tr>
-            <td><b>MNDP</b></td>
-            <td class="center">
-                @foreach($e->nt2()->get() as $den)
-                    {{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}
-                @endforeach
-            </td>
         </tr>
         <tr>
             <td><b>MNEA</b></td>
@@ -618,14 +602,6 @@
         <tr>
             <td><b>MNAS</b></td>
             <td class="center">{{$e->media_discipline}}</td>
-        </tr>
-        <tr>
-            <td><b>MNDP</b></td>
-            <td class="center">
-                @foreach($e->nt3()->get() as $den)
-                    {{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}
-                @endforeach
-            </td>
         </tr>
         <tr>
             <td><b>MNEA</b></td>

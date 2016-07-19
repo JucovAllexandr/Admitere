@@ -78,7 +78,7 @@ class Data extends Controller
             'seria1' => 'string|max:255',
             'dat_elib' => 'date_format:d.m.Y',
             'seria2' => 'string|max:255',
-            'nr' => 'integer',
+            'nr' => 'string|max:255',
             'oficiu' => 'string|max:255',
             'dat_elib2' => 'date_format:d.m.Y',
             'cetatanie' => 'required',
@@ -189,7 +189,7 @@ class Data extends Controller
             $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
         }
 
-        if ($request->specialitate2 == 8 || $request->specialitate2 == 3 || $request->specialitate2 == 4 || $request->specialitate2 == 5) {
+        if ( $request->specialitate2 == 3 || $request->specialitate2 == 4 || $request->specialitate2 == 5) {
             $nota2 = Note::create($informatica);
             $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
         }

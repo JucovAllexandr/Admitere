@@ -26,20 +26,20 @@
                     </ul>
                     <label class="col-md-3">Exportă liste de concurs în Excel:</label>
                     <ul class="col-md-12 ">
-                        <li><a href="{{URL::to('/export/1')}}" class="btn btn-primary">AS:lucrător social</a></li>
-                        <li><a href="{{URL::to('/export/2')}}" class="btn btn-primary">AS:pedagog social</a></li>
-                        <li><a href="{{URL::to('/export/3')}}" class="btn btn-primary">Administrarea aplicațiilor
-                                WEB</a></li>
-                        <li><a href="{{URL::to('/export/5')}}" class="btn btn-primary">Rețele de calculatoare</a></li>
-                        <li><a href="{{URL::to('/export/6')}}" class="btn btn-primary">Coregrafie</a></li>
-                        <li><a href="{{URL::to('/export/10')}}" class="btn btn-primary">Pictura</a></li>
-                        <li><a href="{{URL::to('/export/9')}}" class="btn btn-primary">Interpretare instrumentala</a>
-                        </li>
-                        <li><a href="{{URL::to('/export/8')}}" class="btn btn-primary">Contabilitate</a></li>
-                        <li><a href="{{URL::to('/export/7')}}" class="btn btn-primary">Ecologie și protecția
-                                mediului</a></li>
-                        <li><a href="{{URL::to('/export/4')}}" class="btn btn-primary">Programarea și analiza produselor
-                                de program</a></li>
+                        <li><a href="{{URL::to('/export/')}}" class="btn btn-primary">Export</a></li>
+                        {{--<li><a href="{{URL::to('/export/2')}}" class="btn btn-primary">AS:pedagog social</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/3')}}" class="btn btn-primary">Administrarea aplicațiilor--}}
+                                {{--WEB</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/5')}}" class="btn btn-primary">Rețele de calculatoare</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/6')}}" class="btn btn-primary">Coregrafie</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/10')}}" class="btn btn-primary">Pictura</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/9')}}" class="btn btn-primary">Interpretare instrumentala</a>--}}
+                        {{--</li>--}}
+                        {{--<li><a href="{{URL::to('/export/8')}}" class="btn btn-primary">Contabilitate</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/7')}}" class="btn btn-primary">Ecologie și protecția--}}
+                                {{--mediului</a></li>--}}
+                        {{--<li><a href="{{URL::to('/export/4')}}" class="btn btn-primary">Programarea și analiza produselor--}}
+                                {{--de program</a></li>--}}
                     </ul>
                 </div>
             </div>

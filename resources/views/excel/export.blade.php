@@ -12,7 +12,7 @@
 <body>
 <table>
     <tr>
-        <th colspan="20" style="text-align: center; background-color: #12306f; ">{{$specialitate}}</th>
+        <th colspan="27" style="text-align: center; background-color: #12306f; ">{{$specialitate}}</th>
     </tr>
     <tr>
         <th>Numele, prenumele</th>

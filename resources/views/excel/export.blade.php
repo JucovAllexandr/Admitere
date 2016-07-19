@@ -36,12 +36,12 @@
         <th>Copil ţigan</th>
         <th>A îndeplinit serviciul militar</th>
         <th>Cetateni ai ucrainei de nation romani (moldoveni)</th>
-        <th>Distincţiile acordate la absolvire</th>
         <th>Nota medie din actul de studii</th>
         <th>Buget</th>
         <th>Contract</th>
         <th>Actele retrase</th>
         <th>Naţionalitatea</th>
+        <th>Date de contact</th>
     </tr>
     @foreach($elevi as $elev)
         <tr>
@@ -115,7 +115,6 @@
             <td>{{$elev->cop_roman}}</td>
             <td>{{$elev->livret_militar}}</td>
             <td>{{$elev->ucrainean}}</td>
-            <td>{{$elev->distinc_abs}}</td>
             <td>{{$elev->media_discipline}}</td>
             <td>{{$elev->buget1}}</td>
             <td>{{$elev->contract1}}</td>
@@ -123,6 +122,7 @@
             <td>@foreach($elev->Nationalitys()->get() as $den)
                     {{ucfirst($den->nationality)}}
                 @endforeach</td>
+            <td>{{$elev->telefon}}</td>
         </tr>
     @endforeach
 </table>

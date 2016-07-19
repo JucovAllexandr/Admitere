@@ -28,7 +28,7 @@ class ExportExcel extends Controller
                         //dd($elevi);
                        // $spec = Specialitate::find($request->sp);
                         $sheet->loadView('excel.export', ['elevi' => $elevi, 'specialitate' => 1, 'cod_sp' => 1]);
-                        $sheet->cells('A2:T2', function ($cells) {
+                        $sheet->cells('A2:AA2', function ($cells) {
                             $cells->setBackground('#C0C0C0 ');
                             $cells->setAlignment('center');
                             $cells->setValignment('center');

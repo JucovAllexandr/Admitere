@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47a853ae-c8bb-4067-8728-3eef202c3ad9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/excel/export.blade.php" afterPath="$PROJECT_DIR$/resources/views/excel/export.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php" />
     </list>
     <ignored path="dip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,20 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExportExcel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExportExcel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
+            <state relative-caret-position="306">
+              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="export.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="export.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/excel/export.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="376">
               <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
               <folding>
                 <marker date="1468932012239" expanded="true" signature="3262:3296" ph="{...}" />
@@ -139,8 +139,8 @@
         <option value="$PROJECT_DIR$/resources/views/pdf/admiterea.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Data.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php" />
         <option value="$PROJECT_DIR$/resources/views/excel/export.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php" />
       </list>
     </option>
   </component>
@@ -485,14 +485,7 @@
       <workItem from="1468838980970" duration="5096000" />
       <workItem from="1468846257159" duration="1702000" />
       <workItem from="1468919038333" duration="1000" />
-      <workItem from="1468927138174" duration="4255000" />
-    </task>
-    <task id="LOCAL-00011" summary="data show">
-      <created>1466417694165</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1466417694165</updated>
+      <workItem from="1468927138174" duration="4529000" />
     </task>
     <task id="LOCAL-00012" summary="data show">
       <created>1466448804992</created>
@@ -830,11 +823,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468931646999</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="utf8">
+      <created>1468932015094</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1468932015094</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105915000" />
+    <option name="totallyTimeSpent" value="106189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -1024,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="111" selection-start-line="29" selection-start-column="111" selection-end-line="29" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1042,12 +1034,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/excel/export.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="376">
           <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
           <folding>
             <marker date="1468932012239" expanded="true" signature="3262:3296" ph="{...}" />
             <marker date="1468932012239" expanded="true" signature="4219:4270" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExportExcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

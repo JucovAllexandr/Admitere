@@ -16,16 +16,18 @@ class ExportExcel extends Controller
     {
         if (Auth::check() && (Auth::user()->moderator || Auth::user()->admin)) {
             if (Elev::all()->count() > 0) {
-                $spec = Specialitate::find($request->sp);
-                Excel::create($spec->denumire, function ($excel) use ($request) {
-                    $excel->sheet('Elevi', function ($sheet) use ($request) {
-                        $id = $request->sp;
+                //$spec = Specialitate::find($request->sp);
+                Excel::create("export", function ($excel)  {
+                    $excel->sheet('Elevi', function ($sheet) {
+
                         //$elevi = Elev::where('id_specialitate','=',$id,'id_specialitate2','=',$id,'id_specialitate3','=',$id)->get();
-                        $elevi = Elev::where('id_specialitate', '=', $id)->orWhere('id_specialitate2', '=', $id)
-                            ->orWhere('id_specialitate3', '=', $id)->get();
+//                        $elevi = Elev::where('id_specialitate', '=', $id)->orWhere('id_specialitate2', '=', $id)
+//                            ->orWhere('id_specialitate3', '=', $id)->get();
+
+                        $elevi = Elev::all();
                         //dd($elevi);
-                        $spec = Specialitate::find($request->sp);
-                        $sheet->loadView('excel.export', ['elevi' => $elevi, 'specialitate' => $spec->denumire, 'cod_sp' => $request->sp]);
+                       // $spec = Specialitate::find($request->sp);
+                        $sheet->loadView('excel.export', ['elevi' => $elevi, 'specialitate' => 1, 'cod_sp' => 1]);
                         $sheet->cells('A2:T2', function ($cells) {
                             $cells->setBackground('#C0C0C0 ');
                             $cells->setAlignment('center');

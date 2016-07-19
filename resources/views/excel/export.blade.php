@@ -16,8 +16,15 @@
     </tr>
     <tr>
         <th>Numele, prenumele</th>
-        <th>Specilaitate</th>
-        <th>Media Concursului</th>
+        <th>Asistență socială: lucrător social</th>
+        <th>Administrarea aplicațiilor WEB</th>
+        <th>Programarea și analiza produselor de program</th>
+        <th>Coregrafie</th>
+        <th>Ecologia și protecția mediului</th>
+        <th>Contabilitate</th>
+        <th>Media Concursului 1</th>
+        <th>Media Concursului 2</th>
+        <th>Media Concursului 3</th>
         <th>Data depunerii</th>
         <th>Copil Orfan</th>
         <th>Copil Invalid de gradul I şi II</th>
@@ -39,17 +46,63 @@
     @foreach($elevi as $elev)
         <tr>
             <td>{{$elev->nume.' '.$elev->prenume}}</td>
-            <td>{{$specialitate}}</td>
             <td>
-                @if($elev->id_specialitate == $cod_sp)
-                    {{$elev->media1}}
+                @if($elev->id_specialitate  == 1)
+                    1
+                @elseif($elev->id_specialitate2  == 1)
+                    2
+                @elseif($elev->id_specialitate3  == 1)
+                    3
                 @endif
-                @if($elev->id_specialitate2 == $cod_sp)
-                    {{$elev->media2}}
+            </td>
+            <td> @if($elev->id_specialitate  == 3)
+                    1
+                @elseif($elev->id_specialitate2  == 3)
+                    2
+                @elseif($elev->id_specialitate3  == 3)
+                    3
                 @endif
-                @if($elev->id_specialitate3 == $cod_sp)
-                    {{$elev->media3}}
+            </td>
+            <td> @if($elev->id_specialitate  == 4)
+                    1
+                @elseif($elev->id_specialitate2  == 4)
+                    2
+                @elseif($elev->id_specialitate3  == 4)
+                    3
                 @endif
+            </td>
+            <td> @if($elev->id_specialitate  == 6)
+                    1
+                @elseif($elev->id_specialitate2  == 6)
+                    2
+                @elseif($elev->id_specialitate3  == 6)
+                    3
+                @endif
+            </td>
+            <td> @if($elev->id_specialitate  == 7)
+                    1
+                @elseif($elev->id_specialitate2  == 7)
+                    2
+                @elseif($elev->id_specialitate3  == 7)
+                    3
+                @endif
+            </td>
+            <td> @if($elev->id_specialitate  == 8)
+                    1
+                @elseif($elev->id_specialitate2  == 8)
+                    2
+                @elseif($elev->id_specialitate3  == 8)
+                    3
+                @endif
+            </td>
+            <td>
+                {{$elev->media1}}
+            </td>
+            <td>
+                {{$elev->media2}}
+            </td>
+            <td>
+                {{$elev->media3}}
             </td>
             <td>{{$elev->created_at}}</td>
             <td>{{$elev->cop_orfan}}</td>

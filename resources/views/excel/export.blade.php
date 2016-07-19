@@ -119,7 +119,7 @@
             <td>{{$elev->media_discipline}}</td>
             <td>{{$elev->buget1}}</td>
             <td>{{$elev->contract1}}</td>
-            <td>{{$elev->acte}}</td>
+            <td>              </td>
             <td>@foreach($elev->Nationalitys()->get() as $den)
                     {{ucfirst($den->nationality)}}
                 @endforeach</td>

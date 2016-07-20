@@ -156,7 +156,7 @@ class Data extends Controller
                 $media += $mgnas * 0.6;
             } else {
                 $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
-                $media += $mgnas * 0.4;
+                $media += $med_exam_abs * 0.4;
             }
             return $media;
         }
@@ -165,7 +165,7 @@ class Data extends Controller
         {
             if ($est) {
                 $media = (($not1 + $not2 + $not3 ) / 3) * 0.2;
-                $media += $med_exam_abs * 0.3;
+                $media += $mgnas * 0.3;
             } else {
                 $media = (($not1 + $not2 + $not3 ) / 3) * 0.3;
                 $media += $med_exam_abs * 0.2;

@@ -47,17 +47,17 @@ class Data extends Controller
 
 
             'liv_mil' => 'boolean',
-            'cop_orf' => 'boolean',
-            'patru_cop' => 'boolean',
-            'indep_serv_mil' => 'boolean',
-            'cop_cu_difect' => 'boolean',
-            'parinti_invalid' => 'boolean',
-            'par_cernob' => 'boolean',
-            'cop_romin' => 'boolean',
+            'cop_orfan' => 'boolean',
+            'mm_patru_copii' => 'boolean',
+            //'indep_serv_mil' => 'boolean',
+            'cop_deficiente' => 'boolean',
+            'parinti_invalizi' => 'boolean',
+            'parinti_Cernobil' => 'boolean',
+            'cop_roman' => 'boolean',
             'copil_est' => 'boolean',
-            'cetatean_ucr' => 'boolean',
-            'parint_invalid' => 'boolean',
-            'copil_inv_gr_I_II' => 'boolean',
+            'cop_serv_mil' => 'boolean',
+            //'parint_invalid' => 'boolean',
+            //'copil_inv_gr_I_II' => 'boolean',
 
             'nume' => 'required|string|max:255',
             'prenum' => 'required|string|max:255',
@@ -92,10 +92,11 @@ class Data extends Controller
             'lib_inst' => 'required|between:1,2',
             'lib_stud' => 'required|between:1,3',
             'camin' => 'boolean',
-            'baza_doc' => 'string|max:255',
+            'baza_doc' => 'string',
             'dist' => 'string|max:255',
             'med_ex_ab' => 'required|numeric|between:5,10',
             'med_not_ads' => 'required|numeric|between:5,10',
+            'mgnas' => 'numeric|between:5,10',
             'cod_pers' => 'required|string|max:13|unique:elev,cod_personal',
             'loc_nas' => 'string|max:255',
             'liv_mil_nr' => 'string|max:255',
@@ -148,19 +149,19 @@ class Data extends Controller
         ];
         $media2=0;
         $media3=0;
-        function med_inf($not1, $not2, $not3, $not4, $med_exam_abs, $est)
+        function med_inf($not1, $not2, $not3, $not4, $med_exam_abs, $est, $mgnas)
         {
             if ($est) {
                 $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.4;
-                $media += $med_exam_abs * 0.6;
+                $media += $mgnas * 0.6;
             } else {
                 $media = (($not1 + $not2 + $not3 + $not4) / 4) * 0.6;
-                $media += $med_exam_abs * 0.4;
+                $media += $mgnas * 0.4;
             }
             return $media;
         }
 
-        function med_coreg($not1, $not2, $not3, $med_exam_abs, $est)
+        function med_coreg($not1, $not2, $not3, $med_exam_abs, $est, $mgnas)
         {
             if ($est) {
                 $media = (($not1 + $not2 + $not3 ) / 3) * 0.2;
@@ -174,53 +175,53 @@ class Data extends Controller
 
         if (  $request->specialitate1 == 3 || $request->specialitate1 == 4 || $request->specialitate1 == 5) {
             $nota1 = Note::create($informatica);
-            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
+            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate1 == 7) {
             $nota1 = Note::create($ecologia);
-            $media1 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
+            $media1 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate1 == 6 || $request->specialitate1 == 9 || $request->specialitate1 == 10) {
             $nota1 = Note::create($coregrafie);
-            $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media1 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate1 == 1 || $request->specialitate1 == 2 || $request->specialitate1 == 8) {
             $nota1 = Note::create($as);
-            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media1 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
 
         if ( $request->specialitate2 == 3 || $request->specialitate2 == 4 || $request->specialitate2 == 5) {
             $nota2 = Note::create($informatica);
-            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
+            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate2 == 7) {
             $nota2 = Note::create($ecologia);
-            $media2 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
+            $media2 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate2 == 6 || $request->specialitate2 == 9 || $request->specialitate2 == 10) {
             $nota2 = Note::create($coregrafie);
-            $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media2 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate2 == 1 || $request->specialitate2 == 2 || $request->specialitate2 == 8) {
             $nota2 = Note::create($as);
-            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media2 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
 
         if ($request->specialitate3 == 3 || $request->specialitate3 == 4 || $request->specialitate3 == 5) {
             $nota3 = Note::create($informatica);
-            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est));
+            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->informatica,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate3 == 7) {
             $nota3 = Note::create($ecologia);
-            $media3 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est));
+            $media3 = med_inf($request->lim_instruire,$request->biologia,$request->matem,$request->chimia,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate3 == 6 || $request->specialitate3 == 9 || $request->specialitate3 == 10) {
             $nota3 = Note::create($coregrafie);
-            $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media3 = med_coreg($request->lim_instruire,$request->lim_straina,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
         if ($request->specialitate3 == 1 || $request->specialitate3 == 2 || $request->specialitate3 == 8) {
             $nota3 = Note::create($as);
-            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est));
+            $media3 = med_inf($request->lim_instruire,$request->lim_straina,$request->matem,$request->istoria,$request->med_ex_ab,ifNull($request->copil_est),$request->mgnas);
         }
 
 //        if ($request->specialitate1 != 0)
@@ -267,6 +268,7 @@ class Data extends Controller
             'media1' => $media1,
             'media2' => $media2,
             'media3' => $media3,
+            'mgnas' => $request->mgnas,
             'buget1' => ifNull($request->bug1),
             'buget2' => ifNull($request->bug2),
             'buget3' => ifNull($request->bug3),
@@ -277,16 +279,16 @@ class Data extends Controller
             'limba2' => $request->lib2,
             'limba3' => $request->lib3,
             'livret_militar' => ifNull($request->liv_mil),
-            'cop_orfan' => ifNull($request->cop_orf),
-            'mm_patru_copii' => ifNull($request->patru_cop),
-            'cop_deficiente' => ifNull($request->cop_cu_difect),
-            'parinti_invalizi' => ifNull($request->parinti_invalid),
-            'parinti_Cernobil' => ifNull($request->par_cernob),
-            'cop_roman' => ifNull($request->cop_romin),
+            'cop_orfan' => ifNull($request->cop_orfan),
+            'mm_patru_copii' => ifNull($request->mm_patru_copii),
+            'cop_deficiente' => ifNull($request->cop_deficiente),
+            'parinti_invalizi' => ifNull($request->parinti_invalizi),
+            'parinti_Cernobil' => ifNull($request->parinti_Cernobil),
+            'cop_roman' => ifNull($request->cop_roman),
             'raion_est' => ifNull($request->copil_est),
-            'ucrainean' => ifNull($request->cetatean_ucr),
+            'cop_serv_mil' => ifNull($request->cop_serv_mil),
             'un_par_inv' => ifNull($request->parint_invalid),
-            'copil_inv_gr_I_II' => ifNull($request->copil_inv_gr_I_II),
+           // 'copil_inv_gr_I_II' => ifNull($request->copil_inv_gr_I_II),
             'nume' => mb_strtolower($request->nume),
             'prenume' => mb_strtolower($request->prenum),
             'patronimic' => mb_strtolower($request->patronim),

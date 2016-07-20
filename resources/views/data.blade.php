@@ -697,24 +697,24 @@
 
                                     <div class=" col-md-2 checkbox">
                                         <label>
-                                            @if($errors->first('cop_orf'))
+                                            @if($errors->first('cop_orfan'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="cop_orf" value="1"
-                                                   @if(old('cop_orf')) checked @endif
+                                            <input type="checkbox" name="cop_orfan" value="1"
+                                                   @if(old('cop_orfan')) checked @endif
                                             >
-                                            Copil Orfan
+                                            Copii ramasi fara ocrotire parintesca
                                         </label>
                                     </div>
                                     <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
-                                            @if($errors->first('patru_cop'))
+                                            @if($errors->first('mm_patru_copii'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="patru_cop" value="1"
-                                                   @if(old('patru_cop')) checked @endif>
-                                            Copil din familie cu 4 şi mai mulţi copii
+                                            <input type="checkbox" name="mm_patru_copii" value="1"
+                                                   @if(old('mm_patru_copii')) checked @endif>
+                                            Copii proveniti din familiile cu patru si mai multi copii, aflati la intretinerea parintilor
                                         </label>
 
                                     </div>
@@ -725,26 +725,27 @@
                                     <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
-                                            @if($errors->first('cop_cu_difect'))
+                                            @if($errors->first('cop_deficiente'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="cop_cu_difect" value="1"
-                                                   @if(old('cop_cu_difect')) checked @endif
+                                            <input type="checkbox" name="cop_deficiente" value="1"
+                                                   @if(old('cop_deficiente')) checked @endif
                                             >
-                                            Copil cu deficienţe fizice şi senzoriale
+                                            Copii cu dizabilitate severa, accentuata si medie
                                         </label>
                                     </div>
 
 
                                     <div class=" col-md-4 checkbox">
                                         <label>
-                                            @if($errors->first('parinti_invalid'))
+                                            @if($errors->first('cop_roman'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="parinti_invalid" value="1"
-                                                   @if(old('parinti_invalid')) checked @endif
+                                            <input type="checkbox" name="cop_roman" value="1"
+                                                   @if(old('cop_roman')) checked @endif
                                             >
-                                            Copil cu ambii părinţi invalizi
+                                                Copii de etnie romă
+
                                         </label>
                                     </div>
                                 </div>
@@ -752,25 +753,27 @@
                                     <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-4 checkbox">
                                         <label>
-                                            @if($errors->first('par_cernob'))
+                                            @if($errors->first('parinti_invalizi'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="par_cernob" value="1"
-                                                   @if(old('par_cernob')) checked @endif
+                                            <input type="checkbox" name="parinti_invalizi" value="1"
+                                                   @if(old('parinti_invalizi')) checked @endif
                                             >
-                                            Parinţii participanti la act milit şi Cernobîl
+                                                Copii care au parinti cu dizabilitate severa
+
                                         </label>
                                     </div>
 
                                     <div class=" col-md-3 checkbox">
                                         <label>
-                                            @if($errors->first('cop_romin'))
+                                            @if($errors->first('cop_serv_mil'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="cop_romin" value="1"
-                                                   @if(old('cop_romin')) checked @endif
+                                            <input type="checkbox" name="cop_serv_mil" value="1"
+                                                   @if(old('cop_serv_mil')) checked @endif
                                             >
-                                            Copil de etnie romă
+                                                Tinerii care au indeplinit seviciul militar in termen
+
                                         </label>
                                     </div>
                                 </div>
@@ -778,37 +781,39 @@
                                     <label class="col-md-2 control-label " for="grup"></label>
                                     <div class=" col-md-3 checkbox">
                                         <label>
-                                            @if($errors->first('cetatean_ucr'))
+                                            @if($errors->first('parinti_Cernobil'))
                                                 class=" alert alert-danger"
                                             @endif
-                                            <input type="checkbox" name="cetatean_ucr" value="1"
+                                            <input type="checkbox" name="parinti_Cernobil" value="1"
 
-                                                   @if(old('cetatean_ucr')) checked @endif>
-                                            Cetăteni ai ucrainei de natione romani (moldoveni)
+                                                   @if(old('parinti_Cernobil')) checked @endif>
+                                                {{--//pomeneati !!!!!!!!!!!!!!!!!!!!!!!!111--}}
+
+                                                Copii a carui parinti au participat la actiunele militare pentru aparare integritatii si Independentii Republicii Moldova; La actiunile de lupta din Afganistan sau la lichidarea consecintelor avariei de la Cernobil
                                         </label>
                                     </div>
                                     <label class="col-md-1 control-label " for="grup"></label>
-                                    <div class=" col-md-4 checkbox">
-                                        <label>
-                                            @if($errors->first('parint_invalid'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="parint_invalid" value="1"
-                                                   @if(old('parint_invalid')) checked @endif>
-                                            Copil din familie unul din părinți Invalid de gradul I sau II
-                                        </label>
-                                    </div>
+                                    {{--<div class=" col-md-4 checkbox">--}}
+                                        {{--<label>--}}
+                                            {{--@if($errors->first('parint_invalid'))--}}
+                                                {{--class=" alert alert-danger"--}}
+                                            {{--@endif--}}
+                                            {{--<input type="checkbox" name="parint_invalid" value="1"--}}
+                                                   {{--@if(old('parint_invalid')) checked @endif>--}}
+                                            {{--Copil din familie unul din părinți Invalid de gradul I sau II--}}
+                                        {{--</label>--}}
+                                    {{--</div>--}}
                                     <label class="col-md-6 control-label " for="grup"></label>
-                                    <div class=" col-md-4 checkbox">
-                                        <label>
-                                            @if($errors->first('copil_inv_gr_I_II'))
-                                                class=" alert alert-danger"
-                                            @endif
-                                            <input type="checkbox" name="copil_inv_gr_I_II" value="1"
-                                                   @if(old('copil_invalid')) checked @endif>
-                                            Copil Invalid de gradul I şi II
-                                        </label>
-                                    </div>
+                                    {{--<div class=" col-md-4 checkbox">--}}
+                                        {{--<label>--}}
+                                            {{--@if($errors->first('copil_inv_gr_I_II'))--}}
+                                                {{--class=" alert alert-danger"--}}
+                                            {{--@endif--}}
+                                            {{--<input type="checkbox" name="copil_inv_gr_I_II" value="1"--}}
+                                                   {{--@if(old('copil_invalid')) checked @endif>--}}
+                                            {{--Copil Invalid de gradul I şi II--}}
+                                        {{--</label>--}}
+                                    {{--</div>--}}
                                 </div>
 
                                 <hr>
@@ -824,6 +829,8 @@
                                             >
                                             Copil din r-le de Est, Bender
                                         </label>
+                                        <input type="text" id="mgnas" name="mgnas" value="{{old('mgnas')}}"
+                                               placeholder="mgnas" >
                                     </div>
 
                                     <div class="col-md-2 checkbox">

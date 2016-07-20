@@ -33,7 +33,7 @@
     <span class="tab">Numele: {{ucfirst($e->nume)}} </span>
     <span class="tab">Prenumele: {{ucfirst($e->prenume)}}</span>
     <span class="tab">Patronimicul: {{ucfirst($e->patronimic)}}</span>
-    <p>Sexul:
+    <p>Genul:
         @if($e->sex == 1)
             Masculin
         @else
@@ -42,7 +42,7 @@
     </p>
     <p>Data, luna si anul nasterii:@if($t = new \Carbon\Carbon($e->datanasterii)) {{$t->day}}/{{$t->month}}
         /{{$t->year}} @endif</p>
-    <p>Locul nasterii: {{$e->loc_nas}}</p>
+    {{--<p>Locul nasterii: {{$e->loc_nas}}</p>--}}
     <p>Adresa: r.{{ucfirst($e->raion)}}.,
         @if($e->sat_oras==1)
             s.{{ucfirst($e->num_sat_oras)}}
@@ -52,14 +52,26 @@
 
     </p>
     <p>Codul personal: {{$e->cod_personal}}</p>
-    <p><span class="tab2">Seria: {{$e->seria_buletin}}</span>
+    <p><span class="tab2">Seria: {{ucfirst($e->seria_buletin)}}</span>
         Nr: {{$e->numar_buletin}}</p>
     <p><span class="tab">Eliberat de oficiu: {{$e->oficiu}}</span>
         Data: {{$e->buletin_data_eliberarii}}</p>
-    <p>Nationalitatea:
-        @foreach($e->Nationalitys()->get() as $den)
-            {{ucfirst($den->nationality)}}
-        @endforeach
+    <p>Cetatanie:
+        @if($e->cetatanie==1)
+            MD
+        @endif
+        @if($e->cetatanie==2)
+            RO
+        @endif
+        @if($e->cetatanie==3)
+            RU
+        @endif
+        @if($e->cetatanie==4)
+            UA
+        @endif
+        {{--@foreach($e->Nationalitys()->get() as $den)--}}
+        {{--{{ucfirst($den->nationality)}}--}}
+        {{--@endforeach--}}
     </p>
     <table border="0">
         <tr>
@@ -84,10 +96,10 @@
             </td>
             <td class="center">
                 @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
-                @if($e->buget1)
-                    {{$e->media1}}
-                @endif
+                    @if($e->buget1)
+                        {{$e->media1}}
                     @endif
+                @endif
             </td>
             <td>
                 @if($e->contract1)
@@ -98,10 +110,10 @@
             </td>
             <td class="center">
                 @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
-                @if($e->contract1)
-                    {{$e->media1}}
-                @endif
+                    @if($e->contract1)
+                        {{$e->media1}}
                     @endif
+                @endif
             </td>
         </tr>
         <tr>
@@ -114,9 +126,9 @@
             </td>
             <td class="center">
                 @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
-                @if($e->buget2)
-                    {{$e->media2}}
-                @endif
+                    @if($e->buget2)
+                        {{$e->media2}}
+                    @endif
                 @endif
             </td>
             <td>
@@ -128,9 +140,9 @@
             </td>
             <td class="center">
                 @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
-                @if($e->contract2)
-                    {{$e->media2}}
-                @endif
+                    @if($e->contract2)
+                        {{$e->media2}}
+                    @endif
                 @endif
             </td>
         </tr>
@@ -144,9 +156,9 @@
             </td>
             <td class="center">
                 @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
-                @if($e->buget3)
-                    {{$e->media3}}
-                @endif
+                    @if($e->buget3)
+                        {{$e->media3}}
+                    @endif
                 @endif
             </td>
             <td>
@@ -159,8 +171,8 @@
             <td class="center">
                 @if($e->contract3)
                     @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
-                    {{$e->media3}}
-                @endif
+                        {{$e->media3}}
+                    @endif
                 @endif
             </td>
         </tr>
@@ -246,29 +258,46 @@
 <p style="padding-left: 1em;"><b>Eliberat de of: </b>{{$e->oficiu}} <b
             style="padding-left: 1em;">Data: </b>{{$e->buletin_data_eliberarii}}</p>
 <p style="padding-left: 1em;"><b>Codul personal: </b>{{$e->cod_personal}}</p>
-<p><b>11.Nationalitatea: </b> @foreach($e->Nationalitys()->get() as $den)
-        {{ucfirst($den->nationality)}}
-    @endforeach</p>
-<p style="padding-left: 1em;"><b>Cetatenia: </b>{{$e->cetatanie}}</p>
+{{--<p><b>11.Nationalitatea: </b> @foreach($e->Nationalitys()->get() as $den)--}}
+{{--{{ucfirst($den->nationality)}}--}}
+{{--@endforeach</p>--}}
+<p style="padding-left: 1em;"><b>Cetatenia: </b>
+    @if($e->cetatanie==1)
+        MD
+    @endif
+    @if($e->cetatanie==2)
+        RO
+    @endif
+    @if($e->cetatanie==3)
+        RU
+    @endif
+    @if($e->cetatanie==4)
+        UA
+    @endif</p>
 <p><b>12.Evidenta militara: </b>@if($e->serv_milit)
         Incorporabil
     @else
         Neincorporabil
     @endif</p>
 <p style="padding-left: 1em;"><b>Livret militar nr: </b>{{$e->liv_mil_nr}}</p>
+<p style="padding-left: 1em;"><b>Adivirinta de recrutare: </b>{{$e->liv_mil_nr}}</p>
 <p><b>13.Numele si prenumele parintilor: </b></p>
 <p><b>Tatal: </b>{{ucfirst($e->tat_nume).' '.ucfirst($e->tat_prenume)}}</p>
 <p><b>Mama: </b>{{ucfirst($e->mam_nume).' '.ucfirst($e->mam_prenume)}}</p>
 <div class="page-break"></div>
 
 <p><b>14.Institutia de invatamint absolvita: </b>{{$e->inst_abs}}</p>
-<p><b>Act de studii:</b></p>
+<p><b>Actul de studii in baza caruia a fost admis: </b>{{strtoupper($e->acte)}}</p>
 <p><b>Anul absolvirii: </b>{{$e->an_abs}}</p>
-<p><b>Actul in baza caruia a fost admis: </b>{{strtoupper($e->acte)}}</p>
+{{--<p><b>Actul in baza caruia a fost admis: </b>{{strtoupper($e->acte)}}</p>--}}
 <p><b>15.Limba straina: </b>@foreach($e->limb_studiata()->get() as $den)
         {{ucfirst($den->language)}}
     @endforeach</p>
 <p><b>Limba de instruire: </b> @foreach($e->languages3()->get() as $den)
+        {{ucfirst($den->language)}}
+    @endforeach</p>
+<p><b>Limba de instruire solicitata: </b>
+    @foreach($e->languages1()->get() as $den)
         {{ucfirst($den->language)}}
     @endforeach</p>
 <p><b>16.Necesitatea cazarii in camin: </b>@if($e->camin)
@@ -277,9 +306,36 @@
         Nu
     @endif</p>
 <p><b>18.Inscrierea la concurs pentru cota de 15%:</b></p>
-<p><b>In baza documntelor</b></p>
+@if($e->cop_orfan)
+    1) Copii ramasi fara ocrotire parintesca <br>
+@endif
+@if($e->cop_deficiente)
+    2) Copii cu dizabilitate severa, accentuata si medie<br>
+@endif
+@if($e->parinti_invalizi)
+    3) Copii care au parinti cu dizabilitate severa<br>
+@endif
+@if($e->parinti_Cernobil)
+    4) Copii a carui parinti au participat la actiunele militare pentru aparare integritatii si Independentii Republicii
+    Moldova; La actiunile de lupta din Afganistan sau la lichidarea consecintelor avariei de la Cernobil<br>
+@endif
+@if($e->mm_patru_copii)
+    5) Copii proveniti din familiile cu patru si mai multi copii, aflati la intretinerea parintilor<br>
+@endif
+@if($e->cop_roman)
+    6) Copii de etnie romă<br>
+@endif
+@if($e->cop_serv_mil)
+    7) Tinerii care au indeplinit seviciul militar in termen<br>
+@endif
+<p><b>In baza documentelor</b></p>
 <p>{{$e->doc_seria}}</p>
-<p><b>19.Disctinctii acordate la absolvire: </b></p>
+<p><b>Inscrierea la concurs pentru locurile prevazute absolventilor scolilor din raioanele de Est ale Republicii Moldova
+        si din mun. Bender, care au studiat dupa programele de invatamin aprobate de Ministerul Educatiei</b></p>
+@if($e->raion_est)
+    MGNAS: {{$e->mgnas}}<br>
+    @endif
+<p><b>19.Premiant al olimpiadilor: </b></p>
 <p>{{$e->distinc_abs}}</p>
 <table border="0">
     <tr>
@@ -304,9 +360,9 @@
         </td>
         <td class="center">
             @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
-            @if($e->buget1)
-                {{$e->media1}}
-            @endif
+                @if($e->buget1)
+                    {{$e->media1}}
+                @endif
             @endif
         </td>
         <td>
@@ -318,9 +374,9 @@
         </td>
         <td class="center">
             @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
-            @if($e->contract1)
-                {{$e->media1}}
-            @endif
+                @if($e->contract1)
+                    {{$e->media1}}
+                @endif
             @endif
         </td>
     </tr>
@@ -334,9 +390,9 @@
         </td>
         <td class="center">
             @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
-            @if($e->buget2)
-                {{$e->media2}}
-            @endif
+                @if($e->buget2)
+                    {{$e->media2}}
+                @endif
             @endif
         </td>
         <td>
@@ -348,9 +404,9 @@
         </td>
         <td class="center">
             @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
-            @if($e->contract2)
-                {{$e->media2}}
-            @endif
+                @if($e->contract2)
+                    {{$e->media2}}
+                @endif
             @endif
         </td>
     </tr>
@@ -364,9 +420,9 @@
         </td>
         <td class="center">
             @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
-            @if($e->buget3)
-                {{$e->media3}}
-            @endif
+                @if($e->buget3)
+                    {{$e->media3}}
+                @endif
             @endif
         </td>
         <td>
@@ -378,14 +434,14 @@
         </td>
         <td class="center">
             @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
-            @if($e->contract3)
-                {{$e->media3}}
-            @endif
+                @if($e->contract3)
+                    {{$e->media3}}
+                @endif
             @endif
         </td>
     </tr>
 </table>
-<table align="center" >
+<table align="center">
     <tr>
         <td colspan="2" align="center"><b>Optiunea 1 </b>
             @foreach($e->specialitates()->get() as $den)
@@ -393,12 +449,12 @@
             @endforeach
         </td>
     </tr>
-    <tr>
-        <td colspan="2"><b>Limba de instruire solicitata: </b>
-            @foreach($e->languages1()->get() as $den)
-                {{ucfirst($den->language)}}
-            @endforeach</td>
-    </tr>
+    {{--<tr>--}}
+    {{--<td colspan="2"><b>Limba de instruire solicitata: </b>--}}
+    {{--@foreach($e->languages1()->get() as $den)--}}
+    {{--{{ucfirst($den->language)}}--}}
+    {{--@endforeach</td>--}}
+    {{--</tr>--}}
     <tr>
         <th>Discipline de profil</th>
         <th>Nota</th>
@@ -410,8 +466,8 @@
             </td>
             <td class="center">
                 @if($den->nota1 != 0)
-                {{$den->nota1}}
-                    @endif
+                    {{$den->nota1}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -420,8 +476,8 @@
             </td>
             <td class="center">
                 @if($den->nota2 != 0)
-                {{$den->nota2}}
-                    @endif
+                    {{$den->nota2}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -430,24 +486,27 @@
             </td>
             <td class="center">
                 @if($den->nota3 != 0)
-                {{$den->nota3}}
-                    @endif
+                    {{$den->nota3}}
+                @endif
             </td>
         </tr>
-        <tr >
+        <tr>
             <td>
                 {{ucfirst($den->obiect4)}}
             </td>
             <td class="center">
                 @if($den->nota4 != 0)
-                {{$den->nota4}}
-                    @endif
+                    {{$den->nota4}}
+                @endif
             </td>
         </tr>
         <tr>
-            <td><b>MNAS</b></td>
-            <td class="center">{{$e->media_discipline}}</td>
+            <td><b>MNDP</b></td>
+            @foreach($e->nt1()->get() as $den)
+                <td class="center">{{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}</td>
+            @endforeach
         </tr>
+
         <tr>
             <td><b>MNEA</b></td>
             <td class="center">{{$e->media_exam}}</td>
@@ -456,13 +515,18 @@
             <td><b>MC</b></td>
             <td class="center">
                 @if($e->id_specialitate != 6 && $e->id_specialitate != 9 && $e->id_specialitate != 10)
-                {{$e->media1}}
-                    @endif
+                    {{$e->media1}}
+                @endif
             </td>
+        </tr>
+        <tr>
+            <td><b>MNAS</b></td>
+            <td class="center">{{$e->media_discipline}}</td>
         </tr>
     @endforeach
 </table>
-<table align="center" >
+<div class="page-break"></div>
+<table align="center">
     <tr>
         <td colspan="2" align="center"><b>Optiunea 2 </b>
             @foreach($e->specialitates2()->get() as $den)
@@ -470,12 +534,12 @@
             @endforeach
         </td>
     </tr>
-    <tr>
-        <td colspan="2"><b>Limba de instruire solicitata: </b>
-            @foreach($e->languages2()->get() as $den)
-                {{ucfirst($den->language)}}
-            @endforeach</td>
-    </tr>
+    {{--<tr>--}}
+    {{--<td colspan="2"><b>Limba de instruire solicitata: </b>--}}
+    {{--@foreach($e->languages2()->get() as $den)--}}
+    {{--{{ucfirst($den->language)}}--}}
+    {{--@endforeach</td>--}}
+    {{--</tr>--}}
     <tr>
         <th>Discipline de profil</th>
         <th>Nota</th>
@@ -487,8 +551,8 @@
             </td>
             <td class="center">
                 @if($den->nota1 != 0)
-                {{$den->nota1}}
-                    @endif
+                    {{$den->nota1}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -497,8 +561,8 @@
             </td>
             <td class="center">
                 @if($den->nota2 != 0)
-                {{$den->nota2}}
-                    @endif
+                    {{$den->nota2}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -507,24 +571,27 @@
             </td>
             <td class="center">
                 @if($den->nota3 != 0)
-                {{$den->nota3}}
-                    @endif
+                    {{$den->nota3}}
+                @endif
             </td>
         </tr>
-        <tr >
+        <tr>
             <td>
                 {{ucfirst($den->obiect4)}}
             </td>
             <td class="center">
                 @if($den->nota4 != 0)
-                {{$den->nota4}}
-                    @endif
+                    {{$den->nota4}}
+                @endif
             </td>
         </tr>
         <tr>
-            <td><b>MNAS</b></td>
-            <td class="center">{{$e->media_discipline}}</td>
+            <td><b>MNDP</b></td>
+            @foreach($e->nt2()->get() as $den)
+                <td class="center">{{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}</td>
+            @endforeach
         </tr>
+
         <tr>
             <td><b>MNEA</b></td>
             <td class="center">{{$e->media_exam}}</td>
@@ -533,14 +600,17 @@
             <td><b>MC</b></td>
             <td class="center">
                 @if($e->id_specialitate2 != 6 && $e->id_specialitate2 != 9 && $e->id_specialitate2 != 10)
-                {{$e->media2}}
-                    @endif
+                    {{$e->media2}}
+                @endif
             </td>
+        </tr>
+        <tr>
+            <td><b>MNAS</b></td>
+            <td class="center">{{$e->media_discipline}}</td>
         </tr>
     @endforeach
 </table>
-<div class="page-break"></div>
-<table align="center" >
+<table align="center">
     <tr>
         <td colspan="2" align="center"><b>Optiunea 3 </b>
             @foreach($e->specialitates3()->get() as $den)
@@ -548,12 +618,12 @@
             @endforeach
         </td>
     </tr>
-    <tr>
-        <td colspan="2"><b>Limba de instruire solicitata: </b>
-            @foreach($e->languages3()->get() as $den)
-                {{ucfirst($den->language)}}
-            @endforeach</td>
-    </tr>
+    {{--<tr>--}}
+    {{--<td colspan="2"><b>Limba de instruire solicitata: </b>--}}
+    {{--@foreach($e->languages3()->get() as $den)--}}
+    {{--{{ucfirst($den->language)}}--}}
+    {{--@endforeach</td>--}}
+    {{--</tr>--}}
     <tr>
         <th>Discipline de profil</th>
         <th>Nota</th>
@@ -565,8 +635,8 @@
             </td>
             <td class="center">
                 @if($den->nota1 != 0)
-                {{$den->nota1}}
-                    @endif
+                    {{$den->nota1}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -575,8 +645,8 @@
             </td>
             <td class="center">
                 @if($den->nota2 != 0)
-                {{$den->nota2}}
-                    @endif
+                    {{$den->nota2}}
+                @endif
             </td>
         </tr>
         <tr>
@@ -585,24 +655,27 @@
             </td>
             <td class="center">
                 @if($den->nota3 != 0)
-                {{$den->nota3}}
-                    @endif
+                    {{$den->nota3}}
+                @endif
             </td>
         </tr>
-        <tr >
+        <tr>
             <td>
                 {{ucfirst($den->obiect4)}}
             </td>
             <td class="center">
                 @if($den->nota4 != 0)
-                {{$den->nota4}}
-                    @endif
+                    {{$den->nota4}}
+                @endif
             </td>
         </tr>
         <tr>
-            <td><b>MNAS</b></td>
-            <td class="center">{{$e->media_discipline}}</td>
+            <td><b>MNDP</b></td>
+            @foreach($e->nt3()->get() as $den)
+                <td class="center">{{($den->nota1+$den->nota2+$den->nota3+$den->nota4)/4}}</td>
+            @endforeach
         </tr>
+
         <tr>
             <td><b>MNEA</b></td>
             <td class="center">{{$e->media_exam}}</td>
@@ -611,18 +684,25 @@
             <td><b>MC</b></td>
             <td class="center">
                 @if($e->id_specialitate3 != 6 && $e->id_specialitate3 != 9 && $e->id_specialitate3 != 10)
-                {{$e->media3}}
-                    @endif
+                    {{$e->media3}}
+                @endif
             </td>
+        </tr>
+        <tr>
+            <td><b>MNAS</b></td>
+            <td class="center">{{$e->media_discipline}}</td>
         </tr>
     @endforeach
 </table>
 <p class="center">Subsemnatul, declar cele de mai sus pe propria mea raspundere</p>
-<p class="center">Semnatura candidatului <span style="border-bottom: 1px solid black; padding-right: 150px;" >&nbsp;</span>
+<p class="center">Semnatura candidatului <span
+            style="border-bottom: 1px solid black; padding-right: 150px;">&nbsp;</span>
     data
     <span style="border-bottom: 1px solid black; padding-right: 100px;">&nbsp;</span></p>
 <p class="center">Verificat <span
             style="border-bottom: 1px solid black; padding-right: 150px;">&nbsp;</span>data<span
             style="border-bottom: 1px solid black; padding-right: 100px;">&nbsp;</span></p>
+<p class="center">Secretar <span
+            style="border-bottom: 1px solid black; padding-right: 150px;">&nbsp;</span></p>
 </body>
 </html>

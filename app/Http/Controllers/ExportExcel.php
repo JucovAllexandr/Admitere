@@ -58,6 +58,7 @@ class ExportExcel extends Controller
                             ->orWhere('id_specialitate3', '=', $id)->get();
                         $media=0;
                         $i=0;
+                        //$tmp = new Arrey(count($elevi));
                         foreach ($elevi as $e) {
                             if ($e->id_specialitate == $id) {
                                 {

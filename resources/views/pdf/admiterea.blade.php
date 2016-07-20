@@ -179,7 +179,7 @@
     </table>
     <p>Institutia de invatamint absolvita: {{$e->inst_abs}}</p>
     <p>Anul absolvirii: {{$e->an_abs}}</p>
-    <p>Actul in baza caruia a fost admis: {{$e->acte}}</p>
+    <p>Actul de studii in baza caruia a fost admis: {{$e->acte}}</p>
     <p><span class="tab">Media examenelor de absolvire: {{$e->media_exam}}</span>
         Media generala a notelor de absolvire: {{$e->media_discipline}}</p>
     <p>Limba de instruire:

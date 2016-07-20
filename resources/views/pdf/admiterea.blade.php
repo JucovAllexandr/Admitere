@@ -224,7 +224,7 @@
         I</span> Date personale</b></p>
 <p><b>1.Numele:</b>{{ucfirst($e->nume)}} <b style="padding-left: 2em;">Prenume:</b> {{ucfirst($e->prenume)}}<b
             style="padding-left: 2em;">Patronimicul:</b>{{ucfirst($e->patronimic)}}</p>
-<p><b>2.Sexul:</b>@if($e->sex == 1)
+<p><b>2.Genul:</b>@if($e->sex == 1)
         Masculin
     @else
         Femenin
@@ -274,23 +274,23 @@
     @if($e->cetatanie==4)
         UA
     @endif</p>
-<p><b>12.Evidenta militara: </b>@if($e->serv_milit)
+<p><b>11.Evidenta militara: </b>@if($e->serv_milit)
         Incorporabil
     @else
         Neincorporabil
     @endif</p>
 <p style="padding-left: 1em;"><b>Livret militar nr: </b>{{$e->liv_mil_nr}}</p>
-<p style="padding-left: 1em;"><b>Adivirinta de recrutare: </b>{{$e->liv_mil_nr}}</p>
-<p><b>13.Numele si prenumele parintilor: </b></p>
+<p style="padding-left: 1em;"><b>Adeverinta de recrutare: </b>{{$e->liv_mil_nr}}</p>
+<p><b>12.Numele si prenumele parintilor: </b></p>
 <p><b>Tatal: </b>{{ucfirst($e->tat_nume).' '.ucfirst($e->tat_prenume)}}</p>
 <p><b>Mama: </b>{{ucfirst($e->mam_nume).' '.ucfirst($e->mam_prenume)}}</p>
 <div class="page-break"></div>
 
-<p><b>14.Institutia de invatamint absolvita: </b>{{$e->inst_abs}}</p>
+<p><b>13.Institutia de invatamint absolvita: </b>{{$e->inst_abs}}</p>
 <p><b>Actul de studii in baza caruia a fost admis: </b>{{strtoupper($e->acte)}}</p>
 <p><b>Anul absolvirii: </b>{{$e->an_abs}}</p>
 {{--<p><b>Actul in baza caruia a fost admis: </b>{{strtoupper($e->acte)}}</p>--}}
-<p><b>15.Limba straina: </b>@foreach($e->limb_studiata()->get() as $den)
+<p><b>14.Limba straina: </b>@foreach($e->limb_studiata()->get() as $den)
         {{ucfirst($den->language)}}
     @endforeach</p>
 <p><b>Limba de instruire: </b> @foreach($e->languages3()->get() as $den)
@@ -300,12 +300,12 @@
     @foreach($e->languages1()->get() as $den)
         {{ucfirst($den->language)}}
     @endforeach</p>
-<p><b>16.Necesitatea cazarii in camin: </b>@if($e->camin)
+<p><b>15.Necesitatea cazarii in camin: </b>@if($e->camin)
         Da
     @else
         Nu
     @endif</p>
-<p><b>18.Inscrierea la concurs pentru cota de 15%:</b></p>
+<p><b>16.Inscrierea la concurs pentru cota de 15%:</b></p>
 @if($e->cop_orfan)
     1) Copii ramasi fara ocrotire parintesca <br>
 @endif
@@ -335,7 +335,7 @@
 @if($e->raion_est)
     MGNAS: {{$e->mgnas}}<br>
     @endif
-<p><b>19.Premiant al olimpiadilor: </b></p>
+<p><b>17.Premiant al olimpiadilor: </b></p>
 <p>{{$e->distinc_abs}}</p>
 <table border="0">
     <tr>
